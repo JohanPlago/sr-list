@@ -2,7 +2,10 @@
 
 namespace AppBundle\WebService\SR;
 
+use AppBundle\WebService\SR\Responses\AllEpisodesResponse;
 use AppBundle\WebService\SR\Responses\AllProgramsResponse;
+use AppBundle\WebService\SR\Responses\Entities\Episode;
+use AppBundle\WebService\SR\Responses\Entities\Program;
 use Ci\RestClientBundle\Services\RestClient;
 use JMS\Serializer\Serializer;
 
@@ -23,6 +26,7 @@ class SrWebServiceClient
      * SrWebServiceClient constructor.
      *
      * @param RestClient $client
+     * @param $serializer $serializer
      */
     public function __construct(RestClient $client, Serializer $serializer)
     {
@@ -33,7 +37,7 @@ class SrWebServiceClient
     /**
      * Get all programs/shows by SR
      *
-     * @return array
+     * @return Program[]
      */
     public function getAllPrograms() : array
     {
@@ -42,6 +46,22 @@ class SrWebServiceClient
         $programs = $this->getObjectsFromPaginatedRequest($url, AllProgramsResponse::class);
 
         return $programs;
+    }
+
+    /**
+     * Fetch all episodes from a program
+     *
+     * @param int $programId
+     *
+     * @return Episode[]
+     */
+    public function getAllEpisodesByProgramId(int $programId) : array
+    {
+        $url = static::API_BASE_URI.'episodes/index?programid='.urlencode($programId).'&format=json&size=100';
+
+        $episodes = $this->getObjectsFromPaginatedRequest($url, AllEpisodesResponse::class);
+
+        return $episodes;
     }
 
     /**

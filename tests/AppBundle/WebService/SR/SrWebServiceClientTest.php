@@ -2,6 +2,7 @@
 
 namespace Tests\AppBundle\WebService\SR;
 
+use AppBundle\WebService\SR\Responses\Entities\Episode;
 use AppBundle\WebService\SR\Responses\Entities\Program;
 use AppBundle\WebService\SR\SrWebServiceClient;
 use Ci\RestClientBundle\Services\RestClient;
@@ -157,6 +158,73 @@ class SrWebServiceClientTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test so all data from on episodes are correct
+     */
+    public function testGetAllEpisodesFromProgramDataIsCorrect()
+    {
+        $sampleData = $this->getGetAllEpisodesSingleTestData();
+        $client = new SrWebServiceClient($this->restClient, $this->serializer);
+        $programId = 4131;
+
+        $this->restClient->expects($this->once())
+                         ->method('get')
+                         ->with($this->stringContains('episodes/index?programid='.$programId))
+                         ->willReturn(new Response($this->getGetAllEpisodesSingleTestData()));
+
+        /** @var Episode[] $episodes (just for the autocompletion :) ) */
+        $episodes = $client->getAllEpisodesByProgramId($programId);
+        // Sample data should only contain 1 episode
+        $episode = $episodes[0];
+        $sampleEpisode = json_decode($sampleData, true)['episodes'][0];
+
+        $this->assertEquals(
+            $sampleEpisode['id'],
+            $episode->getSrId(),
+            'Id should be set'
+        );
+        $this->assertEquals(
+            $sampleEpisode['title'],
+            $episode->getTitle(),
+            'Title should be set'
+        );
+        $this->assertEquals(
+            $sampleEpisode['description'],
+            $episode->getDescription(),
+            'Description should be set'
+        );
+        $this->assertEquals(
+            $sampleEpisode['url'],
+            $episode->getWebUrl(),
+            'Web url should be set'
+        );
+        $this->assertEquals(
+            $sampleEpisode['program']['id'],
+            $episode->getProgram()->getSrId(),
+            'Program id should be set'
+        );
+        $this->assertEquals(
+            $sampleEpisode['program']['name'],
+            $episode->getProgram()->getName(),
+            'Program name should be set'
+        );
+
+        // Date looks weird af when it comes from the api
+        $publishTimestampMilliseconds = ((int)$episode->getPublishDateUtc()->format('U')) * 1000;
+        $this->assertEquals(
+            $sampleEpisode['publishdateutc'],
+            "/Date({$publishTimestampMilliseconds})/",
+            'Publish date should be set'
+        );
+        $this->assertEquals(
+            $sampleEpisode['imageurl'],
+            $episode->getImageUrl(),
+            'Image url should be set'
+        );
+    }
+
+    // FYI no need to test the get all episodes for pagination - it uses the same thing ass get all programs
+
+    /**
      * Get sample response with 1 program to check the data in
      *
      * @return string
@@ -184,5 +252,10 @@ class SrWebServiceClientTest extends \PHPUnit_Framework_TestCase
     protected function getGetAllProgramsTestDataPage2() : string
     {
         return file_get_contents(__DIR__.'/response_test_data/programs_index-paginated-2.json');
+    }
+
+    protected function getGetAllEpisodesSingleTestData() : string
+    {
+        return file_get_contents(__DIR__.'/response_test_data/episodes_index-single.json');
     }
 }
