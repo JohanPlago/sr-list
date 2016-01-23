@@ -1,0 +1,178 @@
+{
+  "copyright": "Copyright Sveriges Radio 2016. All rights reserved.",
+  "programs": [
+    {
+      "description": "Lokal sport från Dalarna hör du i P4 Dalarnas lokala sportsändningar på söndagar. Vi finns givetvis här på webben också.",
+      "programcategory": {
+        "id": 10,
+        "name": "Sport"
+      },
+      "payoff": "",
+      "broadcastinfo": "",
+      "email": "sporten.dalarna@sverigesradio.se",
+      "phone": "",
+      "programurl": "http://sverigesradio.se/sida/gruppsida.aspx?programid=161&grupp=3825",
+      "programimage": "http://sverigesradio.se/sida/images/223/2186762_512_512.jpg?preset=api-default-square",
+      "programimagetemplate": "http://sverigesradio.se/sida/images/223/2186762_512_512.jpg",
+      "socialimage": "http://sverigesradio.se/sida/images/223/2186762_512_512.jpg?preset=api-default-square",
+      "socialimagetemplate": "http://sverigesradio.se/sida/images/223/2186762_512_512.jpg",
+      "socialmediaplatforms": [],
+      "channel": {
+        "id": 223,
+        "name": "P4 Dalarna"
+      },
+      "archived": false,
+      "hasondemand": true,
+      "haspod": false,
+      "responsibleeditor": "Anna Gullberg",
+      "id": 22,
+      "name": "Sporten P4 Dalarna"
+    },
+    {
+      "description": "Vi bevakar gotländska idrottsprestationer i många olika sammanhang. Ofta sänder vi direkt.",
+      "programcategory": {
+        "id": 10,
+        "name": "Sport"
+      },
+      "payoff": "",
+      "broadcastinfo": "",
+      "email": "gotlandssporten@sverigesradio.se",
+      "phone": "",
+      "programurl": "http://sverigesradio.se/sida/gruppsida.aspx?programid=94&grupp=3826",
+      "programimage": "http://sverigesradio.se/sida/images/23/2791165_512_512.jpg?preset=api-default-square",
+      "programimagetemplate": "http://sverigesradio.se/sida/images/23/2791165_512_512.jpg",
+      "socialimage": "http://sverigesradio.se/sida/images/23/2791165_512_512.jpg?preset=api-default-square",
+      "socialimagetemplate": "http://sverigesradio.se/sida/images/23/2791165_512_512.jpg",
+      "socialmediaplatforms": [
+        {
+          "platform": "Facebook",
+          "platformurl": "https://www.facebook.com/pages/SR-Gotland/366076305584"
+        },
+        {
+          "platform": "Twitter",
+          "platformurl": "https://twitter.com/p4gotland/"
+        }
+      ],
+      "channel": {
+        "id": 205,
+        "name": "P4 Gotland"
+      },
+      "archived": false,
+      "hasondemand": true,
+      "haspod": false,
+      "responsibleeditor": "Helena Bremberg",
+      "id": 23,
+      "name": "Sporten P4 Gotland"
+    },
+    {
+      "description": "Sporten i P4 Kalmar ger dig de senaste sportnyheterna i Kalmar län.",
+      "programcategory": {
+        "id": 10,
+        "name": "Sport"
+      },
+      "payoff": "",
+      "broadcastinfo": "",
+      "email": "sport.kalmar@sverigesradio.se",
+      "phone": "",
+      "programurl": "http://sverigesradio.se/sida/gruppsida.aspx?programid=86&grupp=3832",
+      "programimage": "http://sverigesradio.se/sida/images/30/2779741_512_512.jpg?preset=api-default-square",
+      "programimagetemplate": "http://sverigesradio.se/sida/images/30/2779741_512_512.jpg",
+      "socialimage": "http://sverigesradio.se/sida/images/30/2779741_512_512.jpg?preset=api-default-square",
+      "socialimagetemplate": "http://sverigesradio.se/sida/images/30/2779741_512_512.jpg",
+      "socialmediaplatforms": [
+        {
+          "platform": "Facebook",
+          "platformurl": "http://www.facebook.com/p4kalmar"
+        },
+        {
+          "platform": "Twitter",
+          "platformurl": "https://twitter.com/p4kalmarsporten/"
+        },
+        {
+          "platform": "Instagram",
+          "platformurl": "https://instagram.com/p4kalmar/"
+        }
+      ],
+      "channel": {
+        "id": 201,
+        "name": "P4 Kalmar"
+      },
+      "archived": false,
+      "hasondemand": true,
+      "haspod": false,
+      "responsibleeditor": "Anja Thorkelsson",
+      "id": 30,
+      "name": "Sporten P4 Kalmar"
+    },
+    {
+      "description": "Sport, P4 Skaraborg, Sveriges Radio.",
+      "programcategory": {
+        "id": 10,
+        "name": "Sport"
+      },
+      "payoff": "",
+      "broadcastinfo": "",
+      "email": "sporten.skaraborg@sverigesradio.se",
+      "phone": "",
+      "programurl": "http://sverigesradio.se/sida/gruppsida.aspx?programid=97&grupp=3840",
+      "programimage": "http://sverigesradio.se/sida/images/208/2186806_512_512.jpg?preset=api-default-square",
+      "programimagetemplate": "http://sverigesradio.se/sida/images/208/2186806_512_512.jpg",
+      "socialimage": "http://sverigesradio.se/sida/images/208/2186806_512_512.jpg?preset=api-default-square",
+      "socialimagetemplate": "http://sverigesradio.se/sida/images/208/2186806_512_512.jpg",
+      "socialmediaplatforms": [],
+      "channel": {
+        "id": 208,
+        "name": "P4 Skaraborg"
+      },
+      "archived": false,
+      "hasondemand": true,
+      "haspod": false,
+      "responsibleeditor": "Gabriel Byström",
+      "id": 35,
+      "name": "Sporten P4 Skaraborg"
+    },
+    {
+      "description": "Sport i P4 Väst",
+      "programcategory": {
+        "id": 10,
+        "name": "Sport"
+      },
+      "payoff": "",
+      "broadcastinfo": "",
+      "email": "sporten.vast@sverigesradio.se",
+      "phone": "",
+      "programurl": "http://sverigesradio.se/sida/gruppsida.aspx?programid=125&grupp=3838",
+      "programimage": "http://sverigesradio.se/sida/images/41/2974856_512_512.jpg?preset=api-default-square",
+      "programimagetemplate": "http://sverigesradio.se/sida/images/41/2974856_512_512.jpg",
+      "socialimage": "http://sverigesradio.se/sida/images/41/2974856_512_512.jpg?preset=api-default-square",
+      "socialimagetemplate": "http://sverigesradio.se/sida/images/41/2974856_512_512.jpg",
+      "socialmediaplatforms": [
+        {
+          "platform": "Facebook",
+          "platformurl": "http://www.facebook.com/p4vast"
+        },
+        {
+          "platform": "Twitter",
+          "platformurl": "https://twitter.com/p4vast/"
+        }
+      ],
+      "channel": {
+        "id": 219,
+        "name": "P4 Väst"
+      },
+      "archived": false,
+      "hasondemand": true,
+      "haspod": false,
+      "responsibleeditor": "Peter Sundblad",
+      "id": 41,
+      "name": "Sporten P4 Väst"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "size": 5,
+    "totalhits": 10,
+    "totalpages": 2,
+    "nextpage": "http://api.sr.se/api/v2/programs?format=json&page=2"
+  }
+}

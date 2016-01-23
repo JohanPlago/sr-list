@@ -1,0 +1,43 @@
+{
+  "copyright": "Copyright Sveriges Radio 2016. All rights reserved.",
+  "programs": [
+    {
+      "description": "Vi bevakar gotländska idrottsprestationer i många olika sammanhang. Ofta sänder vi direkt.",
+      "programcategory": {
+        "id": 10,
+        "name": "Sport"
+      },
+      "payoff": "",
+      "broadcastinfo": "",
+      "email": "gotlandssporten@sverigesradio.se",
+      "phone": "",
+      "programurl": "http://sverigesradio.se/sida/gruppsida.aspx?programid=94&grupp=3826",
+      "programimage": "http://sverigesradio.se/sida/images/23/2791165_512_512.jpg?preset=api-default-square",
+      "programimagetemplate": "http://sverigesradio.se/sida/images/23/2791165_512_512.jpg",
+      "socialimage": "http://sverigesradio.se/sida/images/23/2791165_512_512.jpg?preset=api-default-square",
+      "socialimagetemplate": "http://sverigesradio.se/sida/images/23/2791165_512_512.jpg",
+      "socialmediaplatforms": [
+        {
+          "platform": "Facebook",
+          "platformurl": "https://www.facebook.com/pages/SR-Gotland/366076305584"
+        }
+      ],
+      "channel": {
+        "id": 205,
+        "name": "P4 Gotland"
+      },
+      "archived": false,
+      "hasondemand": true,
+      "haspod": false,
+      "responsibleeditor": "Helena Bremberg",
+      "id": 23,
+      "name": "Sporten P4 Gotland"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "size": 10,
+    "totalhits": 1,
+    "totalpages": 1
+  }
+}

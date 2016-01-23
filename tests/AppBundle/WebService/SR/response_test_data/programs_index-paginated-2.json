@@ -1,0 +1,194 @@
+{
+  "copyright": "Copyright Sveriges Radio 2016. All rights reserved.",
+  "programs": [
+    {
+      "description": "Lokal sport från Västmanland ",
+      "programcategory": {
+        "id": 10,
+        "name": "Sport"
+      },
+      "payoff": "",
+      "broadcastinfo": "",
+      "email": "nyheterna.vstm@sverigesradio.se",
+      "phone": "",
+      "programurl": "http://sverigesradio.se/sida/gruppsida.aspx?programid=112&grupp=3846",
+      "programimage": "http://sverigesradio.se/sida/images/43/2886502_512_512.jpg?preset=api-default-square",
+      "programimagetemplate": "http://sverigesradio.se/sida/images/43/2886502_512_512.jpg",
+      "socialimage": "http://sverigesradio.se/sida/images/43/2886502_512_512.jpg?preset=api-default-square",
+      "socialimagetemplate": "http://sverigesradio.se/sida/images/43/2886502_512_512.jpg",
+      "socialmediaplatforms": [],
+      "channel": {
+        "id": 217,
+        "name": "P4 Västmanland"
+      },
+      "archived": false,
+      "hasondemand": true,
+      "haspod": false,
+      "responsibleeditor": "Kent Nilsson",
+      "id": 43,
+      "name": "Sporten P4 Västmanland"
+    },
+    {
+      "description": "I P4 Jämtland hör du lokala nyheter, lokala aktualiteter, lokala väderprognoser, lokal sport och lokal kultur. ",
+      "programcategory": {
+        "id": 68,
+        "name": "Nyheter"
+      },
+      "payoff": "",
+      "broadcastinfo": "Har du nyhetstips? Kontakta oss via e-post: p4jamtland@sr.se eller 063-16 06 00",
+      "email": "p4jamtland@sverigesradio.se",
+      "phone": "",
+      "programurl": "http://sverigesradio.se/sida/default.aspx?programid=78",
+      "programimage": "http://sverigesradio.se/sida/images/78/2276659_512_512.jpg?preset=api-default-square",
+      "programimagetemplate": "http://sverigesradio.se/sida/images/78/2276659_512_512.jpg",
+      "socialimage": "http://sverigesradio.se/sida/images/78/2276659_512_512.jpg?preset=api-default-square",
+      "socialimagetemplate": "http://sverigesradio.se/sida/images/78/2276659_512_512.jpg",
+      "socialmediaplatforms": [
+        {
+          "platform": "Facebook",
+          "platformurl": "http://www.facebook.com/P4Jamtland"
+        },
+        {
+          "platform": "Twitter",
+          "platformurl": "https://twitter.com/p4jamtland/"
+        },
+        {
+          "platform": "Instagram",
+          "platformurl": "https://instagram.com/p4jamtland/"
+        }
+      ],
+      "channel": {
+        "id": 200,
+        "name": "P4 Jämtland"
+      },
+      "archived": false,
+      "hasondemand": true,
+      "haspod": true,
+      "responsibleeditor": "Ricky Karström",
+      "id": 78,
+      "name": "Nyheter P4 Jämtland"
+    },
+    {
+      "description": "Nyheter och program från Sveriges Radio – i allmänheten tjänst. Lyssna på P1, P2, P3 och P4 med 26 lokala kanaler, samt nyheter på 11 språk från Radio Sweden, Sisuradio och SR Sameradion.",
+      "programcategory": {
+        "id": 68,
+        "name": "Nyheter"
+      },
+      "payoff": "",
+      "broadcastinfo": "",
+      "email": "ekot@sverigesradio.se",
+      "phone": "",
+      "programurl": "http://sverigesradio.se/sida/default.aspx?programid=83",
+      "programimage": "http://sverigesradio.se/sida/images/83/3628510_1400_1400.jpg?preset=api-default-square",
+      "programimagetemplate": "http://sverigesradio.se/sida/images/83/3628510_1400_1400.jpg",
+      "socialimage": "http://sverigesradio.se/sida/images/83/3628510_1400_1400.jpg?preset=api-default-square",
+      "socialimagetemplate": "http://sverigesradio.se/sida/images/83/3628510_1400_1400.jpg",
+      "socialmediaplatforms": [
+        {
+          "platform": "Facebook",
+          "platformurl": "http://www.facebook.com/srekot"
+        },
+        {
+          "platform": "Twitter",
+          "platformurl": "https://twitter.com/sr_ekot/"
+        }
+      ],
+      "channel": {
+        "id": 83,
+        "name": "[No channel]"
+      },
+      "archived": false,
+      "hasondemand": false,
+      "haspod": false,
+      "responsibleeditor": "MICHAEL ÖSTERLUND",
+      "id": 83,
+      "name": "Nyheter (Ekot)"
+    },
+    {
+      "description": "P4 Kalmar ger dig lokala nyheter och program från Kalmar län.",
+      "programcategory": {
+        "id": 68,
+        "name": "Nyheter"
+      },
+      "payoff": "",
+      "broadcastinfo": "",
+      "email": "p4kalmar@sverigesradio.se",
+      "phone": "",
+      "programurl": "http://sverigesradio.se/sida/default.aspx?programid=86",
+      "programimage": "http://sverigesradio.se/sida/images/86/3633128_1400_1400.jpg?preset=api-default-square",
+      "programimagetemplate": "http://sverigesradio.se/sida/images/86/3633128_1400_1400.jpg",
+      "socialimage": "http://sverigesradio.se/sida/images/86/3633128_1400_1400.jpg?preset=api-default-square",
+      "socialimagetemplate": "http://sverigesradio.se/sida/images/86/3633128_1400_1400.jpg",
+      "socialmediaplatforms": [
+        {
+          "platform": "Facebook",
+          "platformurl": "http://www.facebook.com/p4kalmar"
+        },
+        {
+          "platform": "Twitter",
+          "platformurl": "https://twitter.com/p4kalmar/"
+        },
+        {
+          "platform": "Instagram",
+          "platformurl": "https://instagram.com/p4kalmar/"
+        }
+      ],
+      "channel": {
+        "id": 201,
+        "name": "P4 Kalmar"
+      },
+      "archived": false,
+      "hasondemand": true,
+      "haspod": true,
+      "responsibleeditor": "Anja Thorkelsson",
+      "id": 86,
+      "name": "Nyheter P4 Kalmar"
+    },
+    {
+      "description": "I P4 Sörmland hör du det senaste som händer i länet. Du får aktuella nyheter, intervjuer, trafik och väder blandat med musik.",
+      "programcategory": {
+        "id": 68,
+        "name": "Nyheter"
+      },
+      "payoff": "",
+      "broadcastinfo": "Har du tips? Mejla oss: sormland@sverigesradio.se",
+      "email": "sormland@sverigesradio.se",
+      "phone": "",
+      "programurl": "http://sverigesradio.se/sida/default.aspx?programid=87",
+      "programimage": "http://sverigesradio.se/sida/images/87/3437620_1400_1400.jpg?preset=api-default-square",
+      "programimagetemplate": "http://sverigesradio.se/sida/images/87/3437620_1400_1400.jpg",
+      "socialimage": "http://sverigesradio.se/sida/images/87/3437620_1400_1400.jpg?preset=api-default-square",
+      "socialimagetemplate": "http://sverigesradio.se/sida/images/87/3437620_1400_1400.jpg",
+      "socialmediaplatforms": [
+        {
+          "platform": "Facebook",
+          "platformurl": "http://www.facebook.com/p4sormland"
+        },
+        {
+          "platform": "Twitter",
+          "platformurl": "https://twitter.com/p4sormland/"
+        },
+        {
+          "platform": "Instagram",
+          "platformurl": "https://instagram.com/p4sormland/"
+        }
+      ],
+      "channel": {
+        "id": 202,
+        "name": "P4 Sörmland"
+      },
+      "archived": false,
+      "hasondemand": true,
+      "haspod": true,
+      "responsibleeditor": "Pia Lille",
+      "id": 87,
+      "name": "Nyheter P4 Sörmland"
+    }
+  ],
+  "pagination": {
+    "page": 2,
+    "size": 5,
+    "totalhits": 10,
+    "totalpages": 2
+  }
+}
