@@ -17,3 +17,8 @@
 
 # System files
 .DS_Store
+
+# Frontend related stuff
+.sass-cache/
+node_modules/
+
