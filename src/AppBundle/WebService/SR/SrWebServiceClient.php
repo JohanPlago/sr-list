@@ -39,7 +39,7 @@ class SrWebServiceClient
 
     protected function doGetAllPrograms($programs = [], $nextPage = null)
     {
-        $url = $nextPage ?: static::API_BASE_URI.'programs/index?format=json';
+        $url = $nextPage ?: static::API_BASE_URI.'programs/index?format=json&size=100';
 
         $rawResponse = $this->client->get($url);
         $serializedResponse = $this->serializer->deserialize(
