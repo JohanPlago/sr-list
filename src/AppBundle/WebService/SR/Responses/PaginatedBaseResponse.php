@@ -12,7 +12,7 @@ namespace AppBundle\WebService\SR\Responses;
 use AppBundle\WebService\SR\Responses\Properties\Pagination;
 use JMS\Serializer\Annotation\Type;
 
-class PaginatedBaseResponse
+abstract class PaginatedBaseResponse
 {
     /**
      * @var string
@@ -27,6 +27,13 @@ class PaginatedBaseResponse
      * @Type("AppBundle\WebService\SR\Responses\Properties\Pagination")
      */
     private $pagination;
+
+    /**
+     * Get all found entities
+     *
+     * @return array
+     */
+    public abstract function getEntities() : array;
 
     /**
      * @return string

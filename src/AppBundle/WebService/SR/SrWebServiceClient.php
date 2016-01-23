@@ -30,30 +30,54 @@ class SrWebServiceClient
         $this->serializer = $serializer;
     }
 
-    public function getAllPrograms()
+    /**
+     * Get all programs/shows by SR
+     *
+     * @return array
+     */
+    public function getAllPrograms() : array
     {
-        $programs = $this->doGetAllPrograms();
+        $url = static::API_BASE_URI.'programs/index?format=json&size=100';
+
+        $programs = $this->getObjectsFromPaginatedRequest($url, AllProgramsResponse::class);
 
         return $programs;
     }
 
-    protected function doGetAllPrograms($programs = [], $nextPage = null)
+    /**
+     * Fetches objects/entities (i.e. programs, episodes) from the paginated index
+     *
+     * @param string $url The url to fetch the objects from
+     * @param string $targetClass The target response class to create
+     * @param array $foundObjects Objects found on previous pages
+     *
+     * @return array
+     */
+    protected function getObjectsFromPaginatedRequest(
+        string $url,
+        string $targetClass,
+        array $foundObjects = []
+    ) : array
     {
-        $url = $nextPage ?: static::API_BASE_URI.'programs/index?format=json&size=100';
-
         $rawResponse = $this->client->get($url);
-        $serializedResponse = $this->serializer->deserialize(
+        $deserializedResponse = $this->serializer->deserialize(
             $rawResponse->getContent(),
-            AllProgramsResponse::class,
+            $targetClass,
             'json'
         );
 
-        $programs = array_merge($programs, $serializedResponse->getPrograms());
+        $foundObjects = array_merge($foundObjects, $deserializedResponse->getEntities());
 
-        if ($serializedResponse->getPagination()->getPage() < $serializedResponse->getPagination()->getTotalPages()) {
-            return $this->doGetAllPrograms($programs, $serializedResponse->getPagination()->getNextPage());
+        if (
+            $deserializedResponse->getPagination()->getPage() < $deserializedResponse->getPagination()->getTotalPages()
+        ) {
+            return $this->getObjectsFromPaginatedRequest(
+                $deserializedResponse->getPagination()->getNextPage(),
+                $targetClass,
+                $foundObjects
+            );
         }
 
-        return $programs;
+        return $foundObjects;
     }
 }

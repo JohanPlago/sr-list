@@ -23,6 +23,17 @@ class AllProgramsResponse extends PaginatedBaseResponse
     private $programs;
 
     /**
+     * Find all programs
+     *
+     * @return Program[]
+     */
+    public function getEntities() : array
+    {
+        return $this->getPrograms();
+    }
+
+
+    /**
      * @return Entities\Program[]
      */
     public function getPrograms() : array
