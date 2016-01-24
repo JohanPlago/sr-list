@@ -1,14 +1,25 @@
 <ul class="list-bare">
-    {% for song in songs %}
+    {% for track in tracks %}
         <li class="o-grid u-pb">
             <div class="o-grid__item u-1/5">
-                image goes here
+                {% if track.album.images|length > 0 %}
+                    <img src="{{ track.album.images[1].url }}" alt="">
+                {% endif %}
             </div>
             <div class="o-grid__item u-4/5">
-                <h3 class="u-m0">{{ song.title }}</h3>
+                <h3 class="u-m0">{{ track.name }}</h3>
                 <ul class="list-bare">
-                    <li><h4 class="u-m0">{{ song.artist }}</h4>
-                    <li>{{ song.startTimeUtc|date('H:i', 'Europe/Stockholm') }}
+                    <li><strong>
+                            {% for artist in track.artists %}
+                            {{ artist.name }}{% if not loop.last %},{% endif %}
+                            {% endfor %}
+                        </strong>
+                        {% if track.album.name %}
+                            - {{ track.album.name }}
+                        {% endif %}
+                    {% if track.spotifyUri %}
+                        <li><a href="spotify:{{ track.spotifyUri }}">Open in Spotify</a>
+                    {% endif %}
                 </ul>
             </div>
         </li>
