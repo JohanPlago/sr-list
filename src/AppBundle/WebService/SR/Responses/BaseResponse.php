@@ -12,7 +12,7 @@ namespace AppBundle\WebService\SR\Responses;
 use AppBundle\WebService\SR\Responses\Properties\Pagination;
 use JMS\Serializer\Annotation\Type;
 
-abstract class PaginatedBaseResponse
+abstract class BaseResponse
 {
     /**
      * @var string
@@ -46,9 +46,9 @@ abstract class PaginatedBaseResponse
     /**
      * @param string $copyright
      *
-     * @return PaginatedBaseResponse
+     * @return BaseResponse
      */
-    public function setCopyright(string $copyright) : PaginatedBaseResponse
+    public function setCopyright(string $copyright) : BaseResponse
     {
         $this->copyright = $copyright;
 
@@ -66,9 +66,9 @@ abstract class PaginatedBaseResponse
     /**
      * @param Pagination $pagination
      *
-     * @return PaginatedBaseResponse
+     * @return BaseResponse
      */
-    public function setPagination(Pagination $pagination) : PaginatedBaseResponse
+    public function setPagination(Pagination $pagination) : BaseResponse
     {
         $this->pagination = $pagination;
 

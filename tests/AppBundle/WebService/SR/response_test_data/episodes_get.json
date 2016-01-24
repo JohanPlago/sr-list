@@ -1,0 +1,44 @@
+{
+  "copyright": "Copyright Sveriges Radio 2016. All rights reserved.",
+  "episode": {
+    "id": 660612,
+    "title": "Instislutet",
+    "description": "I Institutets slutshow säger redaktionen tack och adjö, det blir besök från Nyckelpigeklubben, lyssnarminnen och så handlar det om projektet att knocka en asteroid ur sin bana. ",
+    "url": "http://sverigesradio.se/sida/avsnitt/660612?programid=4131",
+    "program": {
+      "id": 4131,
+      "name": "Institutet"
+    },
+    "publishdateutc": "\/Date(1450175400000)\/",
+    "imageurl": "http://sverigesradio.se/sida/images/4131/3620540_1200_675.jpg?preset=api-default-square",
+    "imageurltemplate": "http://sverigesradio.se/sida/images/4131/3620540_1200_675.jpg",
+    "listenpodfile": {
+      "title": "Instislutet",
+      "description": "",
+      "filesizeinbytes": 39264673,
+      "program": {
+        "id": 4131,
+        "name": "Institutet"
+      },
+      "duration": 2453,
+      "publishdateutc": "\/Date(1450175400000)\/",
+      "id": 5553189,
+      "url": "http://sverigesradio.se/topsy/ljudfil/5553189.mp3",
+      "statkey": "/app/avsnitt/p3[k(164)]/institutet[p(4131)]/institutet[e(660612)]"
+    },
+    "downloadpodfile": {
+      "title": "Instislutet",
+      "description": "",
+      "filesizeinbytes": 39264673,
+      "program": {
+        "id": 4131,
+        "name": "Institutet"
+      },
+      "duration": 2453,
+      "publishdateutc": "\/Date(1450175400000)\/",
+      "id": 5553189,
+      "url": "http://sverigesradio.se/topsy/ljudfil/5553189.mp3",
+      "statkey": "/app/avsnitt/p3[k(164)]/institutet[p(4131)]/institutet[e(660612)]"
+    }
+  }
+}

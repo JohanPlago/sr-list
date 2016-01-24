@@ -10,7 +10,7 @@ use JMS\Serializer\Annotation as Jms;
  * @copyright Johan Palmfjord, 2016
  * @version 1.0
  */
-class EpisodesResponse extends PaginatedBaseResponse
+class EpisodesResponse extends BaseResponse
 {
     /**
      * @var Episode[]

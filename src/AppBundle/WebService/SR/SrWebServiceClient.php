@@ -2,11 +2,12 @@
 
 namespace AppBundle\WebService\SR;
 
+use AppBundle\WebService\SR\Responses\EpisodeResponse;
 use AppBundle\WebService\SR\Responses\EpisodesResponse;
 use AppBundle\WebService\SR\Responses\AllProgramsResponse;
 use AppBundle\WebService\SR\Responses\Entities\Episode;
 use AppBundle\WebService\SR\Responses\Entities\Program;
-use AppBundle\WebService\SR\Responses\PaginatedBaseResponse;
+use AppBundle\WebService\SR\Responses\BaseResponse;
 use Ci\RestClientBundle\Services\RestClient;
 use JMS\Serializer\Serializer;
 
@@ -86,6 +87,23 @@ class SrWebServiceClient
     }
 
     /**
+     * Get data about a single episode
+     *
+     * @param int $id
+     *
+     * @return Episode
+     */
+    public function getEpisode(int $id) : Episode
+    {
+        $url = static::API_BASE_URI.'episodes/get?id='.urlencode($id).'&format=json';
+
+        $response = $this->doGetObjectsRequest($url, EpisodeResponse::class);
+
+        // We know the single episode response object will be returned so we also know "getEpisode()" be on it for sure
+        return $response->getEpisode();
+    }
+
+    /**
      * Fetches objects/entities (i.e. programs, episodes) from the paginated index
      *
      * @param string $url The url to fetch the objects from
@@ -121,9 +139,9 @@ class SrWebServiceClient
      * @param string $url
      * @param string $targetClass
      *
-     * @return PaginatedBaseResponse
+     * @return BaseResponse
      */
-    protected function doGetObjectsRequest(string $url, string $targetClass) : PaginatedBaseResponse
+    protected function doGetObjectsRequest(string $url, string $targetClass) : BaseResponse
     {
         $rawResponse = $this->client->get($url);
         $deserializedResponse = $this->serializer->deserialize(

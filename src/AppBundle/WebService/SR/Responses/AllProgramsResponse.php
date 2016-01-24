@@ -13,7 +13,7 @@ use AppBundle\WebService\SR\Responses\Entities\Program;
 
 use JMS\Serializer\Annotation as Jms;
 
-class AllProgramsResponse extends PaginatedBaseResponse
+class AllProgramsResponse extends BaseResponse
 {
     /**
      * @var Program[]

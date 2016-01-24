@@ -180,6 +180,9 @@ class SrWebServiceClientTest extends \PHPUnit_Framework_TestCase
 
     // FYI no need to test the get all episodes for pagination - it uses the same thing ass get all programs
 
+    /**
+     * Tests the search method
+     */
     public function testSearchEpisode()
     {
         $sampleData = [];
@@ -202,6 +205,25 @@ class SrWebServiceClientTest extends \PHPUnit_Framework_TestCase
         $sampleEpisode = json_decode($this->getEpisodesSearchTestData(), true)['episodes'][0];
 
         $this->doAssertionsForEpisode($sampleEpisode, $episodes->getEntities()[0]);
+    }
+
+    /**
+     * Test get single episode method
+     */
+    public function testGetEpisode()
+    {
+        $client = new SrWebServiceClient($this->restClient, $this->serializer);
+        $episodeTestData = $this->getGetEpisodeTestData();
+
+        $this->restClient->expects($this->once())
+            ->method('get')
+            ->with($this->stringContains('episodes/get?id'))
+            ->willReturn(new Response($episodeTestData));
+
+        $episode = $client->getEpisode(42);
+        $sampleEpisode = json_decode($episodeTestData, true)['episode'];
+
+        $this->doAssertionsForEpisode($sampleEpisode, $episode);
     }
 
     /**
@@ -334,5 +356,10 @@ class SrWebServiceClientTest extends \PHPUnit_Framework_TestCase
     protected function getEpisodesSearchTestData() : string
     {
         return file_get_contents(__DIR__.'/response_test_data/episodes_search.json');
+    }
+
+    protected function getGetEpisodeTestData() : string
+    {
+        return file_get_contents(__DIR__.'/response_test_data/episodes_get.json');
     }
 }
