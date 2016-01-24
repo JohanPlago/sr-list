@@ -61,7 +61,7 @@ class Episode
      * @var string
      *
      * @Jms\Type("string")
-     * @Jms\SerializedName("imageurl")
+     * @Jms\SerializedName("imageurltemplate")
      */
     private $imageUrl;
 
@@ -207,11 +207,17 @@ class Episode
     }
 
     /**
+     * @param string $size Size of the image to be fetched
+     *
      * @return string
      */
-    public function getImageUrl() : string
+    public function getImageUrl(string $size = null) : string
     {
-        return $this->imageUrl;
+        if ($size) {
+            return $this->imageUrl . '?preset='.$size;
+        } else {
+            return $this->imageUrl;
+        }
     }
 
     /**

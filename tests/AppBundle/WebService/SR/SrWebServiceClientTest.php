@@ -251,7 +251,7 @@ class SrWebServiceClientTest extends \PHPUnit_Framework_TestCase
             'Publish date should be set'
         );
         $this->assertEquals(
-            $sampleEpisode['imageurl'],
+            $sampleEpisode['imageurltemplate'],
             $episode->getImageUrl(),
             'Image url should be set'
         );
