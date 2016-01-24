@@ -26,5 +26,9 @@
         </div>
     </div>
 
-    {% include ":episode_single:tracklist.html.twig" %}
+    {% if songs|length > 0 %}
+        {% include ":episode_single:tracklist.html.twig" %}
+    {% else %}
+        <h2>No tracks listed for this episode :(</h2>
+    {% endif %}
 {% endblock %}
