@@ -2,6 +2,7 @@
 
 namespace AppBundle\WebService\SR;
 
+use AppBundle\WebService\SR\Exceptions\InvalidEpisodeException;
 use AppBundle\WebService\SR\Responses\EpisodeResponse;
 use AppBundle\WebService\SR\Responses\EpisodesResponse;
 use AppBundle\WebService\SR\Responses\AllProgramsResponse;
@@ -92,15 +93,26 @@ class SrWebServiceClient
      * @param int $id
      *
      * @return Episode
+     *
+     * @throws InvalidEpisodeException if no episode was found
      */
     public function getEpisode(int $id) : Episode
     {
         $url = static::API_BASE_URI.'episodes/get?id='.urlencode($id).'&format=json';
 
-        $response = $this->doGetObjectsRequest($url, EpisodeResponse::class);
+        $rawResponse = $this->client->get($url);
 
-        // We know the single episode response object will be returned so we also know "getEpisode()" be on it for sure
-        return $response->getEpisode();
+        if ($rawResponse->getStatusCode() === 404) {
+            throw InvalidEpisodeException::notFound($id);
+        }
+
+        $deserializedResponse = $this->serializer->deserialize(
+            $rawResponse->getContent(),
+            EpisodeResponse::class,
+            'json'
+        );
+
+        return $deserializedResponse->getEpisode();
     }
 
     /**
@@ -144,6 +156,7 @@ class SrWebServiceClient
     protected function doGetObjectsRequest(string $url, string $targetClass) : BaseResponse
     {
         $rawResponse = $this->client->get($url);
+
         $deserializedResponse = $this->serializer->deserialize(
             $rawResponse->getContent(),
             $targetClass,

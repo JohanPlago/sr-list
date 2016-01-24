@@ -53,4 +53,12 @@ class EpisodeController extends Controller
             'result' => $result,
         ]);
     }
+
+    /**
+     * @Route("/{id}", name="single_episode", requirements={id: "\d+"})
+     */
+    public function singleEpisodeAction()
+    {
+
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace Tests\AppBundle\WebService\SR;
 
+use AppBundle\WebService\SR\Exceptions\InvalidEpisodeException;
 use AppBundle\WebService\SR\Responses\Entities\Episode;
 use AppBundle\WebService\SR\Responses\Entities\Program;
 use AppBundle\WebService\SR\SrWebServiceClient;
@@ -224,6 +225,20 @@ class SrWebServiceClientTest extends \PHPUnit_Framework_TestCase
         $sampleEpisode = json_decode($episodeTestData, true)['episode'];
 
         $this->doAssertionsForEpisode($sampleEpisode, $episode);
+    }
+
+    /**
+     * @expectedException \AppBundle\WebService\SR\Exceptions\InvalidEpisodeException
+     */
+    public function testGetEpisodeNotFound()
+    {
+        $client = new SrWebServiceClient($this->restClient, $this->serializer);
+
+        $this->restClient->expects($this->once())
+            ->method('get')
+            ->willReturn(new Response('', 404));
+
+        $client->getEpisode(42);
     }
 
     /**
