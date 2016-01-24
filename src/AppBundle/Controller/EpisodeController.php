@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\WebService\SR\Exceptions\InvalidEpisodeException;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -55,10 +56,23 @@ class EpisodeController extends Controller
     }
 
     /**
-     * @Route("/{id}", name="single_episode", requirements={id: "\d+"})
+     * @Route("/{id}", name="single_episode", requirements={"id": "\d+"})
      */
-    public function singleEpisodeAction()
+    public function singleEpisodeAction(int $id)
     {
+        try {
+            $episode = $this->get('sr_client')->getEpisode($id);
+        } catch (InvalidEpisodeException $e) {
+            return $this->render(
+                ':episode_single:not_found.html.twig',
+                ['id' => $id],
+                new Response('', 404)
+                );
+        }
 
+        return $this->render(":episode_single:single.html.twig", [
+                'episode' => $episode,
+            ]
+        );
     }
 }

@@ -1,0 +1,26 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ episode.title }} av {{ episode.program.name }}{% endblock %}
+
+{% block content %}
+    <div class="o-grid">
+        <div class="o-grid__item u-1/4">
+            <img src="{{ episode.imageUrl('api-default-square') }}" alt="{{ episode.title|e('html_attr') }}">
+        </div>
+        <div class="o-grid__item u-3/4">
+            <h1 class="u-m0">
+                {{ episode.title }}
+                <span class="txt-color-primary txt-md">av {{ episode.program.name }}</span>
+            </h1>
+
+            <div class="txt-italic txt-color-light-grey">
+                Published {{ episode.publishDateUtc|date("Y-m-d H:i", "Europe/Stockholm") }}
+                / <a href="{{ episode.webUrl }}" class="bare-link" target="_blank">{{ episode.webUrl }}</a>
+            </div>
+
+            <p>{{ episode.description }}</p>
+
+            Duration: {{ episode.downloadPodFile.duration|date("H:i:s") }} (without music)
+        </div>
+    </div>
+{% endblock %}
