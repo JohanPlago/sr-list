@@ -4,6 +4,9 @@
 
 {% block content %}
     <h1>Searched for: {{ searchTerm }}</h1>
+
+    {% include ":search:episodes_form.html.twig" %}
+
     Page: {{ result.pagination.page }} of {{ result.pagination.totalPages }}
 
     {% include ":search:pagination.html.twig" %}

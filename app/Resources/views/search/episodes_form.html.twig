@@ -1,0 +1,6 @@
+<form action="{{ path("episodes_search") }}">
+    <input type="search" name="q"
+           {% if searchTerm is defined %} value="{{ searchTerm|e('html_attr') }}"{% endif %}
+           placeholder="Program or episode name">
+    <button type="submit">Search</button>
+</form>
