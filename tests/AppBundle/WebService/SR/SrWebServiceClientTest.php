@@ -173,10 +173,45 @@ class SrWebServiceClientTest extends \PHPUnit_Framework_TestCase
 
         /** @var Episode[] $episodes (just for the autocompletion :) ) */
         $episodes = $client->getAllEpisodesByProgramId($programId);
-        // Sample data should only contain 1 episode
-        $episode = $episodes[0];
         $sampleEpisode = json_decode($sampleData, true)['episodes'][0];
 
+        $this->doAssertionsForEpisode($sampleEpisode, $episodes[0]);
+    }
+
+    // FYI no need to test the get all episodes for pagination - it uses the same thing ass get all programs
+
+    public function testSearchEpisode()
+    {
+        $sampleData = [];
+        $client = new SrWebServiceClient($this->restClient, $this->serializer);
+        $searchTerm = "intstitutet";
+
+        $this->restClient->expects($this->once())
+            ->method('get')
+            ->with(
+                $this->logicalAnd(
+                    $this->stringContains('episodes/search'),
+                    $this->stringContains('query='.$searchTerm),
+                    $this->stringContains('page=1'),
+                    $this->stringContains('format=json')
+                )
+            )
+            ->willReturn(new Response($this->getEpisodesSearchTestData()));
+
+        $episodes = $client->searchForEpisode($searchTerm);
+        $sampleEpisode = json_decode($this->getEpisodesSearchTestData(), true)['episodes'][0];
+
+        $this->doAssertionsForEpisode($sampleEpisode, $episodes->getEntities()[0]);
+    }
+
+    /**
+     * Check all the data in an episode
+     *
+     * @param array $sampleEpisode
+     * @param Episode $episode
+     */
+    protected function doAssertionsForEpisode(array $sampleEpisode, Episode $episode)
+    {
         $this->assertEquals(
             $sampleEpisode['id'],
             $episode->getSrId(),
@@ -220,9 +255,41 @@ class SrWebServiceClientTest extends \PHPUnit_Framework_TestCase
             $episode->getImageUrl(),
             'Image url should be set'
         );
-    }
 
-    // FYI no need to test the get all episodes for pagination - it uses the same thing ass get all programs
+        $this->assertEquals(
+            $sampleEpisode['downloadpodfile']['title'],
+            $episode->getDownloadPodFile()->getTitle(),
+            "Download pod file title should be set"
+        );
+        $this->assertEquals(
+            $sampleEpisode['downloadpodfile']['description'],
+            $episode->getDownloadPodFile()->getDescription(),
+            "Download pod file description should be set"
+        );
+        $this->assertEquals(
+            $sampleEpisode['downloadpodfile']['filesizeinbytes'],
+            $episode->getDownloadPodFile()->getFileSizeInBytes(),
+            "Download pod file size should be set"
+        );
+        $this->assertEquals(
+            $sampleEpisode['downloadpodfile']['duration'],
+            $episode->getDownloadPodFile()->getDuration(),
+            "Download pod file duration should be set"
+        );
+        $this->assertEquals(
+            $sampleEpisode['downloadpodfile']['url'],
+            $episode->getDownloadPodFile()->getUrl(),
+            "Download pod file url should be set"
+        );
+
+        // Date looks weird af when it comes from the api
+        $podPublishTimestampMilliseconds = ((int)$episode->getDownloadPodFile()->getPublishDateUtc()->format('U')) * 1000;
+        $this->assertEquals(
+            $sampleEpisode['downloadpodfile']['publishdateutc'],
+            "/Date($podPublishTimestampMilliseconds)/",
+            "Download pod file date should be set"
+        );
+    }
 
     /**
      * Get sample response with 1 program to check the data in
@@ -257,5 +324,15 @@ class SrWebServiceClientTest extends \PHPUnit_Framework_TestCase
     protected function getGetAllEpisodesSingleTestData() : string
     {
         return file_get_contents(__DIR__.'/response_test_data/episodes_index-single.json');
+    }
+
+    /**
+     * Get a sample search response
+     *
+     * @return string
+     */
+    protected function getEpisodesSearchTestData() : string
+    {
+        return file_get_contents(__DIR__.'/response_test_data/episodes_search.json');
     }
 }

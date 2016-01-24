@@ -2,10 +2,11 @@
 
 namespace AppBundle\WebService\SR;
 
-use AppBundle\WebService\SR\Responses\AllEpisodesResponse;
+use AppBundle\WebService\SR\Responses\EpisodesResponse;
 use AppBundle\WebService\SR\Responses\AllProgramsResponse;
 use AppBundle\WebService\SR\Responses\Entities\Episode;
 use AppBundle\WebService\SR\Responses\Entities\Program;
+use AppBundle\WebService\SR\Responses\PaginatedBaseResponse;
 use Ci\RestClientBundle\Services\RestClient;
 use JMS\Serializer\Serializer;
 
@@ -59,9 +60,29 @@ class SrWebServiceClient
     {
         $url = static::API_BASE_URI.'episodes/index?programid='.urlencode($programId).'&format=json&size=100';
 
-        $episodes = $this->getObjectsFromPaginatedRequest($url, AllEpisodesResponse::class);
+        $episodes = $this->getObjectsFromPaginatedRequest($url, EpisodesResponse::class);
 
         return $episodes;
+    }
+
+    /**
+     * Search for episodes (with manual paging!)
+     *
+     * @param string $searchTerm
+     * @param int $page
+     * @param int $size
+     *
+     * @return EpisodesResponse
+     */
+    public function searchForEpisode(string $searchTerm, int $page = 1, int $size = 30) : EpisodesResponse
+    {
+        $url = static::API_BASE_URI.'episodes/search?query='.rawurlencode($searchTerm)
+               .'&page='.$page.'&size='.$size
+               .'&format=json';
+
+        $response =  $this->doGetObjectsRequest($url, EpisodesResponse::class);
+
+        return $response;
     }
 
     /**
@@ -79,6 +100,31 @@ class SrWebServiceClient
         array $foundObjects = []
     ) : array
     {
+        $response = $this->doGetObjectsRequest($url, $targetClass);
+
+        $foundObjects = array_merge($foundObjects, $response->getEntities());
+
+        if (
+            $response->getPagination()->getPage() < $response->getPagination()->getTotalPages()
+        ) {
+            return $this->getObjectsFromPaginatedRequest(
+                $response->getPagination()->getNextPage(),
+                $targetClass,
+                $foundObjects
+            );
+        }
+
+        return $foundObjects;
+    }
+
+    /**
+     * @param string $url
+     * @param string $targetClass
+     *
+     * @return PaginatedBaseResponse
+     */
+    protected function doGetObjectsRequest(string $url, string $targetClass) : PaginatedBaseResponse
+    {
         $rawResponse = $this->client->get($url);
         $deserializedResponse = $this->serializer->deserialize(
             $rawResponse->getContent(),
@@ -86,18 +132,6 @@ class SrWebServiceClient
             'json'
         );
 
-        $foundObjects = array_merge($foundObjects, $deserializedResponse->getEntities());
-
-        if (
-            $deserializedResponse->getPagination()->getPage() < $deserializedResponse->getPagination()->getTotalPages()
-        ) {
-            return $this->getObjectsFromPaginatedRequest(
-                $deserializedResponse->getPagination()->getNextPage(),
-                $targetClass,
-                $foundObjects
-            );
-        }
-
-        return $foundObjects;
+        return $deserializedResponse;
     }
 }

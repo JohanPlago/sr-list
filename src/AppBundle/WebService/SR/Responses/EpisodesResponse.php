@@ -10,7 +10,7 @@ use JMS\Serializer\Annotation as Jms;
  * @copyright Johan Palmfjord, 2016
  * @version 1.0
  */
-class AllEpisodesResponse extends PaginatedBaseResponse
+class EpisodesResponse extends PaginatedBaseResponse
 {
     /**
      * @var Episode[]
@@ -40,9 +40,9 @@ class AllEpisodesResponse extends PaginatedBaseResponse
     /**
      * @param Episode[] $episodes
      *
-     * @return AllEpisodesResponse
+     * @return EpisodesResponse
      */
-    public function setEpisodes(array $episodes) : AllEpisodesResponse
+    public function setEpisodes(array $episodes) : EpisodesResponse
     {
         $this->episodes = $episodes;
 

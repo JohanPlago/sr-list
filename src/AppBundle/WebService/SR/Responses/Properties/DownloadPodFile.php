@@ -1,16 +1,18 @@
 <?php
-
-namespace AppBundle\WebService\SR\Responses\Entities;
-
-use AppBundle\WebService\SR\Responses\Properties\DownloadPodFile;
-use JMS\Serializer\Annotation as Jms;
-
 /**
  * @author Johan Palmfjord <johan.plago@gmail.com>
  * @copyright Johan Palmfjord, 2016
  * @version 1.0
  */
-class Episode
+
+namespace AppBundle\WebService\SR\Responses\Properties;
+
+use JMS\Serializer\Annotation as Jms;
+
+/**
+ * Class DownloadPodFile
+ */
+class DownloadPodFile
 {
     /**
      * @var integer
@@ -38,16 +40,15 @@ class Episode
      * @var string
      *
      * @Jms\Type("string")
-     * @Jms\SerializedName("url")
      */
-    private $webUrl;
+    private $url;
 
     /**
-     * @var Program
+     * @var integer
      *
-     * @Jms\Type("AppBundle\WebService\SR\Responses\Entities\Program")
+     * @Jms\Type("integer")
      */
-    private $program;
+    private $duration;
 
     /**
      * @var \DateTime
@@ -58,20 +59,12 @@ class Episode
     private $publishDateUtc;
 
     /**
-     * @var string
+     * @var integer
      *
-     * @Jms\Type("string")
-     * @Jms\SerializedName("imageurl")
+     * @Jms\Type("integer")
+     * @Jms\SerializedName("filesizeinbytes")
      */
-    private $imageUrl;
-
-    /**
-     * @var DownloadPodFile
-     *
-     * @Jms\Type("AppBundle\WebService\SR\Responses\Properties\DownloadPodFile")
-     * @Jms\SerializedName("downloadpodfile")
-     */
-    private $downloadPodFile;
+    private $fileSizeInBytes;
 
     /**
      * The date is sent in milliseconds so we need to fix that...
@@ -97,9 +90,9 @@ class Episode
     /**
      * @param int $srId
      *
-     * @return Episode
+     * @return DownloadPodFile
      */
-    public function setSrId(int $srId) : Episode
+    public function setSrId(int $srId) : DownloadPodFile
     {
         $this->srId = $srId;
 
@@ -117,9 +110,9 @@ class Episode
     /**
      * @param string $title
      *
-     * @return Episode
+     * @return DownloadPodFile
      */
-    public function setTitle(string $title) : Episode
+    public function setTitle(string $title) : DownloadPodFile
     {
         $this->title = $title;
 
@@ -137,9 +130,9 @@ class Episode
     /**
      * @param string $description
      *
-     * @return Episode
+     * @return DownloadPodFile
      */
-    public function setDescription(string $description) : Episode
+    public function setDescription(string $description) : DownloadPodFile
     {
         $this->description = $description;
 
@@ -149,45 +142,45 @@ class Episode
     /**
      * @return string
      */
-    public function getWebUrl() : string
+    public function getUrl() : string
     {
-        return $this->webUrl;
+        return $this->url;
     }
 
     /**
-     * @param string $webUrl
+     * @param string $url
      *
-     * @return Episode
+     * @return DownloadPodFile
      */
-    public function setWebUrl(string $webUrl) : Episode
+    public function setUrl(string $url) : DownloadPodFile
     {
-        $this->webUrl = $webUrl;
+        $this->url = $url;
 
         return $this;
     }
 
     /**
-     * @return Program
+     * @return int
      */
-    public function getProgram() : Program
+    public function getDuration() : int
     {
-        return $this->program;
+        return $this->duration;
     }
 
     /**
-     * @param Program $program
+     * @param int $duration
      *
-     * @return Episode
+     * @return DownloadPodFile
      */
-    public function setProgram(Program $program) : Episode
+    public function setDuration(int $duration) : DownloadPodFile
     {
-        $this->program = $program;
+        $this->duration = $duration;
 
         return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getPublishDateUtc() : \DateTime
     {
@@ -195,11 +188,11 @@ class Episode
     }
 
     /**
-     * @param \DateTime $publishDateUtc
+     * @param DateTime $publishDateUtc
      *
-     * @return Episode
+     * @return DownloadPodFile
      */
-    public function setPublishDateUtc(\DateTime $publishDateUtc) : Episode
+    public function setPublishDateUtc(\DateTime $publishDateUtc) : DownloadPodFile
     {
         $this->publishDateUtc = $publishDateUtc;
 
@@ -207,41 +200,21 @@ class Episode
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function getImageUrl() : string
+    public function getFileSizeInBytes() : int
     {
-        return $this->imageUrl;
+        return $this->fileSizeInBytes;
     }
 
     /**
-     * @param string $imageUrl
+     * @param int $fileSizeInBytes
      *
-     * @return Episode
-     */
-    public function setImageUrl(string $imageUrl) : Episode
-    {
-        $this->imageUrl = $imageUrl;
-
-        return $this;
-    }
-
-    /**
      * @return DownloadPodFile
      */
-    public function getDownloadPodFile() : DownloadPodFile
+    public function setFileSizeInBytes(int $fileSizeInBytes) : DownloadPodFile
     {
-        return $this->downloadPodFile;
-    }
-
-    /**
-     * @param DownloadPodFile $downloadPodFile
-     *
-     * @return Episode
-     */
-    public function setDownloadPodFile(DownloadPodFile $downloadPodFile) : Episode
-    {
-        $this->downloadPodFile = $downloadPodFile;
+        $this->fileSizeInBytes = $fileSizeInBytes;
 
         return $this;
     }
