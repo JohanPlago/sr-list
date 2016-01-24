@@ -1,0 +1,1091 @@
+{
+  "tracks" : {
+    "href" : "https://api.spotify.com/v1/search?query=abba&offset=0&limit=20&type=track",
+    "items" : [ {
+      "album" : {
+        "album_type" : "album",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/1nVUhbpkGwlTKxSIF6UJyM"
+        },
+        "href" : "https://api.spotify.com/v1/albums/1nVUhbpkGwlTKxSIF6UJyM",
+        "id" : "1nVUhbpkGwlTKxSIF6UJyM",
+        "images" : [ {
+          "height" : 573,
+          "url" : "https://i.scdn.co/image/e572d9826f2f90396243eeb8724e25a0ca390206",
+          "width" : 640
+        }, {
+          "height" : 269,
+          "url" : "https://i.scdn.co/image/1b22feb7ab9009eb9ebf33e1edbea31822d04d12",
+          "width" : 300
+        }, {
+          "height" : 57,
+          "url" : "https://i.scdn.co/image/e31d3165495ac1a7a1c71b31dff5e2451bc47a39",
+          "width" : 64
+        } ],
+        "name" : "Super Trouper",
+        "type" : "album",
+        "uri" : "spotify:album:1nVUhbpkGwlTKxSIF6UJyM"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 263800,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD8001060"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/4oUfwAQJZGPufJHHzUNByB"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/4oUfwAQJZGPufJHHzUNByB",
+      "id" : "4oUfwAQJZGPufJHHzUNByB",
+      "name" : "Happy New Year",
+      "popularity" : 65,
+      "preview_url" : "https://p.scdn.co/mp3-preview/a4ed07d9a8486bcad04ae3420c4dc0f82bbf68b4",
+      "track_number" : 6,
+      "type" : "track",
+      "uri" : "spotify:track:4oUfwAQJZGPufJHHzUNByB"
+    }, {
+      "album" : {
+        "album_type" : "compilation",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/2rp5riHULWgrXPsDtsp1ir"
+        },
+        "href" : "https://api.spotify.com/v1/albums/2rp5riHULWgrXPsDtsp1ir",
+        "id" : "2rp5riHULWgrXPsDtsp1ir",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/89e75c6302ed5cbae423dfe132ff296fcc39afb4",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/6e8784afdc555de6665d36de35fd0fda834b2c1a",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/d3074e5b9ba83bc3b410adda4a27159efdf019db",
+          "width" : 64
+        } ],
+        "name" : "ABBA Gold",
+        "type" : "album",
+        "uri" : "spotify:album:2rp5riHULWgrXPsDtsp1ir"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 210960,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD7501010"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/6UIwfaQh9RP2anZ5OMQPfX"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/6UIwfaQh9RP2anZ5OMQPfX",
+      "id" : "6UIwfaQh9RP2anZ5OMQPfX",
+      "name" : "Mamma Mia",
+      "popularity" : 64,
+      "preview_url" : "https://p.scdn.co/mp3-preview/04477003746b5ee9fa33523e24d8d2708e11233b",
+      "track_number" : 4,
+      "type" : "track",
+      "uri" : "spotify:track:6UIwfaQh9RP2anZ5OMQPfX"
+    }, {
+      "album" : {
+        "album_type" : "compilation",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/2rp5riHULWgrXPsDtsp1ir"
+        },
+        "href" : "https://api.spotify.com/v1/albums/2rp5riHULWgrXPsDtsp1ir",
+        "id" : "2rp5riHULWgrXPsDtsp1ir",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/89e75c6302ed5cbae423dfe132ff296fcc39afb4",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/6e8784afdc555de6665d36de35fd0fda834b2c1a",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/d3074e5b9ba83bc3b410adda4a27159efdf019db",
+          "width" : 64
+        } ],
+        "name" : "ABBA Gold",
+        "type" : "album",
+        "uri" : "spotify:album:2rp5riHULWgrXPsDtsp1ir"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 231093,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD7601020"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/2rgqPSIRAfaO2MGo9smdSX"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/2rgqPSIRAfaO2MGo9smdSX",
+      "id" : "2rgqPSIRAfaO2MGo9smdSX",
+      "name" : "Dancing Queen",
+      "popularity" : 62,
+      "preview_url" : "https://p.scdn.co/mp3-preview/294461c7157ad496be350656fbd9b7349338be17",
+      "track_number" : 1,
+      "type" : "track",
+      "uri" : "spotify:track:2rgqPSIRAfaO2MGo9smdSX"
+    }, {
+      "album" : {
+        "album_type" : "compilation",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/2rp5riHULWgrXPsDtsp1ir"
+        },
+        "href" : "https://api.spotify.com/v1/albums/2rp5riHULWgrXPsDtsp1ir",
+        "id" : "2rp5riHULWgrXPsDtsp1ir",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/89e75c6302ed5cbae423dfe132ff296fcc39afb4",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/6e8784afdc555de6665d36de35fd0fda834b2c1a",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/d3074e5b9ba83bc3b410adda4a27159efdf019db",
+          "width" : 64
+        } ],
+        "name" : "ABBA Gold",
+        "type" : "album",
+        "uri" : "spotify:album:2rp5riHULWgrXPsDtsp1ir"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 193560,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD7901060"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/0Ny4yM9JFFuCUZ497ouxKe"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/0Ny4yM9JFFuCUZ497ouxKe",
+      "id" : "0Ny4yM9JFFuCUZ497ouxKe",
+      "name" : "Does Your Mother Know",
+      "popularity" : 55,
+      "preview_url" : "https://p.scdn.co/mp3-preview/f5a466c11bc45f09f1fab24444c45356c0bde2ff",
+      "track_number" : 15,
+      "type" : "track",
+      "uri" : "spotify:track:0Ny4yM9JFFuCUZ497ouxKe"
+    }, {
+      "album" : {
+        "album_type" : "compilation",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/2rp5riHULWgrXPsDtsp1ir"
+        },
+        "href" : "https://api.spotify.com/v1/albums/2rp5riHULWgrXPsDtsp1ir",
+        "id" : "2rp5riHULWgrXPsDtsp1ir",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/89e75c6302ed5cbae423dfe132ff296fcc39afb4",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/6e8784afdc555de6665d36de35fd0fda834b2c1a",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/d3074e5b9ba83bc3b410adda4a27159efdf019db",
+          "width" : 64
+        } ],
+        "name" : "ABBA Gold",
+        "type" : "album",
+        "uri" : "spotify:album:2rp5riHULWgrXPsDtsp1ir"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 295280,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD8001020"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/1g1RLXmuXu7HpMA6gmiYve"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/1g1RLXmuXu7HpMA6gmiYve",
+      "id" : "1g1RLXmuXu7HpMA6gmiYve",
+      "name" : "The Winner Takes It All",
+      "popularity" : 57,
+      "preview_url" : "https://p.scdn.co/mp3-preview/54f3f979ea18d250eedb71e432676a9e76afb562",
+      "track_number" : 8,
+      "type" : "track",
+      "uri" : "spotify:track:1g1RLXmuXu7HpMA6gmiYve"
+    }, {
+      "album" : {
+        "album_type" : "album",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/79ZX48114T8NH36MnOTtl7"
+        },
+        "href" : "https://api.spotify.com/v1/albums/79ZX48114T8NH36MnOTtl7",
+        "id" : "79ZX48114T8NH36MnOTtl7",
+        "images" : [ {
+          "height" : 575,
+          "url" : "https://i.scdn.co/image/e476ed4023827e55692e1b676c79cc6e9cd0600b",
+          "width" : 640
+        }, {
+          "height" : 270,
+          "url" : "https://i.scdn.co/image/59f4f383515d3d13560ac3b7e18580aee27cad7f",
+          "width" : 300
+        }, {
+          "height" : 58,
+          "url" : "https://i.scdn.co/image/c77cc67a983a67a1f6eff3f404a81246d73a4810",
+          "width" : 64
+        } ],
+        "name" : "Arrival",
+        "type" : "album",
+        "uri" : "spotify:album:79ZX48114T8NH36MnOTtl7"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 230400,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD7601020"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/01iyCAUm8EvOFqVWYJ3dVX"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/01iyCAUm8EvOFqVWYJ3dVX",
+      "id" : "01iyCAUm8EvOFqVWYJ3dVX",
+      "name" : "Dancing Queen",
+      "popularity" : 69,
+      "preview_url" : "https://p.scdn.co/mp3-preview/538979bb920f417d2fda44a2b5bd82422e56d633",
+      "track_number" : 2,
+      "type" : "track",
+      "uri" : "spotify:track:01iyCAUm8EvOFqVWYJ3dVX"
+    }, {
+      "album" : {
+        "album_type" : "compilation",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/2rp5riHULWgrXPsDtsp1ir"
+        },
+        "href" : "https://api.spotify.com/v1/albums/2rp5riHULWgrXPsDtsp1ir",
+        "id" : "2rp5riHULWgrXPsDtsp1ir",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/89e75c6302ed5cbae423dfe132ff296fcc39afb4",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/6e8784afdc555de6665d36de35fd0fda834b2c1a",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/d3074e5b9ba83bc3b410adda4a27159efdf019db",
+          "width" : 64
+        } ],
+        "name" : "ABBA Gold",
+        "type" : "album",
+        "uri" : "spotify:album:2rp5riHULWgrXPsDtsp1ir"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 272506,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD8001090"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/1yWItbINcAC0IFssISgvvg"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/1yWItbINcAC0IFssISgvvg",
+      "id" : "1yWItbINcAC0IFssISgvvg",
+      "name" : "Lay All Your Love On Me",
+      "popularity" : 55,
+      "preview_url" : "https://p.scdn.co/mp3-preview/bfc5b9235dbc4d8e385b8a6ff4e6f613bbc85f82",
+      "track_number" : 5,
+      "type" : "track",
+      "uri" : "spotify:track:1yWItbINcAC0IFssISgvvg"
+    }, {
+      "album" : {
+        "album_type" : "album",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/5zT1JLIj9E57p3e1rFm9Uq"
+        },
+        "href" : "https://api.spotify.com/v1/albums/5zT1JLIj9E57p3e1rFm9Uq",
+        "id" : "5zT1JLIj9E57p3e1rFm9Uq",
+        "images" : [ {
+          "height" : 574,
+          "url" : "https://i.scdn.co/image/282069761f534f862346dcdad0506c11e41ebe71",
+          "width" : 640
+        }, {
+          "height" : 269,
+          "url" : "https://i.scdn.co/image/de8047cc6c6007b3197cfafd9624f3af3000e3e6",
+          "width" : 300
+        }, {
+          "height" : 57,
+          "url" : "https://i.scdn.co/image/ba736c1d88cadc797714b850136ae19bc43c1947",
+          "width" : 64
+        } ],
+        "name" : "Abba",
+        "type" : "album",
+        "uri" : "spotify:album:5zT1JLIj9E57p3e1rFm9Uq"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 215266,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD7501010"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/5ztQHTm1YQqcTkQmgDEU4n"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/5ztQHTm1YQqcTkQmgDEU4n",
+      "id" : "5ztQHTm1YQqcTkQmgDEU4n",
+      "name" : "Mamma Mia",
+      "popularity" : 56,
+      "preview_url" : "https://p.scdn.co/mp3-preview/1fdd6d17a6d543b0d03bcecb3c450fcd7a81bd9a",
+      "track_number" : 1,
+      "type" : "track",
+      "uri" : "spotify:track:5ztQHTm1YQqcTkQmgDEU4n"
+    }, {
+      "album" : {
+        "album_type" : "compilation",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/2rp5riHULWgrXPsDtsp1ir"
+        },
+        "href" : "https://api.spotify.com/v1/albums/2rp5riHULWgrXPsDtsp1ir",
+        "id" : "2rp5riHULWgrXPsDtsp1ir",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/89e75c6302ed5cbae423dfe132ff296fcc39afb4",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/6e8784afdc555de6665d36de35fd0fda834b2c1a",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/d3074e5b9ba83bc3b410adda4a27159efdf019db",
+          "width" : 64
+        } ],
+        "name" : "ABBA Gold",
+        "type" : "album",
+        "uri" : "spotify:album:2rp5riHULWgrXPsDtsp1ir"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 289160,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD7901120"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/2TjNlK2tNBxF8C8RIaK9Gb"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/2TjNlK2tNBxF8C8RIaK9Gb",
+      "id" : "2TjNlK2tNBxF8C8RIaK9Gb",
+      "name" : "Gimme! Gimme! Gimme! (A Man After Midnight)",
+      "popularity" : 57,
+      "preview_url" : "https://p.scdn.co/mp3-preview/d29146933b56aed481f10daeb89e8360821296ee",
+      "track_number" : 14,
+      "type" : "track",
+      "uri" : "spotify:track:2TjNlK2tNBxF8C8RIaK9Gb"
+    }, {
+      "album" : {
+        "album_type" : "compilation",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/2rp5riHULWgrXPsDtsp1ir"
+        },
+        "href" : "https://api.spotify.com/v1/albums/2rp5riHULWgrXPsDtsp1ir",
+        "id" : "2rp5riHULWgrXPsDtsp1ir",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/89e75c6302ed5cbae423dfe132ff296fcc39afb4",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/6e8784afdc555de6665d36de35fd0fda834b2c1a",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/d3074e5b9ba83bc3b410adda4a27159efdf019db",
+          "width" : 64
+        } ],
+        "name" : "ABBA Gold",
+        "type" : "album",
+        "uri" : "spotify:album:2rp5riHULWgrXPsDtsp1ir"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 234573,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD8102060"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/1yq0DuhjvpnaOHnwZi5tu6"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/1yq0DuhjvpnaOHnwZi5tu6",
+      "id" : "1yq0DuhjvpnaOHnwZi5tu6",
+      "name" : "One Of Us",
+      "popularity" : 52,
+      "preview_url" : "https://p.scdn.co/mp3-preview/05f03c4259b5ec0b9246b873643d409c907bb91f",
+      "track_number" : 16,
+      "type" : "track",
+      "uri" : "spotify:track:1yq0DuhjvpnaOHnwZi5tu6"
+    }, {
+      "album" : {
+        "album_type" : "compilation",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/2rp5riHULWgrXPsDtsp1ir"
+        },
+        "href" : "https://api.spotify.com/v1/albums/2rp5riHULWgrXPsDtsp1ir",
+        "id" : "2rp5riHULWgrXPsDtsp1ir",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/89e75c6302ed5cbae423dfe132ff296fcc39afb4",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/6e8784afdc555de6665d36de35fd0fda834b2c1a",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/d3074e5b9ba83bc3b410adda4a27159efdf019db",
+          "width" : 64
+        } ],
+        "name" : "ABBA Gold",
+        "type" : "album",
+        "uri" : "spotify:album:2rp5riHULWgrXPsDtsp1ir"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 165800,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD7415010"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/1CsuK5dlnWAkWhffeteqH3"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/1CsuK5dlnWAkWhffeteqH3",
+      "id" : "1CsuK5dlnWAkWhffeteqH3",
+      "name" : "Waterloo",
+      "popularity" : 56,
+      "preview_url" : "https://p.scdn.co/mp3-preview/15a6b5a147100dee285f570925f09c191b6b57f1",
+      "track_number" : 19,
+      "type" : "track",
+      "uri" : "spotify:track:1CsuK5dlnWAkWhffeteqH3"
+    }, {
+      "album" : {
+        "album_type" : "compilation",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/2rp5riHULWgrXPsDtsp1ir"
+        },
+        "href" : "https://api.spotify.com/v1/albums/2rp5riHULWgrXPsDtsp1ir",
+        "id" : "2rp5riHULWgrXPsDtsp1ir",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/89e75c6302ed5cbae423dfe132ff296fcc39afb4",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/6e8784afdc555de6665d36de35fd0fda834b2c1a",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/d3074e5b9ba83bc3b410adda4a27159efdf019db",
+          "width" : 64
+        } ],
+        "name" : "ABBA Gold",
+        "type" : "album",
+        "uri" : "spotify:album:2rp5riHULWgrXPsDtsp1ir"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 246813,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD7702020"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/1jgmL1VK9U7XyKIOfVBbqJ"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/1jgmL1VK9U7XyKIOfVBbqJ",
+      "id" : "1jgmL1VK9U7XyKIOfVBbqJ",
+      "name" : "Take A Chance On Me",
+      "popularity" : 55,
+      "preview_url" : "https://p.scdn.co/mp3-preview/c831d8427e7559e6043a2a35c45065f46aa3cb35",
+      "track_number" : 3,
+      "type" : "track",
+      "uri" : "spotify:track:1jgmL1VK9U7XyKIOfVBbqJ"
+    }, {
+      "album" : {
+        "album_type" : "compilation",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/2rp5riHULWgrXPsDtsp1ir"
+        },
+        "href" : "https://api.spotify.com/v1/albums/2rp5riHULWgrXPsDtsp1ir",
+        "id" : "2rp5riHULWgrXPsDtsp1ir",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/89e75c6302ed5cbae423dfe132ff296fcc39afb4",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/6e8784afdc555de6665d36de35fd0fda834b2c1a",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/d3074e5b9ba83bc3b410adda4a27159efdf019db",
+          "width" : 64
+        } ],
+        "name" : "ABBA Gold",
+        "type" : "album",
+        "uri" : "spotify:album:2rp5riHULWgrXPsDtsp1ir"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 325906,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD7901080"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/0cIaQLi7Nzg1bl9OUpRmN3"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/0cIaQLi7Nzg1bl9OUpRmN3",
+      "id" : "0cIaQLi7Nzg1bl9OUpRmN3",
+      "name" : "Chiquitita",
+      "popularity" : 55,
+      "preview_url" : "https://p.scdn.co/mp3-preview/a1be9b0d0c4c44189090eb70b6bdccc79343a24d",
+      "track_number" : 11,
+      "type" : "track",
+      "uri" : "spotify:track:0cIaQLi7Nzg1bl9OUpRmN3"
+    }, {
+      "album" : {
+        "album_type" : "album",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/366R23DbfxqjZo6AUBrQjv"
+        },
+        "href" : "https://api.spotify.com/v1/albums/366R23DbfxqjZo6AUBrQjv",
+        "id" : "366R23DbfxqjZo6AUBrQjv",
+        "images" : [ {
+          "height" : 575,
+          "url" : "https://i.scdn.co/image/625e3e5ae6a8b5b431a61ca1851bcb5d9ca10fd2",
+          "width" : 640
+        }, {
+          "height" : 270,
+          "url" : "https://i.scdn.co/image/9a3773ddbfbcc7f7ac7383657a86801643a48b0a",
+          "width" : 300
+        }, {
+          "height" : 58,
+          "url" : "https://i.scdn.co/image/d16c2d94e7a130ec943057859187911a9cade1ab",
+          "width" : 64
+        } ],
+        "name" : "Voulez-Vous",
+        "type" : "album",
+        "uri" : "spotify:album:366R23DbfxqjZo6AUBrQjv"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 194720,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD7901060"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/2VsVI2mOkZ5s0eEA9MQLN4"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/2VsVI2mOkZ5s0eEA9MQLN4",
+      "id" : "2VsVI2mOkZ5s0eEA9MQLN4",
+      "name" : "Does Your Mother Know",
+      "popularity" : 54,
+      "preview_url" : "https://p.scdn.co/mp3-preview/f8ab481ae7d2d8a654b56b250d34a5f4f955ee02",
+      "track_number" : 6,
+      "type" : "track",
+      "uri" : "spotify:track:2VsVI2mOkZ5s0eEA9MQLN4"
+    }, {
+      "album" : {
+        "album_type" : "compilation",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/2rp5riHULWgrXPsDtsp1ir"
+        },
+        "href" : "https://api.spotify.com/v1/albums/2rp5riHULWgrXPsDtsp1ir",
+        "id" : "2rp5riHULWgrXPsDtsp1ir",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/89e75c6302ed5cbae423dfe132ff296fcc39afb4",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/6e8784afdc555de6665d36de35fd0fda834b2c1a",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/d3074e5b9ba83bc3b410adda4a27159efdf019db",
+          "width" : 64
+        } ],
+        "name" : "ABBA Gold",
+        "type" : "album",
+        "uri" : "spotify:album:2rp5riHULWgrXPsDtsp1ir"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 241813,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD7601050"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/6lKHJ5df6jPEZjSntVw6zP"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/6lKHJ5df6jPEZjSntVw6zP",
+      "id" : "6lKHJ5df6jPEZjSntVw6zP",
+      "name" : "Knowing Me, Knowing You",
+      "popularity" : 53,
+      "preview_url" : "https://p.scdn.co/mp3-preview/f305a66c77253155d1bd52b4fd6d4f17f595aad2",
+      "track_number" : 2,
+      "type" : "track",
+      "uri" : "spotify:track:6lKHJ5df6jPEZjSntVw6zP"
+    }, {
+      "album" : {
+        "album_type" : "album",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/1nVUhbpkGwlTKxSIF6UJyM"
+        },
+        "href" : "https://api.spotify.com/v1/albums/1nVUhbpkGwlTKxSIF6UJyM",
+        "id" : "1nVUhbpkGwlTKxSIF6UJyM",
+        "images" : [ {
+          "height" : 573,
+          "url" : "https://i.scdn.co/image/e572d9826f2f90396243eeb8724e25a0ca390206",
+          "width" : 640
+        }, {
+          "height" : 269,
+          "url" : "https://i.scdn.co/image/1b22feb7ab9009eb9ebf33e1edbea31822d04d12",
+          "width" : 300
+        }, {
+          "height" : 57,
+          "url" : "https://i.scdn.co/image/e31d3165495ac1a7a1c71b31dff5e2451bc47a39",
+          "width" : 64
+        } ],
+        "name" : "Super Trouper",
+        "type" : "album",
+        "uri" : "spotify:album:1nVUhbpkGwlTKxSIF6UJyM"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 294720,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD8001020"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/5kBZR12AntJUTo9UeAsKqP"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/5kBZR12AntJUTo9UeAsKqP",
+      "id" : "5kBZR12AntJUTo9UeAsKqP",
+      "name" : "The Winner Takes It All",
+      "popularity" : 60,
+      "preview_url" : "https://p.scdn.co/mp3-preview/754f266f0a0173b5358ec8d9a1711f2da2041ac4",
+      "track_number" : 2,
+      "type" : "track",
+      "uri" : "spotify:track:5kBZR12AntJUTo9UeAsKqP"
+    }, {
+      "album" : {
+        "album_type" : "album",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/366R23DbfxqjZo6AUBrQjv"
+        },
+        "href" : "https://api.spotify.com/v1/albums/366R23DbfxqjZo6AUBrQjv",
+        "id" : "366R23DbfxqjZo6AUBrQjv",
+        "images" : [ {
+          "height" : 575,
+          "url" : "https://i.scdn.co/image/625e3e5ae6a8b5b431a61ca1851bcb5d9ca10fd2",
+          "width" : 640
+        }, {
+          "height" : 270,
+          "url" : "https://i.scdn.co/image/9a3773ddbfbcc7f7ac7383657a86801643a48b0a",
+          "width" : 300
+        }, {
+          "height" : 58,
+          "url" : "https://i.scdn.co/image/d16c2d94e7a130ec943057859187911a9cade1ab",
+          "width" : 64
+        } ],
+        "name" : "Voulez-Vous",
+        "type" : "album",
+        "uri" : "spotify:album:366R23DbfxqjZo6AUBrQjv"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 294346,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD7901120"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/7r5bS08R8d0jZuDZutVeHQ"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/7r5bS08R8d0jZuDZutVeHQ",
+      "id" : "7r5bS08R8d0jZuDZutVeHQ",
+      "name" : "Gimme! Gimme! Gimme! (A Man After Midnight)",
+      "popularity" : 60,
+      "preview_url" : "https://p.scdn.co/mp3-preview/824a8a5f4a2a97b0c6928c328d0c3a5508fa9ace",
+      "track_number" : 13,
+      "type" : "track",
+      "uri" : "spotify:track:7r5bS08R8d0jZuDZutVeHQ"
+    }, {
+      "album" : {
+        "album_type" : "compilation",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/2rp5riHULWgrXPsDtsp1ir"
+        },
+        "href" : "https://api.spotify.com/v1/albums/2rp5riHULWgrXPsDtsp1ir",
+        "id" : "2rp5riHULWgrXPsDtsp1ir",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/89e75c6302ed5cbae423dfe132ff296fcc39afb4",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/6e8784afdc555de6665d36de35fd0fda834b2c1a",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/d3074e5b9ba83bc3b410adda4a27159efdf019db",
+          "width" : 64
+        } ],
+        "name" : "ABBA Gold",
+        "type" : "album",
+        "uri" : "spotify:album:2rp5riHULWgrXPsDtsp1ir"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 201360,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD7501040"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/1SPnF1gMdkjOI5WVjYgXJ1"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/1SPnF1gMdkjOI5WVjYgXJ1",
+      "id" : "1SPnF1gMdkjOI5WVjYgXJ1",
+      "name" : "S.O.S.",
+      "popularity" : 53,
+      "preview_url" : "https://p.scdn.co/mp3-preview/a46207cea0fa19165b95d4358a365238076045fa",
+      "track_number" : 10,
+      "type" : "track",
+      "uri" : "spotify:track:1SPnF1gMdkjOI5WVjYgXJ1"
+    }, {
+      "album" : {
+        "album_type" : "compilation",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/2rp5riHULWgrXPsDtsp1ir"
+        },
+        "href" : "https://api.spotify.com/v1/albums/2rp5riHULWgrXPsDtsp1ir",
+        "id" : "2rp5riHULWgrXPsDtsp1ir",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/89e75c6302ed5cbae423dfe132ff296fcc39afb4",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/6e8784afdc555de6665d36de35fd0fda834b2c1a",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/d3074e5b9ba83bc3b410adda4a27159efdf019db",
+          "width" : 64
+        } ],
+        "name" : "ABBA Gold",
+        "type" : "album",
+        "uri" : "spotify:album:2rp5riHULWgrXPsDtsp1ir"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 186786,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD7601060"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/2ijsITOdUkUeF8EW7OfYBr"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/2ijsITOdUkUeF8EW7OfYBr",
+      "id" : "2ijsITOdUkUeF8EW7OfYBr",
+      "name" : "Money, Money, Money",
+      "popularity" : 53,
+      "preview_url" : "https://p.scdn.co/mp3-preview/9402b1e2d642b95216cb7be8698ccdf7f13d923c",
+      "track_number" : 9,
+      "type" : "track",
+      "uri" : "spotify:track:2ijsITOdUkUeF8EW7OfYBr"
+    }, {
+      "album" : {
+        "album_type" : "compilation",
+        "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/2rp5riHULWgrXPsDtsp1ir"
+        },
+        "href" : "https://api.spotify.com/v1/albums/2rp5riHULWgrXPsDtsp1ir",
+        "id" : "2rp5riHULWgrXPsDtsp1ir",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/89e75c6302ed5cbae423dfe132ff296fcc39afb4",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/6e8784afdc555de6665d36de35fd0fda834b2c1a",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/d3074e5b9ba83bc3b410adda4a27159efdf019db",
+          "width" : 64
+        } ],
+        "name" : "ABBA Gold",
+        "type" : "album",
+        "uri" : "spotify:album:2rp5riHULWgrXPsDtsp1ir"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0LcJLqbBmaGUft1e9Mm8HV",
+        "id" : "0LcJLqbBmaGUft1e9Mm8HV",
+        "name" : "ABBA",
+        "type" : "artist",
+        "uri" : "spotify:artist:0LcJLqbBmaGUft1e9Mm8HV"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 251786,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "SEAYD8001010"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/18Y7wZOUmZvWakS4VN2YdU"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/18Y7wZOUmZvWakS4VN2YdU",
+      "id" : "18Y7wZOUmZvWakS4VN2YdU",
+      "name" : "Super Trouper",
+      "popularity" : 52,
+      "preview_url" : "https://p.scdn.co/mp3-preview/d30f12a81b0c1a48da0516b3dcb985183d38cb1d",
+      "track_number" : 6,
+      "type" : "track",
+      "uri" : "spotify:track:18Y7wZOUmZvWakS4VN2YdU"
+    } ],
+    "limit" : 20,
+    "next" : "https://api.spotify.com/v1/search?query=abba&offset=20&limit=20&type=track",
+    "offset" : 0,
+    "previous" : null,
+    "total" : 9852
+  }
+}

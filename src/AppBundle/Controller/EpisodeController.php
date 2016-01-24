@@ -76,9 +76,11 @@ class EpisodeController extends Controller
             $songs = [];
         }
 
+        $tracks = $this->get('spotify_track_converter')->getSongsFromSpotify($songs);
+
         return $this->render(":episode_single:single.html.twig", [
                 'episode' => $episode,
-                'songs' => $songs,
+                'tracks' => $tracks,
             ]
         );
     }

@@ -7,7 +7,18 @@ services:
     sr_client:
         class: AppBundle\WebService\SR\SrWebServiceClient
         arguments: ["@ci.restclient", "@jms_serializer"]
+    spotify_track_finder:
+        class: AppBundle\Service\SpotifyTrackFinder
+        arguments: ["@spotify.web_api"]
+    spotify_track_converter:
+        class: AppBundle\Service\SrToSpotifyTrackConverter
+        arguments: ["@spotify_track_finder"]
     twig.extensions.text:
         class: Twig_Extensions_Extension_Text
         tags:
             - { name: twig.extension }
+    spotify.session:
+        class: SpotifyWebAPI\Session
+        arguments: ["%%spotify.client_id%%", "%%spotify.client_secret%%"]
+    spotify.web_api:
+        class: SpotifyWebAPI\SpotifyWebAPI
