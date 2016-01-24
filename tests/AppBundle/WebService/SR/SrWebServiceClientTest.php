@@ -242,6 +242,69 @@ class SrWebServiceClientTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test get playlist by episode id method
+     */
+    public function testGetEpisodePlaylist()
+    {
+        $client = new SrWebServiceClient($this->restClient, $this->serializer);
+        $sampleData = $this->getEpisodePlaylistTestData();
+
+        $this->restClient->expects($this->once())
+            ->method('get')
+            ->with($this->stringContains('playlists/getplaylistbyepisodeid?id='))
+            ->willReturn(new Response($sampleData));
+
+        $songs = $client->getEpisodePlaylist(42);
+        $firstSampleSong = json_decode($sampleData, true)['song'][0];
+
+        // Just check the first item - the others shold be ok too
+        $this->assertEquals(
+            $firstSampleSong['title'],
+            $songs[0]->getTitle(),
+            'Title should be set'
+        );
+        $this->assertEquals(
+            $firstSampleSong['description'],
+            $songs[0]->getDescription(),
+            'Description should be set'
+        );
+        $this->assertEquals(
+            $firstSampleSong['artist'],
+            $songs[0]->getArtist(),
+            'Artist should be set'
+        );
+        $this->assertEquals(
+            $firstSampleSong['composer'],
+            $songs[0]->getComposer(),
+            'Composer should be set'
+        );
+        $this->assertEquals(
+            $firstSampleSong['recordlabel'],
+            $songs[0]->getRecordLabel(),
+            'Record label should be set'
+        );
+        $this->assertEquals(
+            $firstSampleSong['lyricist'],
+            $songs[0]->getLyricist(),
+            'Lyricist should be set'
+        );
+    }
+
+    /**
+     * @expectedException \AppBundle\WebService\SR\Exceptions\InvalidEpisodeException
+     */
+    public function testGetEpisodePlaylistEpisodeNotFound()
+    {
+        $client = new SrWebServiceClient($this->restClient, $this->serializer);
+
+        $this->restClient->expects($this->once())
+                         ->method('get')
+                         ->willReturn(new Response('', 404));
+
+        $client->getEpisodePlaylist(42);
+    }
+
+    /**
      * Check all the data in an episode
      *
      * @param array $sampleEpisode
@@ -376,5 +439,15 @@ class SrWebServiceClientTest extends \PHPUnit_Framework_TestCase
     protected function getGetEpisodeTestData() : string
     {
         return file_get_contents(__DIR__.'/response_test_data/episodes_get.json');
+    }
+
+    /**
+     * Get sample test response when getting episode playlist
+     *
+     * @return string
+     */
+    protected function getEpisodePlaylistTestData() : string
+    {
+        return file_get_contents(__DIR__.'/response_test_data/playlist_getplaylistbyepisodeid.json');
     }
 }

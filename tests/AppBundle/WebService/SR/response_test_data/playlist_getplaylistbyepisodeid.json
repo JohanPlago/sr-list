@@ -1,0 +1,64 @@
+{
+  "copyright": "Copyright Sveriges Radio 2016. All rights reserved.",
+  "song": [
+    {
+      "title": "Classic",
+      "description": "MKTO - Classic",
+      "artist": "MKTO",
+      "composer": "Evan Bogart/Andrew Goldstein/Emanuel Kiriakou/Lindy Robbins",
+      "recordlabel": "SONY BMG",
+      "lyricist": "Mkto",
+      "starttimeutc": "\/Date(1409753476957)\/",
+      "stoptimeutc": "\/Date(1409753649080)\/"
+    },
+    {
+      "title": "Another Love Song",
+      "description": "Looptroop Rockers - Another Love Song",
+      "artist": "Looptroop Rockers",
+      "composer": "M/Magnus Bergkvist/Mattias Lundh Isén",
+      "recordlabel": "DvsG",
+      "lyricist": "Promoe",
+      "starttimeutc": "\/Date(1409754123630)\/",
+      "stoptimeutc": "\/Date(1409754360730)\/"
+    },
+    {
+      "title": "Ghost",
+      "description": "Ella Henderson - Ghost",
+      "artist": "Ella Henderson",
+      "composer": "Ella Henderson/Noel Zancanella/Ryan T",
+      "recordlabel": "Sony Music",
+      "starttimeutc": "\/Date(1409754627093)\/",
+      "stoptimeutc": "\/Date(1409754838140)\/"
+    },
+    {
+      "title": "Holler",
+      "description": "Rebecca & Fiona - Holler",
+      "artist": "Rebecca & Fiona",
+      "composer": "R/R Scheja/F Fitzpatrick/M Krunegård",
+      "recordlabel": "Universal",
+      "lyricist": "Rebecca & Fiona, Rebecca Scheja, Fiona",
+      "starttimeutc": "\/Date(1409755080913)\/",
+      "stoptimeutc": "\/Date(1409755291347)\/"
+    },
+    {
+      "title": "Maps",
+      "description": "Maroon 5 - Maps",
+      "artist": "Maroon 5",
+      "composer": "Ryan Tedder/Adam Levine/Benjamin Levi",
+      "albumname": "V",
+      "recordlabel": "INTERSCOPE",
+      "lyricist": "Adam Levine/PJ Morton",
+      "starttimeutc": "\/Date(1409755642477)\/",
+      "stoptimeutc": "\/Date(1409755830590)\/"
+    },
+    {
+      "title": "Hard Time",
+      "description": "Seinabo Sey - Hard Time",
+      "artist": "Seinabo Sey",
+      "composer": "Magnus Lidehäll/S Sey/V Pontare",
+      "recordlabel": "Universal",
+      "starttimeutc": "\/Date(1409755897540)\/",
+      "stoptimeutc": "\/Date(1409756101603)\/"
+    }
+  ]
+}

@@ -15,7 +15,7 @@ use JMS\Serializer\Annotation as Jms;
  *
  * Response object when fetching a single episode
  */
-class EpisodeResponse extends BaseResponse
+class EpisodeResponse
 {
     /**
      * @var Episode

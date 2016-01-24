@@ -9,6 +9,7 @@ use AppBundle\WebService\SR\Responses\AllProgramsResponse;
 use AppBundle\WebService\SR\Responses\Entities\Episode;
 use AppBundle\WebService\SR\Responses\Entities\Program;
 use AppBundle\WebService\SR\Responses\BaseResponse;
+use AppBundle\WebService\SR\Responses\PlaylistResponse;
 use Ci\RestClientBundle\Services\RestClient;
 use JMS\Serializer\Serializer;
 
@@ -115,6 +116,32 @@ class SrWebServiceClient
         return $deserializedResponse->getEpisode();
     }
 
+    /**
+     * Fetch playlist/tracklist from the specified episode
+     *
+     * @param int $episodeId
+     *
+     * @return array
+     * @throws InvalidEpisodeException If the episode does not exist
+     */
+    public function getEpisodePlaylist(int $episodeId) : array
+    {
+        $url = static::API_BASE_URI.'playlists/getplaylistbyepisodeid?id='.urlencode($episodeId).'&format=json';
+
+        $rawResponse = $this->client->get($url);
+
+        if ($rawResponse->getStatusCode() === 404) {
+            throw InvalidEpisodeException::notFound($episodeId);
+        }
+
+        $deserializedResponse = $this->serializer->deserialize(
+            $rawResponse->getContent(),
+            PlaylistResponse::class,
+            'json'
+        );
+
+        return $deserializedResponse->getSongs();
+    }
     /**
      * Fetches objects/entities (i.e. programs, episodes) from the paginated index
      *
