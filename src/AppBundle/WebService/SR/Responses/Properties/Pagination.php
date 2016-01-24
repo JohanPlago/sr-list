@@ -58,7 +58,7 @@ class Pagination
      * @Type("string")
      * @SerializedName("nextpage")
      */
-    private $nextPage;
+    private $nextPage = '';
 
     /**
      * @return int

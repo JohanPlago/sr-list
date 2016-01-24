@@ -148,6 +148,11 @@ class Program
      */
     public function getProgramCategory() : ProgramCategory
     {
+        // Add empty pod file if it's not set (might not happen during deserialization)
+        if (is_null($this->programCategory)) {
+            $this->programCategory = new ProgramCategory();
+        }
+
         return $this->programCategory;
     }
 
@@ -248,6 +253,11 @@ class Program
      */
     public function getChannel() : Channel
     {
+        // Add empty pod file if it's not set (might not happen during deserialization)
+        if (is_null($this->channel)) {
+            $this->channel = new Channel();
+        }
+
         return $this->channel;
     }
 

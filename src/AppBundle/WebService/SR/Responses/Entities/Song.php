@@ -55,6 +55,40 @@ class Song
     private $lyricist;
 
     /**
+     * @var \DateTime
+     *
+     * @Jms\Type("DateTime<'\/\D\a\t\e\(U\)\/'>")
+     * @Jms\SerializedName("starttimeutc")
+     */
+    private $startTimeUtc;
+
+    /**
+     * @var \DateTime
+     *
+     * @Jms\Type("DateTime<'\/\D\a\t\e\(U\)\/'>")
+     * @Jms\SerializedName("stoptimeutc")
+     */
+    private $stopTimeUtc;
+
+    /**
+     * The date is sent in milliseconds so we need to fix that...
+     *
+     * @Jms\PostDeserialize
+     */
+    public function dateTimeFromMilliseconds()
+    {
+        if ($this->startTimeUtc instanceof \DateTime) {
+            $originalTimestamp = (int)$this->startTimeUtc->format('U');
+            $this->startTimeUtc = \DateTime::createFromFormat('U', floor($originalTimestamp / 1000));
+        }
+
+        if ($this->stopTimeUtc instanceof \DateTime) {
+            $originalTimestamp = (int)$this->stopTimeUtc->format('U');
+            $this->stopTimeUtc = \DateTime::createFromFormat('U', floor($originalTimestamp / 1000));
+        }
+    }
+
+    /**
      * @return string
      */
     public function getTitle() : string
@@ -170,6 +204,46 @@ class Song
     public function setLyricist(string $lyricist) : Song
     {
         $this->lyricist = $lyricist;
+
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getStartTimeUtc() : \DateTime
+    {
+        return $this->startTimeUtc;
+    }
+
+    /**
+     * @param \DateTime $startTimeUtc
+     *
+     * @return Song
+     */
+    public function setStartTimeUtc(\DateTime $startTimeUtc) : Song
+    {
+        $this->startTimeUtc = $startTimeUtc;
+
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getStopTimeUtc() : \DateTime
+    {
+        return $this->stopTimeUtc;
+    }
+
+    /**
+     * @param \DateTime $stopTimeUtc
+     *
+     * @return Song
+     */
+    public function setStopTimeUtc(\DateTime $stopTimeUtc) : Song
+    {
+        $this->stopTimeUtc = $stopTimeUtc;
 
         return $this;
     }

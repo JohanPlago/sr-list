@@ -16,7 +16,7 @@ class SocialMediaPlatform
      *
      * @Jms\Type("string")
      */
-    private $platform;
+    private $platform = '';
 
     /**
      * @var string
@@ -24,7 +24,7 @@ class SocialMediaPlatform
      * @Jms\Type("string")
      * @Jms\SerializedName("platformurl")
      */
-    private $platformUrl;
+    private $platformUrl = '';
 
     /**
      * @return string

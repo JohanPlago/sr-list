@@ -17,14 +17,14 @@ class Channel
      * @Jms\Type("integer")
      * @Jms\SerializedName("id")
      */
-    private $srId;
+    private $srId = 0;
 
     /**
      * @var string
      *
      * @Jms\Type("string")
      */
-    private $name;
+    private $name = '';
 
     /**
      * @return int

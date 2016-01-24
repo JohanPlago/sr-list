@@ -20,35 +20,35 @@ class DownloadPodFile
      * @Jms\Type("integer")
      * @Jms\SerializedName("id")
      */
-    private $srId;
+    private $srId = 0;
 
     /**
      * @var string
      *
      * @Jms\Type("string")
      */
-    private $title;
+    private $title = '';
 
     /**
      * @var string
      *
      * @Jms\Type("string")
      */
-    private $description;
+    private $description = '';
 
     /**
      * @var string
      *
      * @Jms\Type("string")
      */
-    private $url;
+    private $url = '';
 
     /**
      * @var integer
      *
      * @Jms\Type("integer")
      */
-    private $duration;
+    private $duration = 0;
 
     /**
      * @var \DateTime
@@ -64,7 +64,7 @@ class DownloadPodFile
      * @Jms\Type("integer")
      * @Jms\SerializedName("filesizeinbytes")
      */
-    private $fileSizeInBytes;
+    private $fileSizeInBytes = 0;
 
     /**
      * The date is sent in milliseconds so we need to fix that...

@@ -288,6 +288,10 @@ class SrWebServiceClientTest extends \PHPUnit_Framework_TestCase
             $songs[0]->getLyricist(),
             'Lyricist should be set'
         );
+
+        // Date time acts weird so just check it like this
+        $this->assertInstanceOf(\DateTime::class, $songs[0]->getStartTimeUtc(), 'Start time should be a datetime');
+        $this->assertInstanceOf(\DateTime::class, $songs[0]->getStopTimeUtc(), 'Stop time should be a datetime');
     }
 
     /**

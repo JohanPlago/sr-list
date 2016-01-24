@@ -171,6 +171,11 @@ class Episode
      */
     public function getProgram() : Program
     {
+        // Add empty pod file if it's not set (might not happen during deserialization)
+        if (is_null($this->program)) {
+            $this->program = new Program();
+        }
+
         return $this->program;
     }
 
@@ -237,6 +242,11 @@ class Episode
      */
     public function getDownloadPodFile() : DownloadPodFile
     {
+        // Add empty pod file if it's not set (might not happen during deserialization)
+        if (is_null($this->downloadPodFile)) {
+            $this->downloadPodFile = new DownloadPodFile();
+        }
+
         return $this->downloadPodFile;
     }
 

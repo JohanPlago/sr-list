@@ -56,7 +56,7 @@ class EpisodeController extends Controller
     }
 
     /**
-     * @Route("/{id}", name="single_episode", requirements={"id": "\d+"})
+     * @Route("/{id}", name="episode_single", requirements={"id": "\d+"})
      */
     public function singleEpisodeAction(int $id)
     {
@@ -70,8 +70,15 @@ class EpisodeController extends Controller
                 );
         }
 
+        try {
+            $songs = $this->get('sr_client')->getEpisodePlaylist($id);
+        } catch (InvalidEpisodeException $e) {
+            $songs = [];
+        }
+
         return $this->render(":episode_single:single.html.twig", [
                 'episode' => $episode,
+                'songs' => $songs,
             ]
         );
     }

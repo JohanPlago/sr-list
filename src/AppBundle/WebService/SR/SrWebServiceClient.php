@@ -3,6 +3,7 @@
 namespace AppBundle\WebService\SR;
 
 use AppBundle\WebService\SR\Exceptions\InvalidEpisodeException;
+use AppBundle\WebService\SR\Responses\Entities\Song;
 use AppBundle\WebService\SR\Responses\EpisodeResponse;
 use AppBundle\WebService\SR\Responses\EpisodesResponse;
 use AppBundle\WebService\SR\Responses\AllProgramsResponse;
@@ -121,7 +122,7 @@ class SrWebServiceClient
      *
      * @param int $episodeId
      *
-     * @return array
+     * @return Song[]
      * @throws InvalidEpisodeException If the episode does not exist
      */
     public function getEpisodePlaylist(int $episodeId) : array
