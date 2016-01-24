@@ -20,7 +20,11 @@
 
             <p>{{ episode.description }}</p>
 
-            Duration: {{ episode.downloadPodFile.duration|date("H:i:s") }} (without music)
+            {% if episode.downloadPodFile.duration > 0 %}
+                Duration: {{ episode.downloadPodFile.duration|date("H:i:s") }} (without music)
+            {% endif %}
         </div>
     </div>
+
+    {% include ":episode_single:tracklist.html.twig" %}
 {% endblock %}

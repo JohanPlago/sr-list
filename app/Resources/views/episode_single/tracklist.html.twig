@@ -1,0 +1,16 @@
+<ul class="list-bare">
+    {% for song in songs %}
+        <li class="o-grid u-pb">
+            <div class="o-grid__item u-1/5">
+                image goes here
+            </div>
+            <div class="o-grid__item u-4/5">
+                <h3 class="u-m0">{{ song.title }}</h3>
+                <ul class="list-bare">
+                    <li><h4 class="u-m0">{{ song.artist }}</h4>
+                    <li>{{ song.startTimeUtc|date('H:i', 'Europe/Stockholm') }}
+                </ul>
+            </div>
+        </li>
+    {% endfor %}
+</ul>
