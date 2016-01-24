@@ -6,4 +6,8 @@ parameters:
 services:
     sr_client:
         class: AppBundle\WebService\SR\SrWebServiceClient
-        arguments: ["@ci.restclient"]
+        arguments: ["@ci.restclient", "@jms_serializer"]
+    twig.extensions.text:
+        class: Twig_Extensions_Extension_Text
+        tags:
+            - { name: twig.extension }

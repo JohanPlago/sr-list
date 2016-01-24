@@ -1,0 +1,22 @@
+<article class="o-grid u-pb">
+
+    <div class="o-grid__item u-1/6">
+        <a href="#">
+            <img src="{{ episode.getImageUrl('api-default-square') }}"
+                 alt="{{ episode.title|e("html_attr") }}">
+        </a>
+    </div>
+
+    <div class="o-grid__item u-5/6">
+        <h2 class="u-m0">
+            <a href="#" class="bare-link">{{ episode.title }}</a>
+            <span class="txt-color-primary txt-xs">av {{ episode.program.name }}</span>
+        </h2>
+
+        <div class="txt-italic txt-color-light-grey">
+            {{ episode.publishDateUtc.format("Y-m-d H:i") }}
+        </div>
+
+        <p class="u-m0">{{ episode.description|truncate(200) }}</p>
+    </div>
+</article>

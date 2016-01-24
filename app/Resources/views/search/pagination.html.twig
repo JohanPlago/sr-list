@@ -1,0 +1,12 @@
+<div class="pagination">
+    <ol class="list-inline bare-links">
+        {% for i in 1..result.pagination.totalPages %}
+            {% if i == page %}
+                <li class="pagination__item pagination__item--current-page txt-bold">{{ i }}
+            {% else %}
+                <li class="pagination__item">
+                    <a href="{{ path("episodes_search", {q: searchTerm, page: i}) }}">{{ i }}</a>
+            {% endif %}
+        {% endfor %}
+    </ol>
+</div>

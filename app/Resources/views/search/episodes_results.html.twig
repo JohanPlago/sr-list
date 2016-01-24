@@ -1,0 +1,16 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}Search result for {{ searchTerm }}{% endblock %}
+
+{% block content %}
+    <h1>Searched for: {{ searchTerm }}</h1>
+    Page: {{ result.pagination.page }} of {{ result.pagination.totalPages }}
+
+    {% include ":search:pagination.html.twig" %}
+
+    {% for episode in result.episodes %}
+        {% include ":search:episode.html.twig" %}
+    {% endfor %}
+
+    {% include ":search:pagination.html.twig" %}
+{% endblock %}
