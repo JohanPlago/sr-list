@@ -32,19 +32,19 @@ class EpisodeController extends Controller
 
         $result = $this->get('sr_client')->searchForEpisode($searchTerm, $page);
 
+        // Use another template if no results are found
+        if ($result->getPagination()->getTotalHits() === 0) {
+            return $this->render(':search:episodes_result_empty.html.twig', [
+                'searchTerm' => $searchTerm,
+                ]);
+        }
+
         // Redirect to the highest existing page number if current page is more than that
         if ($page > $result->getPagination()->getTotalPages()) {
             return $this->redirectToRoute("episodes_search", [
                 'q' => $searchTerm,
                 'page' => $result->getPagination()->getTotalPages(),
             ]);
-        }
-
-        // Use another template if no results are found
-        if ($result->getPagination()->getTotalHits() === 0) {
-            return $this->render(':search:episodes_result_empty.html.twig', [
-                'searchTerm' => $searchTerm,
-                ]);
         }
 
         return $this->render(':search:episodes_results.html.twig', [
