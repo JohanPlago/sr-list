@@ -1,0 +1,15 @@
+.pagination__item {
+  width: 30px;
+  text-align: center;
+
+  border: 1px solid $color-light-grey;
+  border-right: 0;
+
+  &:last-of-type {
+    border-right: 1px solid $color-light-grey;
+  }
+}
+
+  .pagination__item--current-page {
+    background: #eee;
+  }

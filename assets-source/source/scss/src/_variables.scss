@@ -1,3 +1,21 @@
-.foo {
-  display: none;
-}
+// Fonts
+$txt-xxl:  36px;
+$txt-xl:  30px;
+$txt-lg:  24px;
+$txt-md:  20px;
+$txt-sm:  16px;
+$txt-xs:  14px;
+
+$font-size-base: $txt-xs;
+
+$inuit-heading-size-1:  $txt-xxl;
+$inuit-heading-size-2:  $txt-xl;
+$inuit-heading-size-3:  $txt-lg;
+$inuit-heading-size-4:  $txt-md;
+$inuit-heading-size-5:  $txt-sm;
+$inuit-heading-size-6:  $txt-xs;
+
+// Colors
+$color-light-grey: #7a7a7a;
+$color-primary: #0FC391;
+

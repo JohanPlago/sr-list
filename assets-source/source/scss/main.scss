@@ -1,9 +1,20 @@
+@import "src/variables";
+
 // Third party stuff
-@import "vendor/bootstrap/variables";
-@import "vendor/bootstrap/mixins";
-@import "vendor/bootstrap/scaffolding";
+@import "vendor/inuit/settings.defaults";
+@import "vendor/inuit/tools.functions";
+@import "vendor/inuit/tools.mixins";
+@import "vendor/inuit/generic.normalize";
+@import "vendor/inuit/generic.normalize";
+@import "vendor/inuit/base.page";
+
+@import "vendor/inuit/objects.list-inline";
+
+@import "vendor/inuit/trumps.spacing";
 
 @import "vendor/rbrtsmith-grid/rwsmith-grid";
 
-// My thingies
-@import "src/variables";
+@import "src/reset";
+@import "src/text";
+@import "src/objects";
+@import "src/helpers";
