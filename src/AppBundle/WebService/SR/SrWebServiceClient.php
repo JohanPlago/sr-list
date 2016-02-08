@@ -2,16 +2,19 @@
 
 namespace AppBundle\WebService\SR;
 
-use AppBundle\WebService\SR\Exceptions\InvalidEpisodeException;
-use AppBundle\WebService\SR\Responses\Entities\Song;
-use AppBundle\WebService\SR\Responses\EpisodeResponse;
-use AppBundle\WebService\SR\Responses\EpisodesResponse;
-use AppBundle\WebService\SR\Responses\AllProgramsResponse;
-use AppBundle\WebService\SR\Responses\Entities\Episode;
-use AppBundle\WebService\SR\Responses\Entities\Program;
-use AppBundle\WebService\SR\Responses\BaseResponse;
-use AppBundle\WebService\SR\Responses\PlaylistResponse;
+use AppBundle\WebService\SR\Exception\InvalidEpisodeException;
+use AppBundle\WebService\SR\Responses\{
+    Entity\Song,
+    Entity\Episode,
+    Entity\Program,
+    EpisodeResponse,
+    EpisodesResponse,
+    AllProgramsResponse,
+    BaseResponse,
+    PlaylistResponse
+};
 use Ci\RestClientBundle\Services\RestClient;
+use JMS\Serializer\Exception\RuntimeException;
 use JMS\Serializer\Serializer;
 
 
@@ -180,11 +183,15 @@ class SrWebServiceClient
      * @param string $targetClass
      *
      * @return BaseResponse
+     *
+     * @throws RuntimeException
      */
     protected function doGetObjectsRequest(string $url, string $targetClass) : BaseResponse
     {
+        // TODO Do something on response error codes
         $rawResponse = $this->client->get($url);
 
+        // TODO Catch error on malformatted json
         $deserializedResponse = $this->serializer->deserialize(
             $rawResponse->getContent(),
             $targetClass,

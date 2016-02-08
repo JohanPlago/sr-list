@@ -10,7 +10,7 @@ namespace AppBundle\Service;
 use AppBundle\Entity\Spotify\ArtistSimplified;
 use AppBundle\Entity\Spotify\Track;
 use AppBundle\Exception\NoTracksFoundException;
-use AppBundle\WebService\SR\Responses\Entities\Song;
+use AppBundle\WebService\SR\Responses\Entity\Song;
 
 class SrToSpotifyTrackConverter
 {

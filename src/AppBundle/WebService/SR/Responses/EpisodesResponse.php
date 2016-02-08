@@ -2,7 +2,7 @@
 
 namespace AppBundle\WebService\SR\Responses;
 
-use AppBundle\WebService\SR\Responses\Entities\Episode;
+use AppBundle\WebService\SR\Responses\Entity\Episode;
 use JMS\Serializer\Annotation as Jms;
 
 /**
@@ -15,7 +15,7 @@ class EpisodesResponse extends BaseResponse
     /**
      * @var Episode[]
      *
-     * @Jms\Type("array<AppBundle\WebService\SR\Responses\Entities\Episode>")
+     * @Jms\Type("array<AppBundle\WebService\SR\Responses\Entity\Episode>")
      */
     private $episodes;
 

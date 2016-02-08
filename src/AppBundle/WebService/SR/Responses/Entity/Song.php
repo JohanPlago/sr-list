@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-namespace AppBundle\WebService\SR\Responses\Entities;
+namespace AppBundle\WebService\SR\Responses\Entity;
 
 use JMS\Serializer\Annotation as Jms;
 

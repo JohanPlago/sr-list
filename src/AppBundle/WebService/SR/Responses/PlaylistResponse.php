@@ -7,7 +7,7 @@
 
 namespace AppBundle\WebService\SR\Responses;
 
-use AppBundle\WebService\SR\Responses\Entities\Song;
+use AppBundle\WebService\SR\Responses\Entity\Song;
 use JMS\Serializer\Annotation as Jms;
 
 class PlaylistResponse
@@ -15,7 +15,7 @@ class PlaylistResponse
     /**
      * @var Song[]
      *
-     * @Jms\Type("array<AppBundle\WebService\SR\Responses\Entities\Song>")
+     * @Jms\Type("array<AppBundle\WebService\SR\Responses\Entity\Song>")
      * @Jms\SerializedName("song")
      */
     private $songs;

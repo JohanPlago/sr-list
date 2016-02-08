@@ -2,7 +2,7 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\WebService\SR\Exceptions\InvalidEpisodeException;
+use AppBundle\WebService\SR\Exception\InvalidEpisodeException;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -67,7 +67,7 @@ class EpisodeController extends Controller
                 ':episode_single:not_found.html.twig',
                 ['id' => $id],
                 new Response('', 404)
-                );
+            );
         }
 
         try {
@@ -78,7 +78,9 @@ class EpisodeController extends Controller
 
         $tracks = $this->get('spotify_track_converter')->getSongsFromSpotify($songs);
 
-        return $this->render(":episode_single:single.html.twig", [
+        return $this->render(
+            ":episode_single:single.html.twig",
+            [
                 'episode' => $episode,
                 'tracks' => $tracks,
             ]

@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\WebService\SR\Responses\Entities;
+namespace AppBundle\WebService\SR\Responses\Entity;
 
 use AppBundle\WebService\SR\Responses\Properties\DownloadPodFile;
 use JMS\Serializer\Annotation as Jms;
@@ -45,7 +45,7 @@ class Episode
     /**
      * @var Program
      *
-     * @Jms\Type("AppBundle\WebService\SR\Responses\Entities\Program")
+     * @Jms\Type("AppBundle\WebService\SR\Responses\Entity\Program")
      */
     private $program;
 

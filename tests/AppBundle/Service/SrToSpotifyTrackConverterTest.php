@@ -13,9 +13,11 @@ namespace Tests\AppBundle\Service;
 
 use AppBundle\Entity\Spotify\Track;
 use AppBundle\Exception\NoTracksFoundException;
-use AppBundle\Service\SpotifyTrackFinder;
-use AppBundle\Service\SrToSpotifyTrackConverter;
-use AppBundle\WebService\SR\Responses\Entities\Song;
+use AppBundle\Service\{
+    SpotifyTrackFinder,
+    SrToSpotifyTrackConverter
+};
+use AppBundle\WebService\SR\Responses\Entity\Song;
 
 class SrToSpotifyTrackConverterTest extends \PHPUnit_Framework_TestCase
 {

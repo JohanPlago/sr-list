@@ -9,7 +9,7 @@
 
 namespace AppBundle\WebService\SR\Responses;
 
-use AppBundle\WebService\SR\Responses\Entities\Program;
+use AppBundle\WebService\SR\Responses\Entity\Program;
 
 use JMS\Serializer\Annotation as Jms;
 
@@ -18,7 +18,7 @@ class AllProgramsResponse extends BaseResponse
     /**
      * @var Program[]
      *
-     * @Jms\Type("array<AppBundle\WebService\SR\Responses\Entities\Program>")
+     * @Jms\Type("array<AppBundle\WebService\SR\Responses\Entity\Program>")
      */
     private $programs;
 
@@ -34,7 +34,7 @@ class AllProgramsResponse extends BaseResponse
 
 
     /**
-     * @return Entities\Program[]
+     * @return Entity\Program[]
      */
     public function getPrograms() : array
     {
@@ -42,7 +42,7 @@ class AllProgramsResponse extends BaseResponse
     }
 
     /**
-     * @param Entities\Program[] $programs
+     * @param Entity\Program[] $programs
      *
      * @return AllProgramsResponse
      */

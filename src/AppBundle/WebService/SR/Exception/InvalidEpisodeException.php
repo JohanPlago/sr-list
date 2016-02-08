@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-namespace AppBundle\WebService\SR\Exceptions;
+namespace AppBundle\WebService\SR\Exception;
 
 class InvalidEpisodeException extends \Exception
 {

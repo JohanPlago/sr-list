@@ -7,16 +7,17 @@
 
 namespace Tests\AppBundle\Service;
 
-
-use AppBundle\Entity\Spotify\AlbumSimplified;
-use AppBundle\Entity\Spotify\ArtistSimplified;
-use AppBundle\Entity\Spotify\Track;
+use AppBundle\Entity\Spotify\{
+    AlbumSimplified,
+    ArtistSimplified,
+    Track
+};
 use AppBundle\Service\SpotifyTrackFinder;
 use SpotifyWebAPI\SpotifyWebAPI;
 
 class SpotifyTrackFinderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var SpotifyWebAPI|\PHPUnit_Framework_MockObject_MockObject  */
+    /** @var SpotifyWebAPI|\PHPUnit_Framework_MockObject_MockObject */
     private $apiStub;
     /** @var SpotifyTrackFinder */
     private $trackFinder;
@@ -24,18 +25,18 @@ class SpotifyTrackFinderTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->apiStub = $this->getMockBuilder(SpotifyWebAPI::class)
-            ->disableOriginalConstructor()
-            ->getMock();
+                              ->disableOriginalConstructor()
+                              ->getMock();
         $this->trackFinder = new SpotifyTrackFinder($this->apiStub);
     }
 
     public function testBuildTrack()
     {
         $track = (object)[
-            'id' => 'aoeu',
+            'id'   => 'someid',
             'name' => 'Someone like you',
             'href' => 'http://aoeuaoeu',
-            'uri' => 'htnhnstu',
+            'uri'  => 'testuri:test',
         ];
 
         $result = $this->trackFinder->buildTrack($track, new AlbumSimplified(), [new ArtistSimplified()]);
@@ -68,14 +69,14 @@ class SpotifyTrackFinderTest extends \PHPUnit_Framework_TestCase
     public function testBuildImages()
     {
         $image1 = (object)[
-            'width' => 101,
+            'width'  => 101,
             'height' => 102,
-            'url' => 'http://1...',
+            'url'    => 'http://example.tld/test.png',
         ];
         $image2 = clone $image1;
-        
+
         $result = $this->trackFinder->buildImages([$image1, $image2]);
-        
+
         $this->assertCount(2, $result, 'Number of result should equal number of inputted images');
 
         $this->assertEquals(
@@ -98,9 +99,9 @@ class SpotifyTrackFinderTest extends \PHPUnit_Framework_TestCase
     public function testBuildAlbum()
     {
         $album = (object)[
-            'id' => 'test',
+            'id'   => 'testid',
             'name' => 'I am someone',
-            'uri' => 'nonense',
+            'uri'  => 'nonense:test',
             'href' => 'http://...',
         ];
 
@@ -131,10 +132,10 @@ class SpotifyTrackFinderTest extends \PHPUnit_Framework_TestCase
     public function testBuildArtists()
     {
         $artist1 = (object)[
-            'id' => 'something',
+            'id'   => 'someid',
             'name' => 'Avicii',
             'href' => 'http://...',
-            'uri' => 'nonsense',
+            'uri'  => 'nonsense:test',
         ];
         $artist2 = clone $artist1;
         $result = $this->trackFinder->buildArtists([$artist1, $artist2]);
@@ -184,12 +185,12 @@ class SpotifyTrackFinderTest extends \PHPUnit_Framework_TestCase
     {
         $result = (object)[
             'tracks' => (object)[
-                'items' => []
-            ]
+                'items' => [],
+            ],
         ];
 
         $this->apiStub->method('search')
-            ->willReturn($result);
+                      ->willReturn($result);
 
         $this->trackFinder->findTrack('track that doesnt exist');
     }

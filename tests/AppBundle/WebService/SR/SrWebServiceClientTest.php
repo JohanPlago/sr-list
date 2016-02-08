@@ -2,9 +2,8 @@
 
 namespace Tests\AppBundle\WebService\SR;
 
-use AppBundle\WebService\SR\Exceptions\InvalidEpisodeException;
-use AppBundle\WebService\SR\Responses\Entities\Episode;
-use AppBundle\WebService\SR\Responses\Entities\Program;
+use AppBundle\WebService\SR\Responses\Entity\Episode;
+use AppBundle\WebService\SR\Responses\Entity\Program;
 use AppBundle\WebService\SR\SrWebServiceClient;
 use Ci\RestClientBundle\Services\RestClient;
 use JMS\Serializer\{
@@ -228,7 +227,7 @@ class SrWebServiceClientTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \AppBundle\WebService\SR\Exceptions\InvalidEpisodeException
+     * @expectedException \AppBundle\WebService\SR\Exception\InvalidEpisodeException
      */
     public function testGetEpisodeNotFound()
     {
@@ -295,7 +294,7 @@ class SrWebServiceClientTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \AppBundle\WebService\SR\Exceptions\InvalidEpisodeException
+     * @expectedException \AppBundle\WebService\SR\Exception\InvalidEpisodeException
      */
     public function testGetEpisodePlaylistEpisodeNotFound()
     {

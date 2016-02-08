@@ -7,10 +7,12 @@
 
 namespace AppBundle\Service;
 
-use AppBundle\Entity\Spotify\AlbumSimplified;
-use AppBundle\Entity\Spotify\ArtistSimplified;
-use AppBundle\Entity\Spotify\Image;
-use AppBundle\Entity\Spotify\Track;
+use AppBundle\Entity\Spotify\{
+    AlbumSimplified,
+    ArtistSimplified,
+    Image,
+    Track
+};
 use AppBundle\Exception\NoTracksFoundException;
 use SpotifyWebAPI\SpotifyWebAPI;
 
