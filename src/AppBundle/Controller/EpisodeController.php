@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\WebService\SR\Exception\InvalidEpisodeException;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -70,6 +71,19 @@ class EpisodeController extends Controller
             );
         }
 
+        return $this->render(
+            ":episode_single:single.html.twig",
+            [
+                'episode' => $episode,
+            ]
+        );
+    }
+
+    /**
+     * @Route("/{id}/tracks.json", name="episode_single_tracks", requirements={"id": "\d+"})
+     */
+    public function spotifyTracksAction(int $id)
+    {
         try {
             $songs = $this->get('sr_client')->getEpisodePlaylist($id);
         } catch (InvalidEpisodeException $e) {
@@ -78,12 +92,8 @@ class EpisodeController extends Controller
 
         $tracks = $this->get('spotify_track_converter')->getSongsFromSpotify($songs);
 
-        return $this->render(
-            ":episode_single:single.html.twig",
-            [
-                'episode' => $episode,
-                'tracks' => $tracks,
-            ]
-        );
+        $serializedTracks = $this->get('jms_serializer')->serialize($tracks, 'json');
+
+        return new Response($serializedTracks, 200, ['Content-Type' => 'application/json']);
     }
 }

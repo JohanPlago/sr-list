@@ -1,27 +1,23 @@
-<ul class="list-bare">
-    {% for track in tracks %}
-        <li class="o-grid u-pb">
-            <div class="o-grid__item u-1/5">
-                {% if track.album.images|length > 0 %}
-                    <img src="{{ track.album.images[1].url }}" alt="">
-                {% endif %}
-            </div>
-            <div class="o-grid__item u-4/5">
-                <h3 class="u-m0">{{ track.name }}</h3>
-                <ul class="list-bare">
-                    <li><strong>
-                            {% for artist in track.artists %}
-                            {{ artist.name }}{% if not loop.last %},{% endif %}
-                            {% endfor %}
-                        </strong>
-                        {% if track.album.name %}
-                            - {{ track.album.name }}
-                        {% endif %}
-                    {% if track.spotifyUri %}
-                        <li><a href="spotify:{{ track.spotifyUri }}">Open in Spotify</a>
-                    {% endif %}
-                </ul>
-            </div>
-        </li>
-    {% endfor %}
+<ul class="list-bare" id="jst-tracklist">
 </ul>
+
+<script type="text/template" id="jst-track-template">
+    <li class="o-grid u-pb">
+        <div class="o-grid__item u-1/5">
+            <img src="" alt="" class="jst-album-image">
+        </div>
+        <div class="o-grid__item u-4/5">
+            <h3 class="u-m0 jst-track-name"></h3>
+            <ul class="list-bare">
+                <li><strong class="jst-track-artists"></strong>
+                    <span class="jst-album-name"></span>
+                <li class="jst-spotify-uri">
+                    <a href="" class="jst-spotify-uri-a">Open in Spotify</a>
+            </ul>
+        </div>
+    </li>
+</script>
+
+<script type="text/template" id="jst-tracklist-empty">
+    <li><h2>No tracks listed for this episode :(</h2>
+</script>

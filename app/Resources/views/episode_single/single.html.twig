@@ -26,9 +26,15 @@
         </div>
     </div>
 
-    {% if tracks|length > 0 %}
-        {% include ":episode_single:tracklist.html.twig" %}
-    {% else %}
-        <h2>No tracks listed for this episode :(</h2>
-    {% endif %}
+    {% include ":episode_single:tracklist.html.twig" %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script type="application/javascript">
+        $(function() {
+            srList.loadTracks('{{ path('episode_single_tracks', {id: episode.srId}) }}');
+        });
+    </script>
 {% endblock %}

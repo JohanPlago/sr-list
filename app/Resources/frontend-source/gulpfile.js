@@ -19,7 +19,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function() {
-    return gulp.src('source/js/enabled/**/*.js')
+    return gulp.src(['source/js/app.js', 'source/js/enabled/**/*.js'])
         .pipe(concat('app.js'))
         .pipe(gulp.dest('build/js'))
         .pipe(gulp.dest(webAssetsDir + '/js'))
