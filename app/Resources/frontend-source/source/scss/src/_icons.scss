@@ -10,6 +10,9 @@
   .svg-icon__svg--color-primary {
     fill: $color-primary;
   }
+  .svg-icon__svg--color-very-light-grey {
+    fill: $color-very-light-grey;
+  }
 
   .svg-icon--magnifying-glass {
     width: 27px;
@@ -29,4 +32,19 @@
     width: 12px;
     height: 12px;
     transform: rotate(90deg);
+  }
+
+.svg-icon--scalable {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 100%;
+}
+  .svg-icon--scalable__svg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
   }

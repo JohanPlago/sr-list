@@ -44,6 +44,10 @@
                 } else {
                     $trackListItem.find('.jst-album-name').remove();
                 }
+
+                $trackListItem.find('.jst-album-placeholder').remove();
+            } else {
+                $trackListItem.find('.jst-album-image').remove();
             }
 
             if (typeof track.spotify_uri !== 'undefined') {

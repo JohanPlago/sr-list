@@ -7276,6 +7276,10 @@ img {
   fill: #0FC391;
 }
 
+.svg-icon__svg--color-very-light-grey {
+  fill: #e0e0e0;
+}
+
 .svg-icon--magnifying-glass {
   width: 27px;
   height: 27px;
@@ -7298,6 +7302,22 @@ img {
   height: 12px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+.svg-icon--scalable {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 100%;
+}
+
+.svg-icon--scalable__svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
 }
 
 .bare-link, .bare-links a {
