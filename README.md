@@ -6,9 +6,6 @@ episode and links the results to Spotify tracks.
 
 **So far this project is just started and there's a lot to do :)**
 
-Ps. this is mainly a php project, but as it uses some css libs that generaties more css github classifies it as css.
-A solution to that is very welcome.
-
 ## Requirements
  - Php 7
  - Spotify app credentials
