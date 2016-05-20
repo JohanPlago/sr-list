@@ -1,6 +1,20 @@
+{% set start = page > 5 ? page - 5 : 1 %}
+{% set end = (start+10) > result.pagination.totalPages ? result.pagination.totalPages : start+10 %}
+
 <div class="pagination">
     <ol class="list-inline bare-links">
-        {% for i in 1..result.pagination.totalPages %}
+        {% if (page) > 1 %}
+            <li class="pagination__item">
+                <a href="{{ path("episodes_search", {q: searchTerm, page: page-1}) }}">&lsaquo;</a>
+        {% endif %}
+
+        {% if start > 1 %}
+            <li class="pagination__item">
+                <a href="{{ path("episodes_search", {q: searchTerm, page: 1}) }}">{{ 1 }}</a>
+            <li class="pagination__item">...
+        {% endif %}
+
+        {% for i in start..end %}
             {% if i == page %}
                 <li class="pagination__item pagination__item--current-page txt-bold">{{ i }}
             {% else %}
@@ -8,5 +22,18 @@
                     <a href="{{ path("episodes_search", {q: searchTerm, page: i}) }}">{{ i }}</a>
             {% endif %}
         {% endfor %}
+
+        {% if end < result.pagination.totalPages %}
+            <li class="pagination__item">...
+            <li class="pagination__item">
+                <a href="{{ path("episodes_search", {q: searchTerm, page: result.pagination.totalPages}) }}">
+                    {{ result.pagination.totalPages }}
+                </a>
+        {% endif %}
+
+        {% if (page) < result.pagination.totalPages %}
+            <li class="pagination__item">
+                <a href="{{ path("episodes_search", {q: searchTerm, page: page+1}) }}">&rsaquo;</a>
+        {% endif %}
     </ol>
 </div>
