@@ -19,3 +19,14 @@
     width: 60px;
     height: 60px;
   }
+
+  .svg-icon--caret-left {
+    width: 12px;
+    height: 12px;
+    transform: rotate(270deg);
+  }
+  .svg-icon--caret-right {
+    width: 12px;
+    height: 12px;
+    transform: rotate(90deg);
+  }

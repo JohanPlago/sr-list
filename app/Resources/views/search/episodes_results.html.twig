@@ -3,17 +3,19 @@
 {% block title %}Sökresultat för {{ searchTerm }}{% endblock %}
 
 {% block content %}
+    <em class="float-right">Sida {{ result.pagination.page }} av {{ result.pagination.totalPages }}</em>
+
     <h1>Sökresultat för <em>{{ searchTerm }}</em></h1>
 
-    {% include ":search:episodes_form.html.twig" %}
-
-    Sida {{ result.pagination.page }} av {{ result.pagination.totalPages }}
-
-    {% include ":search:pagination.html.twig" %}
+    <div class="u-pv text-center">
+        {% include ":search:pagination.html.twig" %}
+    </div>
 
     {% for episode in result.episodes %}
         {% include ":search:episode.html.twig" %}
     {% endfor %}
 
-    {% include ":search:pagination.html.twig" %}
+    <div class="u-pv text-center">
+        {% include ":search:pagination.html.twig" %}
+    </div>
 {% endblock %}

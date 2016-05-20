@@ -1,22 +1,28 @@
-{% set start = page > 5 ? page - 5 : 1 %}
-{% set end = (start+10) > result.pagination.totalPages ? result.pagination.totalPages : start+10 %}
+{% set start = page > 2 ? page - 2 : 1 %}
+{% set end = (start+4) > result.pagination.totalPages ? result.pagination.totalPages : start+4 %}
 
 <div class="pagination">
-    <ol class="list-inline bare-links">
+    <ol class="list-inline">
         {% if (page) > 1 %}
             <li class="pagination__item">
-                <a href="{{ path("episodes_search", {q: searchTerm, page: page-1}) }}">&lsaquo;</a>
+                <a href="{{ path("episodes_search", {q: searchTerm, page: page-1}) }}">
+                    <span class="svg-icon">
+                        <svg class="svg-icon__svg svg-icon--caret-left svg-icon__svg--color-primary">
+                            <use xlink:href="{{ asset("assets/img/sprites.svg") }}#caret"/>
+                        </svg>
+                    </span>
+                </a>
         {% endif %}
 
         {% if start > 1 %}
             <li class="pagination__item">
                 <a href="{{ path("episodes_search", {q: searchTerm, page: 1}) }}">{{ 1 }}</a>
-            <li class="pagination__item">...
+            <li class="pagination__item"><span>...</span>
         {% endif %}
 
         {% for i in start..end %}
             {% if i == page %}
-                <li class="pagination__item pagination__item--current-page txt-bold">{{ i }}
+                <li class="pagination__item pagination__item--current-page txt-bold"><span>{{ i }}</span>
             {% else %}
                 <li class="pagination__item">
                     <a href="{{ path("episodes_search", {q: searchTerm, page: i}) }}">{{ i }}</a>
@@ -24,7 +30,7 @@
         {% endfor %}
 
         {% if end < result.pagination.totalPages %}
-            <li class="pagination__item">...
+            <li class="pagination__item"><span>...</span>
             <li class="pagination__item">
                 <a href="{{ path("episodes_search", {q: searchTerm, page: result.pagination.totalPages}) }}">
                     {{ result.pagination.totalPages }}
@@ -33,7 +39,13 @@
 
         {% if (page) < result.pagination.totalPages %}
             <li class="pagination__item">
-                <a href="{{ path("episodes_search", {q: searchTerm, page: page+1}) }}">&rsaquo;</a>
+                <a href="{{ path("episodes_search", {q: searchTerm, page: page+1}) }}">
+                    <span class="svg-icon">
+                        <svg class="svg-icon__svg svg-icon--caret-right svg-icon__svg--color-primary">
+                            <use xlink:href="{{ asset("assets/img/sprites.svg") }}#caret"/>
+                        </svg>
+                    </span>
+                </a>
         {% endif %}
     </ol>
 </div>

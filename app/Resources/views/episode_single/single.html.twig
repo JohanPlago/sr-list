@@ -15,7 +15,8 @@
 
             <div class="txt-italic txt-color-light-grey">
                 Publicerat {{ episode.publishDateUtc|date("Y-m-d H:i", "Europe/Stockholm") }}
-                / <a href="{{ episode.webUrl }}" class="bare-link" target="_blank">{{ episode.webUrl }}</a>
+                <span class="text-black">/</span>
+                <a href="{{ episode.webUrl }}" class="bare-link" target="_blank">{{ episode.webUrl }}</a>
             </div>
 
             <p>{{ episode.description }}</p>

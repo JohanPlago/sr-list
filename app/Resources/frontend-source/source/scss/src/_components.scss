@@ -1,0 +1,30 @@
+.pagination__item {
+  > a, > span {
+    display: inline-block;
+    padding: $inuit-base-spacing-unit--small $inuit-base-spacing-unit;
+    text-align: center;
+
+    color: $color-primary;
+    text-decoration: none;
+  }
+}
+
+.pagination__item:hover,
+.pagination__item:focus {
+  a {
+    font-weight: bold;
+    color: #fff;
+    background: $color-primary;
+  }
+
+  svg {
+    fill: #fff;
+  }
+}
+.pagination__item--current-page {
+  > a, > span {
+    font-weight: bold;
+    color: #fff;
+    background: $color-primary;
+  }
+}
