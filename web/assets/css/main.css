@@ -7212,6 +7212,25 @@ img {
   background: #eee;
 }
 
+.site-content {
+  max-width: 1200px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-header {
+  border-bottom: 1px #7a7a7a solid;
+  margin-bottom: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.site-logo {
+  width: 120px;
+}
+
 .bare-link, .bare-links a {
   color: inherit;
   text-decoration: inherit;
