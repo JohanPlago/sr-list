@@ -1,12 +1,12 @@
 {% extends "::layout.html.twig" %}
 
-{% block title %}Search result for {{ searchTerm }}{% endblock %}
+{% block title %}Sökresultat för {{ searchTerm }}{% endblock %}
 
 {% block content %}
-    <h1>Searched for: {{ searchTerm }}</h1>
+    <h1>Sökresultat för <em>{{ searchTerm }}</em></h1>
 
-    <h2>No results found :(</h2>
+    <h2>Inget hittades :(</h2>
 
-    <h2>Try again:</h2>
+    <h2>Försök igen:</h2>
     {% include ":search:episodes_form.html.twig" %}
 {% endblock %}

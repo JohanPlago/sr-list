@@ -14,14 +14,14 @@
             </h1>
 
             <div class="txt-italic txt-color-light-grey">
-                Published {{ episode.publishDateUtc|date("Y-m-d H:i", "Europe/Stockholm") }}
+                Publicerat {{ episode.publishDateUtc|date("Y-m-d H:i", "Europe/Stockholm") }}
                 / <a href="{{ episode.webUrl }}" class="bare-link" target="_blank">{{ episode.webUrl }}</a>
             </div>
 
             <p>{{ episode.description }}</p>
 
             {% if episode.downloadPodFile.duration > 0 %}
-                Duration: {{ episode.downloadPodFile.duration|date("H:i:s") }} (without music)
+                Längd: {{ episode.downloadPodFile.duration|date("H:i:s") }} (utan musik)
             {% endif %}
         </div>
     </div>

@@ -1,13 +1,13 @@
 {% extends "::layout.html.twig" %}
 
-{% block title %}Search result for {{ searchTerm }}{% endblock %}
+{% block title %}Sökresultat för {{ searchTerm }}{% endblock %}
 
 {% block content %}
-    <h1>Searched for: {{ searchTerm }}</h1>
+    <h1>Sökresultat för <em>{{ searchTerm }}</em></h1>
 
     {% include ":search:episodes_form.html.twig" %}
 
-    Page: {{ result.pagination.page }} of {{ result.pagination.totalPages }}
+    Sida {{ result.pagination.page }} av {{ result.pagination.totalPages }}
 
     {% include ":search:pagination.html.twig" %}
 
