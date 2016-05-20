@@ -6,6 +6,19 @@
   padding-bottom: $inuit-base-spacing-unit;
 }
 
-.site-logo {
-  width: 120px;
+.site-header__logo {
+  max-width: 120px;
+}
+
+.site-header__search {
+  width: 100%;
+
+  font-size: $txt-xl;
+
+  padding: $inuit-base-spacing-unit--small;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
 }

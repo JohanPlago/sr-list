@@ -2,9 +2,14 @@
 
 {% block body %}
     <header class="site-header">
-        <div class="site-content">
-            <div class="site-logo">
-                <img src="{{ asset('assets/img/logo.svg') }}" alt="SR Playlist">
+        <div class="site-content o-grid o-grid--center">
+            <div class="o-grid__item u-1/6@sm-up">
+                <div class="site-header__logo">
+                    <img src="{{ asset('assets/img/logo.svg') }}" alt="SR Playlist">
+                </div>
+            </div>
+            <div class="o-grid__item u-5/6@sm-up">
+                {% include ":search:form.html.twig" %}
             </div>
         </div>
     </header>

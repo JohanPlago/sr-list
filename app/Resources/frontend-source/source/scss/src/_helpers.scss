@@ -10,3 +10,9 @@
 .bare-links a {
   @extend .bare-link;
 }
+
+.bare-button {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
