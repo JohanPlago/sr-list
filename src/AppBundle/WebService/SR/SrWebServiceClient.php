@@ -17,7 +17,6 @@ use Ci\RestClientBundle\Services\RestClient;
 use JMS\Serializer\Exception\RuntimeException;
 use JMS\Serializer\Serializer;
 
-
 /**
  * Class SrWebServiceClient
  */
@@ -27,8 +26,8 @@ class SrWebServiceClient
     protected $client;
     /** @var Serializer */
     protected $serializer;
-
-    const API_BASE_URI = 'http://api.sr.se/api/v2/';
+    /** @var string */
+    protected $apiBaseUri = 'http://api.sr.se/api/v2/';
 
     /**
      * SrWebServiceClient constructor.
@@ -49,7 +48,7 @@ class SrWebServiceClient
      */
     public function getAllPrograms() : array
     {
-        $url = static::API_BASE_URI.'programs/index?format=json&size=100';
+        $url = $this->apiBaseUri.'programs/index?format=json&size=100';
 
         $programs = $this->getObjectsFromPaginatedRequest($url, AllProgramsResponse::class);
 
@@ -65,7 +64,7 @@ class SrWebServiceClient
      */
     public function getAllEpisodesByProgramId(int $programId) : array
     {
-        $url = static::API_BASE_URI.'episodes/index?programid='.urlencode($programId).'&format=json&size=100';
+        $url = $this->apiBaseUri.'episodes/index?programid='.urlencode($programId).'&format=json&size=100';
 
         $episodes = $this->getObjectsFromPaginatedRequest($url, EpisodesResponse::class);
 
@@ -83,7 +82,7 @@ class SrWebServiceClient
      */
     public function searchForEpisode(string $searchTerm, int $page = 1, int $size = 30) : EpisodesResponse
     {
-        $url = static::API_BASE_URI.'episodes/search?query='.rawurlencode($searchTerm)
+        $url = $this->apiBaseUri.'episodes/search?query='.rawurlencode($searchTerm)
                .'&page='.$page.'&size='.$size
                .'&format=json';
 
@@ -103,7 +102,7 @@ class SrWebServiceClient
      */
     public function getEpisode(int $id) : Episode
     {
-        $url = static::API_BASE_URI.'episodes/get?id='.urlencode($id).'&format=json';
+        $url = $this->apiBaseUri.'episodes/get?id='.urlencode($id).'&format=json';
 
         $rawResponse = $this->client->get($url);
 
@@ -130,7 +129,7 @@ class SrWebServiceClient
      */
     public function getEpisodePlaylist(int $episodeId) : array
     {
-        $url = static::API_BASE_URI.'playlists/getplaylistbyepisodeid?id='.urlencode($episodeId).'&format=json';
+        $url = $this->apiBaseUri.'playlists/getplaylistbyepisodeid?id='.urlencode($episodeId).'&format=json';
 
         $rawResponse = $this->client->get($url);
 
@@ -199,5 +198,17 @@ class SrWebServiceClient
         );
 
         return $deserializedResponse;
+    }
+
+    /**
+     * @param string $apiBaseUri
+     *
+     * @return SrWebServiceClient
+     */
+    public function setApiBaseUri(string $apiBaseUri) : SrWebServiceClient
+    {
+        $this->apiBaseUri = $apiBaseUri;
+
+        return $this;
     }
 }
