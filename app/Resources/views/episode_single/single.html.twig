@@ -27,6 +27,9 @@
         </div>
     </div>
 
+    <h2>
+        Låtar i det här avsnittet
+    </h2>
     {% include ":episode_single:tracklist.html.twig" %}
 {% endblock %}
 
@@ -34,7 +37,7 @@
     {{ parent() }}
 
     <script type="application/javascript">
-        $(function() {
+        $(function () {
             srList.loadTracks('{{ path('episode_single_tracks', {id: episode.srId}) }}');
         });
     </script>

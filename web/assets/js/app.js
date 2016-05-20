@@ -28,10 +28,10 @@ window.srList = {};
         }
 
         // Template html
-        var $trackListItem = $($('#jst-track-template').html());
+        var $trackListItemTemplate = $($('#jst-track-template').html());
 
         $.each(tracks, function(i, track) {
-            $trackListItem = $trackListItem.clone();
+            $trackListItem = $trackListItemTemplate.clone();
 
             $trackListItem.find('.jst-track-name').html(track.name);
             $trackListItem.find('.jst-track-artists').html(getArtistNames(track.artists));
