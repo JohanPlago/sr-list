@@ -7234,15 +7234,21 @@ img {
 .site-header__logo {
   max-width: 120px;
 }
+@media (max-width: 768px) {
+  .site-header__logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .site-header__search {
   width: 100%;
   font-size: 30px;
   padding: 12px;
+  border: 1px solid #e0e0e0;
 }
 .site-header__search:focus {
   outline: none;
-  box-shadow: none;
 }
 
 .svg-icon {
