@@ -7258,6 +7258,7 @@ img {
 
 .svg-icon__svg {
   fill: #000;
+  max-width: 100%;
 }
 
 .svg-icon__svg--color-primary {
