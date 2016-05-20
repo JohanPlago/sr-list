@@ -27,10 +27,13 @@
         </div>
     </div>
 
-    <h2>
-        Låtar i det här avsnittet
-    </h2>
-    {% include ":episode_single:tracklist.html.twig" %}
+    <h2 class="txt-xl text-center">Låtar i det här avsnittet</h2>
+
+    <div class="js-tracklist-spinner-container tracklist-spinner-container"></div>
+
+    <div class="o-grid">
+        {% include ":episode_single:tracklist.html.twig" %}
+    </div>
 {% endblock %}
 
 {% block javascripts %}

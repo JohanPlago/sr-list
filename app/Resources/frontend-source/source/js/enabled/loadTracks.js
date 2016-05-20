@@ -4,11 +4,15 @@
      * @param ajaxUrl
      */
     srList.loadTracks = function (ajaxUrl) {
-        srList.loadTracksSpinner = new Spinner(getSpinnerOpts()).spin($('#jst-tracklist')[0]);
+        var $spinnerContainer = $('.js-tracklist-spinner-container');
+        srList.loadTracksSpinner = new Spinner(getSpinnerOpts()).spin($spinnerContainer[0]);
 
         $.getJSON(ajaxUrl)
             .success(populateTrackListContainer)
-            .always(function() {srList.loadTracksSpinner.stop()});
+            .always(function() {
+                srList.loadTracksSpinner.stop();
+                $spinnerContainer.remove();
+            });
     };
 
     /**

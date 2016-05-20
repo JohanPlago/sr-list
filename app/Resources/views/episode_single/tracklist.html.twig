@@ -2,24 +2,26 @@
 </ul>
 
 <script type="text/template" id="jst-track-template">
-    <li class="o-grid u-pb">
-        <div class="o-grid__item u-1/6">
-            <img src="" alt="" class="jst-album-image">
+    <li class="o-grid__item u-1/2@sm-up">
+        <div class="o-grid u-pb">
+            <div class="o-grid__item u-1/6">
+                <img src="" alt="" class="jst-album-image">
 
-            <div class="svg-icon svg-icon--scalable jst-album-placeholder">
-                <svg class="svg-icon__svg svg-icon--scalable__svg svg-icon__svg--color-very-light-grey svg-icon--cd">
-                    <use xlink:href="{{ asset("assets/img/sprites.svg") }}#cd"/>
-                </svg>
+                <div class="svg-icon svg-icon--scalable jst-album-placeholder">
+                    <svg class="svg-icon__svg svg-icon--scalable__svg svg-icon__svg--color-very-light-grey svg-icon--cd">
+                        <use xlink:href="{{ asset("assets/img/sprites.svg") }}#cd"/>
+                    </svg>
+                </div>
             </div>
-        </div>
-        <div class="o-grid__item u-5/6">
-            <h3 class="u-m0 jst-track-name"></h3>
-            <ul class="list-bare">
-                <li><strong class="jst-track-artists"></strong>
-                    <span class="jst-album-name"></span>
-                <li class="jst-spotify-uri">
-                    <a href="" class="jst-spotify-uri-a">Öppna i Spotify</a>
-            </ul>
+            <div class="o-grid__item u-5/6">
+                <h3 class="u-m0 jst-track-name"></h3>
+                <ul class="list-bare">
+                    <li><strong class="jst-track-artists"></strong>
+                        <span class="jst-album-name"></span>
+                    <li class="jst-spotify-uri">
+                        <a href="" class="jst-spotify-uri-a">Öppna i Spotify</a>
+                </ul>
+            </div>
         </div>
     </li>
 </script>
