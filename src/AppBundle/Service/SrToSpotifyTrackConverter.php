@@ -7,8 +7,8 @@
 
 namespace AppBundle\Service;
 
-use AppBundle\Entity\Spotify\ArtistSimplified;
-use AppBundle\Entity\Spotify\Track;
+use AppBundle\WebService\Spotify\ValueObject\ArtistSimplified;
+use AppBundle\WebService\Spotify\ValueObject\Track;
 use AppBundle\Exception\NoTracksFoundException;
 use AppBundle\WebService\SR\Responses\Entity\Song;
 

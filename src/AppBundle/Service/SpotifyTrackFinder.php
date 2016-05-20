@@ -7,7 +7,7 @@
 
 namespace AppBundle\Service;
 
-use AppBundle\Entity\Spotify\{
+use AppBundle\WebService\Spotify\ValueObject\{
     AlbumSimplified,
     ArtistSimplified,
     Image,

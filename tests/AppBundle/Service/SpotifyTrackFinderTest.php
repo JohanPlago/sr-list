@@ -7,7 +7,7 @@
 
 namespace Tests\AppBundle\Service;
 
-use AppBundle\Entity\Spotify\{
+use AppBundle\WebService\Spotify\ValueObject\{
     AlbumSimplified,
     ArtistSimplified,
     Track

@@ -7,7 +7,7 @@
  * @version 1.0
  */
 
-namespace AppBundle\Entity\Spotify;
+namespace AppBundle\WebService\Spotify\ValueObject;
 
 class ArtistSimplified
 {

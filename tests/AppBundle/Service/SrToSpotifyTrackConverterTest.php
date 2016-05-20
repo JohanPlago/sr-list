@@ -11,7 +11,7 @@
 namespace Tests\AppBundle\Service;
 
 
-use AppBundle\Entity\Spotify\Track;
+use AppBundle\WebService\Spotify\ValueObject\Track;
 use AppBundle\Exception\NoTracksFoundException;
 use AppBundle\Service\{
     SpotifyTrackFinder,
