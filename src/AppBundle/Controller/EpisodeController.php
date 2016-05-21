@@ -59,22 +59,31 @@ class EpisodeController extends Controller
     /**
      * @Route("/{id}", name="episode_single", requirements={"id": "\d+"})
      */
-    public function singleEpisodeAction(int $id)
+    public function singleEpisodeAction(int $id, Request $request)
     {
+        $searchTerm = $request->query->get('term');
+        $searchPage = $request->query->get('page');
         try {
             $episode = $this->get('sr_client')->getEpisode($id);
         } catch (InvalidEpisodeException $e) {
             return $this->render(
                 ':episode_single:not_found.html.twig',
-                ['id' => $id],
+                [
+                    'id' => $id,
+                    'searchTerm' => $searchTerm,
+                    'searchPage' => $searchPage,
+                ],
                 new Response('', 404)
             );
         }
+
 
         return $this->render(
             ":episode_single:single.html.twig",
             [
                 'episode' => $episode,
+                'searchTerm' => $searchTerm,
+                'searchPage' => $searchPage,
             ]
         );
     }

@@ -7170,6 +7170,14 @@ img {
   color: #0FC391;
 }
 
+.txt-color-light-grey-f {
+  color: #7a7a7a !important;
+}
+
+.txt-color-primary-f {
+  color: #0FC391 !important;
+}
+
 .txt-italic {
   font-style: italic;
 }
@@ -7230,6 +7238,17 @@ img {
 .tracklist-spinner-container {
   position: relative;
   top: 50px;
+}
+
+.back-to-search {
+  display: inline-block;
+  text-decoration: none;
+}
+.back-to-search:hover, .back-to-search:focus {
+  text-decoration: none;
+}
+.back-to-search:hover .back-to-search__text, .back-to-search:focus .back-to-search__text {
+  border-bottom: 1px solid #0FC391;
 }
 
 .site-content {

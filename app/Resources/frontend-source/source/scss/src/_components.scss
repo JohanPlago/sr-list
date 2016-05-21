@@ -36,3 +36,21 @@
   position: relative;
   top: 50px
 }
+
+
+
+
+
+.back-to-search {
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    .back-to-search__text {
+      border-bottom: 1px solid $color-primary;
+    }
+  }
+}

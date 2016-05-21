@@ -9,7 +9,7 @@
 
     <div class="o-grid__item u-5/6">
         <h2 class="u-m0">
-            <a href="{{ path("episode_single", {id: episode.srId}) }}" class="bare-link">{{ episode.title }}</a>
+            <a href="{{ path("episode_single", {id: episode.srId, term: searchTerm, page: page}) }}" class="bare-link">{{ episode.title }}</a>
             <span class="txt-color-primary txt-xs">av {{ episode.program.name }}</span>
         </h2>
 
