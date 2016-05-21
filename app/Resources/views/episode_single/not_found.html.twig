@@ -3,6 +3,9 @@
 {% block title %}Avsnittet kunde inte hittas{% endblock %}
 
 {% block content %}
+
+    {% include ':episode_single:back.html.twig' %}
+
     <h1 class="text-center txt-color-light-grey">Ett avsnitt med id #{{ id }} finns inte</h1>
 
     <div class="o-grid">

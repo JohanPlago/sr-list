@@ -1,9 +1,11 @@
-<a href="{{ path("episodes_search", {q: searchTerm, page: searchPage}) }}"
-   class="txt-color-primary-f txt-lg back-to-search u-mv">
-        <span class="svg-icon">
-            <svg class="svg-icon__svg svg-icon--caret-left svg-icon__svg--color-primary">
-                <use xlink:href="{{ asset("assets/img/sprites.svg") }}#caret"/>
-            </svg>
-        </span>
-    <span class="back-to-search__text">Sökresultat</span>
-</a>
+{% if searchTerm|length > 0 %}
+    <a href="{{ path("episodes_search", {q: searchTerm, page: searchPage}) }}"
+       class="txt-color-primary-f txt-lg back-to-search u-mv">
+            <span class="svg-icon">
+                <svg class="svg-icon__svg svg-icon--caret-left svg-icon__svg--color-primary">
+                    <use xlink:href="{{ asset("assets/img/sprites.svg") }}#caret"/>
+                </svg>
+            </span>
+        <span class="back-to-search__text">Sökresultat</span>
+    </a>
+{% endif %}
