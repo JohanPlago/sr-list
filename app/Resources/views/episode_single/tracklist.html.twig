@@ -27,5 +27,12 @@
 </script>
 
 <script type="text/template" id="jst-tracklist-empty">
-    <li class="txt-color-light-grey txt-lg text-center">Det finns inga låtar listade för det här avsnittet :(
+    <li class="o-grid">
+        <div class="o-grid__item u-1/1 txt-color-light-grey txt-lg text-center">
+            Det finns inga låtar listade för det här avsnittet :(
+        </div>
+        <div class="o-grid__item u-2/3@sm-up u-push-1/6@sm-up u-pt">
+            {% include ":search:form.html.twig" %}
+        </div>
+    </li>
 </script>
