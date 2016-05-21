@@ -2,6 +2,12 @@
 
 {% block title %}Avsnittet kunde inte hittas{% endblock %}
 
-{% block body %}
-<h1>Ett avsnitt med id #{{ id }} finns inte</h1>
+{% block content %}
+    <h1 class="text-center txt-color-light-grey">Ett avsnitt med id #{{ id }} finns inte</h1>
+
+    <div class="o-grid">
+        <div class="o-grid__item u-2/3@sm-up u-push-1/6@sm-up u-pt">
+            {% include ":search:form.html.twig" %}
+        </div>
+    </div>
 {% endblock %}
