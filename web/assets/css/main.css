@@ -7274,9 +7274,20 @@ a:hover, a:focus {
   text-decoration: none;
   transition: background-color .2s;
 }
+.btn:hover, .btn:focus {
+  text-decoration: none;
+}
 
 .btn--sm {
   padding: 5px 20px;
+}
+
+.btn--md {
+  padding: 12px 24px;
+}
+
+.btn--lg {
+  padding: 24px 50px;
 }
 
 .btn--xl {
@@ -7290,6 +7301,14 @@ a:hover, a:focus {
 
 .btn--full-width {
   width: 100%;
+}
+
+.btn--color-primary {
+  background-color: #0FC391;
+  color: #fff;
+}
+.btn--color-primary:hover, .btn--color-primary:focus {
+  background-color: #11dba3;
 }
 
 .btn--spotify-login {
@@ -7399,6 +7418,11 @@ a:hover, a:focus {
   height: 60px;
 }
 
+.svg-icon--plus {
+  width: 27px;
+  height: 27px;
+}
+
 .svg-icon--caret-left {
   width: 12px;
   height: 12px;
@@ -7494,8 +7518,16 @@ a:hover, a:focus {
   display: inline-block;
 }
 
+.vertical-text-middle {
+  vertical-align: middle;
+}
+
 .inline-block {
   display: inline-block;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .clearfix:after {

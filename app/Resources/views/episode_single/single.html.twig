@@ -27,6 +27,24 @@
             {% if episode.downloadPodFile.duration > 0 %}
                 Längd: {{ episode.downloadPodFile.duration|date("H:i:s") }} (utan musik)
             {% endif %}
+
+            <div class="u-pv">
+                <a href="#" class="btn btn--lg btn--color-primary txt-bold txt-md js-create-playlist-trigger"
+                    data-target-url="{{ path("episode_playlist_create", { id: episode.srId }) }}">
+                    <span class="svg-icon vertical-text-middle">
+                        <svg class="svg-icon__svg svg-icon__svg--color-white svg-icon--plus">
+                            <use xlink:href="{{ asset('assets/img/sprites.svg') }}#plus"/>
+                        </svg>
+                    </span>
+                    <span class="u-pl">
+                        Skapa spellista
+                    </span>
+                </a>
+                <div>
+                    <em class="js-create-playlist-status-error hidden">Fel</em>
+                    <em class="js-create-playlist-status-success hidden">Spellista skapad</em>
+                </div>
+            </div>
         </div>
     </div>
 

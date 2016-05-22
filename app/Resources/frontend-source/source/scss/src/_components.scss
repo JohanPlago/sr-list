@@ -63,10 +63,21 @@
   text-decoration: none;
 
   transition: background-color .2s;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
 
   .btn--sm {
     padding: 5px 20px
+  }
+  .btn--md {
+    padding: $inuit-base-spacing-unit--small $inuit-base-spacing-unit;
+  }
+  .btn--lg {
+    padding: 24px 50px;
   }
   .btn--xl {
     padding: $inuit-base-spacing-unit 100px;
@@ -79,6 +90,16 @@
   .btn--full-width {
     width: 100%;
     @extend .text-center;
+  }
+
+  .btn--color-primary {
+    background-color: $color-primary;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($color-primary, 5%);
+    }
   }
 
   .btn--spotify-login {

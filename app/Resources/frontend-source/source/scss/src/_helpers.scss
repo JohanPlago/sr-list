@@ -42,9 +42,16 @@
   transform: translateY(-50%);
   display: inline-block;
 }
+.vertical-text-middle {
+  vertical-align: middle;
+}
 
 .inline-block {
   display: inline-block;
+}
+
+.hidden {
+  display: none !important;
 }
 
 
