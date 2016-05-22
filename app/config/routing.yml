@@ -1,12 +1,13 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
-hwi_oauth_login:
-    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
-    prefix: /spotify/logga-in
-hwi_oauth_redirect:
-    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
-    prefix: /spotify/connect
+
+hwi_oauth_connect:
+    path: /spotify/logga-in
+    defaults: { _controller: HWIOAuthBundle:Connect:connect }
+hwi_oauth_service_redirect:
+    path: /spotify/connect/{service}
+    defaults: { _controller: HWIOAuthBundle:Connect:redirectToService }
 spotify_login:
     path: /spotify/logga-in/check
 logout:

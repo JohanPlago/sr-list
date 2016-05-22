@@ -33,6 +33,7 @@ security:
                     spotify: /spotify/logga-in/check
                 login_path: /spotify/logga-in
                 failure_path: /spotify/logga-in
+                default_target_path: /spotify/jag
                 oauth_user_provider:
                     service: app.spotify_oauth_user_provider
     access_control:
