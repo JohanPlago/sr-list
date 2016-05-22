@@ -134,9 +134,9 @@ class ValueObjectBuilder
                 $newImage = new Image();
 
                 $newImage
-                    ->setHeight($image->height)
+                    ->setHeight($image->height ?? 0)
                     ->setUrl($image->url)
-                    ->setWidth($image->width);
+                    ->setWidth($image->width ?? 0);
 
                 return $newImage;
             },
