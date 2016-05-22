@@ -1,0 +1,75 @@
+{
+  "href": "https://api.spotify.com/v1/users/wizzler/playlists",
+  "items": [
+    {
+      "collaborative": false,
+      "external_urls": {
+        "spotify": "http://open.spotify.com/user/wizzler/playlists/53Y8wT46QIMz5H4WQ8O22c"
+      },
+      "href": "https://api.spotify.com/v1/users/wizzler/playlists/53Y8wT46QIMz5H4WQ8O22c",
+      "id": "53Y8wT46QIMz5H4WQ8O22c",
+      "images": [
+        {
+          "height": 573,
+          "url": "https://i.scdn.co/image/e572d9826f2f90396243eeb8724e25a0ca390206",
+          "width": 640
+        },
+        {
+          "height": 269,
+          "url": "https://i.scdn.co/image/1b22feb7ab9009eb9ebf33e1edbea31822d04d12",
+          "width": 300
+        }
+      ],
+      "name": "Wizzlers Big Playlist",
+      "owner": {
+        "external_urls": {
+          "spotify": "http://open.spotify.com/user/wizzler"
+        },
+        "href": "https://api.spotify.com/v1/users/wizzler",
+        "id": "wizzler",
+        "type": "user",
+        "uri": "spotify:user:wizzler"
+      },
+      "public": true,
+      "snapshot_id": "bNLWdmhh+HDsbHzhckXeDC0uyKyg4FjPI/KEsKjAE526usnz2LxwgyBoMShVL+z+",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/users/wizzler/playlists/53Y8wT46QIMz5H4WQ8O22c/tracks",
+        "total": 30
+      },
+      "type": "playlist",
+      "uri": "spotify:user:wizzler:playlist:53Y8wT46QIMz5H4WQ8O22c"
+    },
+    {
+      "collaborative": false,
+      "external_urls": {
+        "spotify": "http://open.spotify.com/user/wizzlersmate/playlists/1AVZz0mBuGbCEoNRQdYQju"
+      },
+      "href": "https://api.spotify.com/v1/users/wizzlersmate/playlists/1AVZz0mBuGbCEoNRQdYQju",
+      "id": "1AVZz0mBuGbCEoNRQdYQju",
+      "images": [],
+      "name": "Another Playlist",
+      "owner": {
+        "external_urls": {
+          "spotify": "http://open.spotify.com/user/wizzlersmate"
+        },
+        "href": "https://api.spotify.com/v1/users/wizzlersmate",
+        "id": "wizzlersmate",
+        "type": "user",
+        "uri": "spotify:user:wizzlersmate"
+      },
+      "public": true,
+      "snapshot_id": "Y0qg/IT5T02DKpw4uQKc/9RUrqQJ07hbTKyEeDRPOo9LU0g0icBrIXwVkHfQZ/aD",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/users/wizzlersmate/playlists/1AVZz0mBuGbCEoNRQdYQju/tracks",
+        "total": 58
+      },
+      "type": "playlist",
+      "uri": "spotify:user:wizzlersmate:playlist:1AVZz0mBuGbCEoNRQdYQju"
+    }
+  ],
+  "limit": 9,
+  "next": "https://api.spotify.com/v1/next/...",
+  "offset": 0,
+  "previous": "https://api.spotify.com/v1/prev...",
+  "total": 9
+}

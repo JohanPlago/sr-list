@@ -9,15 +9,92 @@
 
 namespace AppBundle\WebService\Spotify;
 
+use AppBundle\WebService\Spotify\Response\UserPlaylistResponse;
 use AppBundle\WebService\Spotify\ValueObject\{
-    AlbumSimplified,
-    ArtistSimplified,
-    Image,
-    Track
+    AlbumSimplified, ArtistSimplified, Image, Playlist, Track
 };
 
 class ValueObjectBuilder
 {
+    /**
+     * @param $response
+     *
+     * @return UserPlaylistResponse
+     */
+    public function buildUserPlaylistResponse($response)
+    {
+        $result = new  UserPlaylistResponse();
+        $result
+            ->setHref($response->href)
+            ->setItems(array_map([$this, 'buildPlaylist'], $response->items))
+            ->setLimit($response->limit)
+            ->setNext($response->next)
+            ->setOffset($response->offset)
+            ->setPrevious($response->previous)
+            ->setTotal($response->total);
+
+        return $result;
+    }
+
+    /**
+     * @param $playlist
+     *
+     * @return Playlist
+     */
+    public function buildPlaylist($playlist) : Playlist
+    {
+        $result = new Playlist();
+        $result
+            ->setCollaborative($playlist->collaborative)
+            ->setExternalUrls((array)$playlist->external_urls)
+            ->setHref($playlist->href)
+            ->setId($playlist->id)
+            ->setImages($this->buildImages($playlist->images))
+            ->setName($playlist->name)
+            ->setOwner($this->buildPlaylistOwner($playlist->owner))
+            ->setPublic($playlist->public)
+            ->setSnapshotId($playlist->snapshot_id)
+            ->setTracks($this->buildPlaylistTracksReference($playlist->tracks))
+            ->setType($playlist->type)
+            ->setUri($playlist->uri);
+
+        return $result;
+    }
+
+    /**
+     * @param object $owner
+     *
+     * @return Playlist\Owner
+     */
+    public function buildPlaylistOwner($owner)
+    {
+        $result = new Playlist\Owner();
+
+        $result
+            ->setExternalUrls((array)$owner->external_urls)
+            ->setHref($owner->href)
+            ->setId($owner->id)
+            ->setType($owner->type)
+            ->setUri($owner->uri);
+
+        return $result;
+    }
+
+    /**
+     * @param object $tracksReference
+     *
+     * @return Playlist\TracksReference
+     */
+    public function buildPlaylistTracksReference($tracksReference)
+    {
+        $result = new Playlist\TracksReference();
+
+        $result
+            ->setHref($tracksReference->href)
+            ->setTotal($tracksReference->total);
+
+        return $result;
+    }
 
     /**
      * Create a track object from result

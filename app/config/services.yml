@@ -16,6 +16,10 @@ services:
     spotify.track_converter:
         class: AppBundle\Service\SrToSpotifyTrackConverter
         arguments: ["@spotify.track_finder"]
+    spotify.playlist_manager:
+        class: AppBundle\WebService\Spotify\PlaylistManager
+        arguments: ["@spotify.web_api", "@spotify.value_object_builder"]
+
     spotify.session:
         class: SpotifyWebAPI\Session
         arguments: ["%spotify.client_id%", "%spotify.client_secret%", "%spotify.redirect_uri%"]
