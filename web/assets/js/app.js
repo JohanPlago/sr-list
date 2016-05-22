@@ -143,6 +143,7 @@ window.srList = {};
 
             if (typeof track.spotify_uri !== 'undefined') {
                 $trackListItem.find('.jst-spotify-uri-a').prop('href', track.spotify_uri);
+                $trackListItem.find('.jst-spotify-not-found').remove();
             } else {
                 $trackListItem.find('.jst-spotify-uri').remove();
             }
