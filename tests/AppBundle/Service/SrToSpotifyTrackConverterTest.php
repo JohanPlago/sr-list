@@ -78,4 +78,58 @@ class SrToSpotifyTrackConverterTest extends \PHPUnit_Framework_TestCase
             'Artist should be set to default'
         );
     }
+
+    public function testGetSongsFromSpotify()
+    {
+        $song = new Song();
+        $song
+            ->setTitle('Foo song')
+            ->setArtist('Bar');
+        $song2 = new Song();
+        $song2
+            ->setTitle('Baz song')
+            ->setArtist('Qux');
+        $spotifyTrack = new Track();
+        $spotifyTrack
+            ->setId('aoeu')
+            ->setSpotifyUri('spotify:track:something');
+
+        $this->trackFinder->expects($this->at(0))
+                          ->method('findTrack')
+                          ->willReturn($spotifyTrack);
+        $this->trackFinder->expects($this->at(1))
+                          ->method('findTrack')
+                          ->willThrowException(NoTracksFoundException::emptyResult());
+
+        $result = $this->trackConverter->getSongsFromSpotify([$song, $song2], true);
+
+        $this->assertCount(2, $result, '2 tracks should be returned');
+    }
+
+    public function testGetSongsFromSpotifyIgnoresEmpty()
+    {
+        $song = new Song();
+        $song
+            ->setTitle('Foo song')
+            ->setArtist('Bar');
+        $song2 = new Song();
+        $song2
+            ->setTitle('Baz song')
+            ->setArtist('Qux');
+        $spotifyTrack = new Track();
+        $spotifyTrack
+            ->setId('aoeu')
+            ->setSpotifyUri('spotify:track:something');
+
+        $this->trackFinder->expects($this->at(0))
+                          ->method('findTrack')
+                          ->willReturn($spotifyTrack);
+        $this->trackFinder->expects($this->at(1))
+                          ->method('findTrack')
+                          ->willThrowException(NoTracksFoundException::emptyResult());
+
+        $result = $this->trackConverter->getSongsFromSpotify([$song, $song2], false);
+
+        $this->assertCount(1, $result, 'Only 1 track should be returned');
+    }
 }

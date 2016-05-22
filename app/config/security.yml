@@ -41,6 +41,7 @@ security:
         - { path: ^/spotify/logga-in, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/spotify/logga-ut, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/spotify , roles: ROLE_USER }
+        - { path: ^/avsnitt/.*/playlist-create$, roles: ROLE_USER }
 
 
 

@@ -20,6 +20,14 @@ class UserAwareSpotifyWebApi extends SpotifyWebAPI
     protected $tokenStorage;
 
     /**
+     * @return TokenStorage
+     */
+    public function getTokenStorage()
+    {
+        return $this->tokenStorage;
+    }
+
+    /**
      * Set the token storage
      *
      * @param TokenStorage $tokenStorage
@@ -31,6 +39,23 @@ class UserAwareSpotifyWebApi extends SpotifyWebAPI
         $this->tokenStorage = $tokenStorage;
 
         return $this;
+    }
+
+    /**
+     * Current user's spotify id
+     *
+     * @return null|string
+     */
+    public function getSpotifyUserId()
+    {
+        $token = $this->tokenStorage->getToken();
+
+        // Save the access token if user is logged in
+        if ($token instanceof TokenInterface && $token->getUser() instanceof SpotifyUser) {
+            return $token->getUser()->getSpotifyId();
+        }
+
+        return null;
     }
 
     /**
@@ -47,6 +72,4 @@ class UserAwareSpotifyWebApi extends SpotifyWebAPI
 
         return parent::authHeaders();
     }
-
-
 }

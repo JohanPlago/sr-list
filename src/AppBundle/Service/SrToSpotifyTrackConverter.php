@@ -35,9 +35,19 @@ class SrToSpotifyTrackConverter
      *
      * @return Track[]
      */
-    public function getSongsFromSpotify(array $songs)
+    public function getSongsFromSpotify(array $songs, $includeMissing = true)
     {
-        return array_map([$this, 'getSongFromSpotify'], $songs);
+        $tracks = [];
+        foreach ($songs as $song) {
+            $track = $this->getSongFromSpotify($song);
+
+            // Track was found in spotify if it has a uri
+            if ($track->getSpotifyUri() || (!$track->getSpotifyUri() && $includeMissing)) {
+                array_push($tracks, $track);
+            }
+        }
+
+        return $tracks;
     }
 
     /**

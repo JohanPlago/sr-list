@@ -2,7 +2,9 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\WebService\Spotify\ValueObject\Track;
 use AppBundle\WebService\SR\Exception\InvalidEpisodeException;
+use SpotifyWebAPI\SpotifyWebAPIException;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -104,5 +106,43 @@ class EpisodeController extends Controller
         $serializedTracks = $this->get('jms_serializer')->serialize($tracks, 'json');
 
         return new Response($serializedTracks, 200, ['Content-Type' => 'application/json']);
+    }
+
+    /**
+     * @Route("/{id}/playlist-create", name="episode_playlist_create", requirements={"id": "\d+"}, methods={"GET", "POST"})
+     */
+    public function createPlaylistAction($id)
+    {
+        $srClient = $this->get('sr_client');
+        $episode = $srClient->getEpisode($id);
+        $playlistName = $episode->getProgram()->getName() . ' - ' . $episode->getTitle();
+
+        try {
+            $newPlaylist = $this->get('spotify.playlist_manager')->createPlaylist($playlistName);
+        } catch (SpotifyWebAPIException $e) {
+            return new JsonResponse(['error_message' => 'Spellistan kunde inte skapas.'], 500);
+        }
+
+        try {
+            $songs = $this->get('sr_client')->getEpisodePlaylist($id);
+        } catch (InvalidEpisodeException $e) {
+            throw $this->createNotFoundException();
+        }
+
+        $tracks = $this->get('spotify.track_converter')->getSongsFromSpotify($songs, false);
+        $trackIds = array_map(function (Track $track) {
+            return $track->getId();
+        }, $tracks);
+
+        try {
+            $this->get('spotify.playlist_manager')->addTracksToPlaylist($newPlaylist->getId(), $trackIds);
+        } catch (SpotifyWebAPIException $e) {
+            return new JsonResponse(
+                ['error_message' => 'Spellistan skapades, men vi kunde inte lägga till spåren. Mer vet vi tyvärr inte :('],
+                500
+            );
+        }
+        
+        return new Response('ok', 201);
     }
 }

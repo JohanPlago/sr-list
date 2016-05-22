@@ -9,12 +9,13 @@
 
 namespace AppBundle\WebService\Spotify;
 
-use SpotifyWebAPI\SpotifyWebAPI;
+use AppBundle\Service\UserAwareSpotifyWebApi;
 use SpotifyWebAPI\SpotifyWebAPIException;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
 
 class PlaylistManager
 {
-    /** @var SpotifyWebAPI */
+    /** @var UserAwareSpotifyWebApi */
     protected $spotifyWebApi;
     /** @var ValueObjectBuilder */
     protected $valueObjectBuilder;
@@ -22,15 +23,19 @@ class PlaylistManager
     /**
      * PlaylistManager constructor.
      *
-     * @param SpotifyWebAPI $spotifyWebApi
+     * @param UserAwareSpotifyWebApi $spotifyWebApi
+     * @param ValueObjectBuilder $valueObjectBuilder
      */
-    public function __construct(SpotifyWebAPI $spotifyWebApi, ValueObjectBuilder $valueObjectBuilder)
+    public function __construct(UserAwareSpotifyWebApi $spotifyWebApi, ValueObjectBuilder $valueObjectBuilder)
     {
         $this->spotifyWebApi = $spotifyWebApi;
         $this->valueObjectBuilder = $valueObjectBuilder;
     }
 
+
     /**
+     * Gets the current user's playlists
+     *
      * @param int $limit
      * @param int $offset
      *
@@ -44,5 +49,43 @@ class PlaylistManager
         $response = $this->valueObjectBuilder->buildUserPlaylistResponse($rawResponse);
 
         return $response;
+    }
+
+    /**
+     * Creates a new playlist
+     *
+     * @param string $name The playlist name
+     * @param bool $public
+     *
+     * @return ValueObject\Playlist
+     * @throws SpotifyWebAPIException
+     */
+    public function createPlaylist($name, $public = true)
+    {
+        $rawResponse = $this->spotifyWebApi->createUserPlaylist($this->spotifyWebApi->getSpotifyUserId(), [
+            'name' => $name,
+            'public' => $public,
+        ]);
+
+        $response = $this->valueObjectBuilder->buildPlaylist($rawResponse);
+
+        return $response;
+    }
+
+    /**
+     * Adds new tracks to a playlist
+     *
+     * @param string $playlistId
+     * @param array $tracks
+     *
+     * @return bool
+     */
+    public function addTracksToPlaylist($playlistId, array $tracks)
+    {
+        $userId = $this->spotifyWebApi->getSpotifyUserId();
+
+        $this->spotifyWebApi->addUserPlaylistTracks($userId, $playlistId, $tracks);
+
+        return true;
     }
 }
