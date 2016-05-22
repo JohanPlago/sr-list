@@ -62,14 +62,18 @@ class SrToSpotifyTrackConverter
         try {
             $track = $this->spotifyTrackFinder->findTrack($this->getSearchTermFromSongObject($song));
         } catch (NoTracksFoundException $e) {
-            // Set to default
-            $artist = new ArtistSimplified();
-            $artist->setName($song->getArtist());
+            try {
+                $track = $this->spotifyTrackFinder->findTrack($this->getLooseSearchTermFromSongObject($song));
+            } catch (NoTracksFoundException $e) {
+                // Set to default
+                $artist = new ArtistSimplified();
+                $artist->setName($song->getArtist());
 
-            $track = new Track();
-            $track
-                ->setName($song->getTitle())
-                ->setArtists([$artist]);
+                $track = new Track();
+                $track
+                    ->setName($song->getTitle())
+                    ->setArtists([$artist]);
+            }
         }
 
         return $track;
@@ -84,6 +88,31 @@ class SrToSpotifyTrackConverter
      */
     protected function getSearchTermFromSongObject(Song $song) : string
     {
-        return "artist:{$song->getArtist()} track:{$song->getTitle()}";
+        return "artist:{$this->removeUnnecessaryCharacters($song->getArtist())} track:{$this->removeUnnecessaryCharacters($song->getTitle())}";
+    }
+
+    /**
+     * Get the search query to send to spotify from song data, but don't specify artist & track
+     *
+     * @param Song $song
+     *
+     * @return string
+     */
+    protected function getLooseSearchTermFromSongObject(Song $song) : string
+    {
+        return "{$this->removeUnnecessaryCharacters($song->getArtist())} {$this->removeUnnecessaryCharacters($song->getTitle())}";
+    }
+
+    /**
+     * Remove unnecessary characters (such as &, (, ) etc) to widen search
+     *
+     * @param string $string
+     *
+     * @return string
+     */
+    protected function removeUnnecessaryCharacters(string $string) : string
+    {
+//        return $string;
+        return str_replace(['(', ')', '-', '&', ',', '.'], ' ', $string);
     }
 }
