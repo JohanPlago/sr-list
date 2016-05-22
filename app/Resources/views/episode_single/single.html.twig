@@ -28,7 +28,7 @@
                 Längd: {{ episode.downloadPodFile.duration|date("H:i:s") }} (utan musik)
             {% endif %}
 
-            <div class="u-pv">
+            <div class="u-pv js-create-playlist">
                 <a href="#" class="btn btn--lg btn--color-primary txt-bold txt-md js-create-playlist-trigger"
                     data-target-url="{{ path("episode_playlist_create", { id: episode.srId }) }}">
                     <span class="svg-icon vertical-text-middle">

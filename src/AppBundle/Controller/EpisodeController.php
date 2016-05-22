@@ -142,7 +142,8 @@ class EpisodeController extends Controller
                 500
             );
         }
-        
+
+        sleep(1);
         return new Response('ok', 201);
     }
 }
