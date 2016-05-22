@@ -99,7 +99,7 @@ class EpisodeController extends Controller
             $songs = [];
         }
 
-        $tracks = $this->get('spotify_track_converter')->getSongsFromSpotify($songs);
+        $tracks = $this->get('spotify.track_converter')->getSongsFromSpotify($songs);
 
         $serializedTracks = $this->get('jms_serializer')->serialize($tracks, 'json');
 

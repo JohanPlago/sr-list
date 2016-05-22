@@ -8,14 +8,14 @@ services:
         class: AppBundle\WebService\SR\SrWebServiceClient
         arguments: ["@ci.restclient", "@jms_serializer"]
 
-    spotify_value_object_builder:
+    spotify.value_object_builder:
         class: AppBundle\WebService\Spotify\ValueObjectBuilder
-    spotify_track_finder:
+    spotify.track_finder:
         class: AppBundle\WebService\Spotify\TrackFinder
-        arguments: ["@spotify.web_api", "@spotify_value_object_builder"]
-    spotify_track_converter:
+        arguments: ["@spotify.web_api", "@spotify.value_object_builder"]
+    spotify.track_converter:
         class: AppBundle\Service\SrToSpotifyTrackConverter
-        arguments: ["@spotify_track_finder"]
+        arguments: ["@spotify.track_finder"]
     spotify.session:
         class: SpotifyWebAPI\Session
         arguments: ["%spotify.client_id%", "%spotify.client_secret%", "%spotify.redirect_uri%"]
@@ -29,7 +29,7 @@ services:
         tags:
             - { name: twig.extension }
 
-    app.spotify_repository:
+    app.spotify_user_repository:
       class: AppBundle\Entity\Repository\SpotifyUserRepository
       factory: ["@doctrine.orm.default_entity_manager", getRepository]
       arguments: [AppBundle\Entity\SpotifyUser]
@@ -38,4 +38,4 @@ services:
         class: HWI\Bundle\OAuthBundle\Security\Core\User\OAuthUserProvider
     app.spotify_oauth_user_provider:
         class: AppBundle\Security\User\SpotifyOAuthUserProvider
-        arguments: ["@app.spotify_repository", "@doctrine.orm.default_entity_manager", "@spotify.web_api"]
+        arguments: ["@app.spotify_user_repository", "@doctrine.orm.default_entity_manager", "@spotify.web_api"]
