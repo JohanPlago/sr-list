@@ -2,11 +2,11 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\Entity\SpotifyUser;
 use SpotifyWebAPI\SpotifyWebAPIException;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\{
+    Request, Response
+};
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -17,12 +17,25 @@ class SpotifyLoginController extends Controller
     /**
      * @Route("/jag", name="spotify_profile")
      */
-    public function myPageAction()
+    public function myPageAction(Request $request)
     {
-        $spotifyApiClient = $this->get('spotify.web_api');
+        $limit = 50;
+        $page = (int)$request->query->get('playlist-page');
+        $offset = ($page > 0 ? $page : 1) * $limit;
+
+        try {
+            $playlistResponse = $this->get('spotify.playlist_manager')->requestUserPlaylists($limit, $offset);
+        } catch (SpotifyWebAPIException $e) {
+            $playlistResponse = [];
+            $failedToFetchPlaylists = true;
+        }
 
         return $this->render(
-            ':spotify:me.html.twig', [
-        ]);
+            ':spotify:me.html.twig',
+            [
+                'playlistResponse' => $playlistResponse,
+                'failedToFetchPlaylists' => isset($failedToFetchPlaylists),
+            ]
+        );
     }
 }
