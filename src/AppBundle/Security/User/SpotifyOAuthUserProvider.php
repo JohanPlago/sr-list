@@ -11,7 +11,10 @@ namespace AppBundle\Security\User;
 
 use AppBundle\Entity\Repository\SpotifyUserRepository;
 use AppBundle\Entity\SpotifyUser;
+use AppBundle\Service\UserAwareSpotifyWebApi;
 use Doctrine\ORM\EntityManager;
+use HWI\Bundle\OAuthBundle\OAuth\ResourceOwner\SpotifyResourceOwner;
+use HWI\Bundle\OAuthBundle\OAuth\ResourceOwnerInterface;
 use HWI\Bundle\OAuthBundle\OAuth\Response\UserResponseInterface;
 use HWI\Bundle\OAuthBundle\Security\Core\User\OAuthUserProvider;
 use SpotifyWebAPI\SpotifyWebAPI;
@@ -24,20 +27,29 @@ class SpotifyOAuthUserProvider extends OAuthUserProvider
     protected $userRepository;
     /** @var EntityManager */
     protected $em;
-    /** @var SpotifyWebAPI */
+    /** @var UserAwareSpotifyWebApi */
     protected $spotifyWebApi;
+    /** @var ResourceOwnerInterface */
+    protected $resourceOwner;
 
     /**
      * SpotifyOAuthUserProvider constructor.
      *
      * @param SpotifyUserRepository $userRepository
      * @param EntityManager $em
+     * @param UserAwareSpotifyWebApi $spotifyWebApi
+     * @param ResourceOwnerInterface $resourceOwner
      */
-    public function __construct(SpotifyUserRepository $userRepository, EntityManager $em, $spotifyWebApi)
-    {
+    public function __construct(
+        SpotifyUserRepository $userRepository,
+        EntityManager $em,
+        UserAwareSpotifyWebApi $spotifyWebApi,
+        SpotifyResourceOwner $resourceOwner
+    ) {
         $this->userRepository = $userRepository;
         $this->em = $em;
         $this->spotifyWebApi = $spotifyWebApi;
+        $this->resourceOwner = $resourceOwner;
     }
 
     public function loadUserByUsername($username)
@@ -46,6 +58,14 @@ class SpotifyOAuthUserProvider extends OAuthUserProvider
 
         if (!$user instanceof SpotifyUser) {
             return new SpotifyUser($username);
+        }
+
+        if ($user->getAccessTokenExpires() <= (time() + 10)) {
+            $refreshResponse = $this->resourceOwner->refreshAccessToken($user->getRefreshToken());
+            $user->setAccessToken($refreshResponse['access_token']);
+            $user->setAccessTokenExpires(time() + $refreshResponse['expires_in']);
+            $this->em->persist($user);
+            $this->em->flush();
         }
 
         return $user;

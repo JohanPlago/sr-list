@@ -42,4 +42,4 @@ services:
         class: HWI\Bundle\OAuthBundle\Security\Core\User\OAuthUserProvider
     app.spotify_oauth_user_provider:
         class: AppBundle\Security\User\SpotifyOAuthUserProvider
-        arguments: ["@app.spotify_user_repository", "@doctrine.orm.default_entity_manager", "@spotify.web_api"]
+        arguments: ["@app.spotify_user_repository", "@doctrine.orm.default_entity_manager", "@spotify.web_api", "@hwi_oauth.resource_owner.spotify"]
