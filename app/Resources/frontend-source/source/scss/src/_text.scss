@@ -40,6 +40,13 @@
   font-size: $txt-sm;
 }
 
+.txt-sm\@sm-down {
+  @media (max-width: $responsive-screen-sm) {
+    font-size: $txt-sm;
+  }
+
+}
+
 .txt-xs {
   font-size: $txt-xs;
 }

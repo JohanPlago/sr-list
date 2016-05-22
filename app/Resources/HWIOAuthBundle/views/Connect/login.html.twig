@@ -1,0 +1,32 @@
+{% extends '::layout.html.twig' %}
+
+{% block content %}
+    {% if error is defined and error %}
+        <span>{{ error }}</span>
+    {% endif %}
+    {% for owner in hwi_oauth_resource_owners() %}
+        <div class="text-center u-pv">
+            <a href="{{ hwi_oauth_login_url(owner) }}" class="btn btn--spotify-login btn--xl">
+                <span class="svg-icon">
+                    <svg class="svg-icon__svg svg-icon--spotify-logo svg-icon__svg--color-white">
+                        <use xlink:href="{{ asset('assets/img/sprites.svg') }}#spotify-logo" />
+                    </svg>
+                </span>
+                <span class="txt-lg txt-sm@sm-down u-pl vertical-center">
+                    Logga in med Spotify
+                </span>
+            </a>
+        </div>
+    {% endfor %}
+
+    <div class="o-grid">
+        <div class="o-grid__item u-1/3@sm-up u-push-1/3@sm-up">
+            <div class="text-center u-pv">
+                <h1>Logga in för att skapa spellistor</h1>
+                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta
+                    ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                    nibh, ut fermentum massa justo sit amet risus.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

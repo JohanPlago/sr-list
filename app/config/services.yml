@@ -19,6 +19,17 @@ services:
             - { name: twig.extension }
     spotify.session:
         class: SpotifyWebAPI\Session
-        arguments: ["%%spotify.client_id%%", "%%spotify.client_secret%%"]
+        arguments: ["%spotify.client_id%", "%spotify.client_secret%", "%spotify.redirect_uri%"]
     spotify.web_api:
-        class: SpotifyWebAPI\SpotifyWebAPI
+        class: AppBundle\Service\UserAwareSpotifyWebApi
+        calls:
+            - [ setTokenStorage, ["@security.token_storage"]]
+    app.spotify_repository:
+      class: AppBundle\Entity\Repository\SpotifyUserRepository
+      factory: ["@doctrine.orm.default_entity_manager", getRepository]
+      arguments: [AppBundle\Entity\SpotifyUser]
+    hwi_oauth.user.provider.entity:
+        class: HWI\Bundle\OAuthBundle\Security\Core\User\OAuthUserProvider
+    app.spotify_oauth_user_provider:
+        class: AppBundle\Security\User\SpotifyOAuthUserProvider
+        arguments: ["@app.spotify_repository", "@doctrine.orm.default_entity_manager", "@spotify.web_api"]

@@ -21,3 +21,4 @@ parameters:
     # Spotify application auth thingies
     spotify.client_id: ThisIsYourApplicationId
     spotify.client_secret: ThisIsYourApplicationSecret
+    spotify.redirect_uri: http://siteurl.tld/spotify/login

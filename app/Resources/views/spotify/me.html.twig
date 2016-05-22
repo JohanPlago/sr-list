@@ -1,0 +1,16 @@
+{% extends "::layout.html.twig" %}
+{% block content %}
+    <div class="o-grid">
+        {% if app.user.imageUrl %}
+            <div class="o-grid__item u-1/4">
+                <img src="{{ app.user.imageUrl }}" alt="">
+            </div>
+        {% endif %}
+        <div class="o-grid__item u-3/4">
+            <h1 class="u-m0">
+                {{ app.user.displayName }}
+                <span class="txt-color-primary txt-md">({{ app.user.spotifyId }})</span>
+            </h1>
+        </div>
+    </div>
+{% endblock %}

@@ -67,3 +67,11 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+hwi_oauth:
+    firewall_names: [main]
+    resource_owners:
+        spotify:
+            type: spotify
+            client_id: %spotify.client_id%
+            client_secret: %spotify.client_secret%
+            scope: "playlist-read-private playlist-modify-public playlist-modify-private user-library-read user-library-modify"

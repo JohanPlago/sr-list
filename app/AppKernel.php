@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Ci\RestClientBundle\CiRestClientBundle(),
             new \JMS\SerializerBundle\JMSSerializerBundle(),
+            new \HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
             new AppBundle\AppBundle(),
         ];
 

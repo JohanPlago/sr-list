@@ -8,9 +8,14 @@
                     <img src="{{ asset('assets/img/logo.svg') }}" alt="SR Playlist">
                 </div>
             </div>
-            <div class="o-grid__item u-5/6@sm-up">
+            <div class="o-grid__item u-{{ app.user is not null ? 4 : 5 }}/6@sm-up">
                 {% include ":search:form.html.twig" %}
             </div>
+            {% if app.user is not null %}
+                <div class="o-grid__item u-1/6@sm-up">
+                    Inloggad som {{ app.user.displayName }}
+                </div>
+            {% endif %}
         </div>
     </header>
 

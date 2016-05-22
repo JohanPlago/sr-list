@@ -35,3 +35,14 @@
 .float-right {
   float: right;
 }
+
+.vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+
+.inline-block {
+  display: inline-block;
+}

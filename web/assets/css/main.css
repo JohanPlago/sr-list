@@ -7206,6 +7206,12 @@ img {
   font-size: 16px;
 }
 
+@media (max-width: 768px) {
+  .txt-sm\@sm-down {
+    font-size: 16px;
+  }
+}
+
 .txt-xs {
   font-size: 14px;
 }
@@ -7249,6 +7255,52 @@ img {
 }
 .back-to-search:hover .back-to-search__text, .back-to-search:focus .back-to-search__text {
   border-bottom: 1px solid #0FC391;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color .2s;
+}
+
+.btn--sm {
+  padding: 5px 20px;
+}
+
+.btn--xl {
+  padding: 24px 100px;
+}
+@media (max-width: 768px) {
+  .btn--xl {
+    padding: 12px 20px;
+  }
+}
+
+.btn--full-width {
+  width: 100%;
+}
+
+.btn--spotify-login {
+  background-color: #2ebd59;
+  color: #fff;
+  border-radius: 100px;
+  line-height: 1;
+}
+.btn--spotify-login .vertical-center {
+  -webkit-transform: translateY(-75%);
+          transform: translateY(-75%);
+}
+.btn--spotify-login:hover, .btn--spotify-login:focus {
+  background-color: #36ce64;
+}
+@media (max-width: 768px) {
+  .btn--spotify-login .vertical-center {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .btn--spotify-login .u-pl {
+    padding-left: 12px !important;
+  }
 }
 
 .site-content {
@@ -7304,6 +7356,10 @@ img {
   fill: #e0e0e0;
 }
 
+.svg-icon__svg--color-white {
+  fill: #fff;
+}
+
 .svg-icon--magnifying-glass {
   width: 27px;
   height: 27px;
@@ -7326,6 +7382,17 @@ img {
   height: 12px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+.svg-icon--spotify-logo {
+  width: 60px;
+  height: 60px;
+}
+@media (max-width: 768px) {
+  .svg-icon--spotify-logo {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .svg-icon--scalable {
@@ -7363,7 +7430,7 @@ img {
   margin-right: auto;
 }
 
-.text-center {
+.text-center, .btn--full-width {
   text-align: center;
 }
 
@@ -7377,4 +7444,16 @@ img {
 
 .float-right {
   float: right;
+}
+
+.vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: inline-block;
+}
+
+.inline-block {
+  display: inline-block;
 }

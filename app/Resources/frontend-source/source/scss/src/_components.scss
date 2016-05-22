@@ -54,3 +54,55 @@
     }
   }
 }
+
+
+
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+
+  transition: background-color .2s;
+}
+
+  .btn--sm {
+    padding: 5px 20px
+  }
+  .btn--xl {
+    padding: $inuit-base-spacing-unit 100px;
+
+    @media (max-width: $responsive-screen-sm) {
+      padding: $inuit-base-spacing-unit--small 20px;
+    }
+
+  }
+  .btn--full-width {
+    width: 100%;
+    @extend .text-center;
+  }
+
+  .btn--spotify-login {
+    background-color: $color-spotify-brand;
+    color: #fff;
+    border-radius: 100px;
+    line-height: 1;
+
+    // For some reason the translateY(-50%) makes the text 75% vertically aligned
+    .vertical-center {
+      transform: translateY(-75%);
+    }
+
+    &:hover, &:focus {
+      background-color: lighten($color-spotify-brand, 5%);
+    }
+
+    @media (max-width: $responsive-screen-sm) {
+      // For some reason the translateY(-75%) makes vertically aligned 75% at this screen width but not in full widoth
+      .vertical-center {
+        transform: translateY(-50%);
+      }
+      .u-pl {
+        padding-left: $inuit-base-spacing-unit--small !important;
+      }
+    }
+  }

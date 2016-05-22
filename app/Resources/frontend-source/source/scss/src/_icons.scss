@@ -13,6 +13,9 @@
   .svg-icon__svg--color-very-light-grey {
     fill: $color-very-light-grey;
   }
+  .svg-icon__svg--color-white {
+    fill: #fff;
+  }
 
   .svg-icon--magnifying-glass {
     width: 27px;
@@ -32,6 +35,16 @@
     width: 12px;
     height: 12px;
     transform: rotate(90deg);
+  }
+
+  .svg-icon--spotify-logo {
+    width: 60px;
+    height: 60px;
+
+    @media (max-width: 768px) {
+      width: 30px;
+      height: 30px;
+    }
   }
 
 .svg-icon--scalable {

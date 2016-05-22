@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Class EpisodeController
  *
- * @Route("/episodes")
+ * @Route("/avsnitt")
  */
 class EpisodeController extends Controller
 {
@@ -20,7 +20,7 @@ class EpisodeController extends Controller
      * @param string $searchTerm
      * @param int $page
      *
-     * @Route("/search", name="episodes_search")
+     * @Route("/sok", name="episodes_search")
      */
     public function searchAction(Request $request) : Response
     {

@@ -2,10 +2,19 @@
 # http://symfony.com/doc/current/book/security.html
 security:
 
+    encoders:
+        AppBundle\Entity\SpotifyUser:
+            algorithm: sha1
+            encode_as_base64: false
+            iterations: 1
+
+    role_hierarchy:
+        ROLE_USER: ROLE_USER
+
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory:
-            memory: ~
+        pgo_oauth_provider:
+            id: app.spotify_oauth_user_provider
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -14,7 +23,26 @@ security:
             security: false
 
         main:
-            anonymous: ~
+            anonymous: true
+            pattern: ^/
+            logout:
+                path: /spotify/logga-ut
+                target: /
+            oauth:
+                resource_owners:
+                    spotify: /spotify/logga-in/check
+                login_path: /spotify/logga-in
+                failure_path: /spotify/logga-in
+                oauth_user_provider:
+                    service: app.spotify_oauth_user_provider
+    access_control:
+        - { path: ^/spotify/connect, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/spotify/logga-in, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/spotify/logga-ut, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/spotify , roles: ROLE_USER }
+
+
+
             # activate different ways to authenticate
 
             # http_basic: ~
