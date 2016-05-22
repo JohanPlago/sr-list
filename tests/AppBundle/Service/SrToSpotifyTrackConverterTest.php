@@ -14,21 +14,21 @@ namespace Tests\AppBundle\Service;
 use AppBundle\WebService\Spotify\ValueObject\Track;
 use AppBundle\Exception\NoTracksFoundException;
 use AppBundle\Service\{
-    SpotifyTrackFinder,
+    AppBundle\WebService\Spotify\SpotifyTrackFinder,
     SrToSpotifyTrackConverter
 };
 use AppBundle\WebService\SR\Responses\Entity\Song;
 
 class SrToSpotifyTrackConverterTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var SpotifyTrackFinder|\PHPUnit_Framework_MockObject_MockObject */
+    /** @var \AppBundle\WebService\Spotify\SpotifyTrackFinder|\PHPUnit_Framework_MockObject_MockObject */
     private $trackFinder;
     /** @var SrToSpotifyTrackConverter */
     private $trackConverter;
 
     public function setUp()
     {
-        $this->trackFinder = $this->getMockBuilder(SpotifyTrackFinder::class)
+        $this->trackFinder = $this->getMockBuilder(\AppBundle\WebService\Spotify\TrackFinder::class)
             ->disableOriginalConstructor()
             ->getMock();
         $this->trackConverter = new SrToSpotifyTrackConverter($this->trackFinder);

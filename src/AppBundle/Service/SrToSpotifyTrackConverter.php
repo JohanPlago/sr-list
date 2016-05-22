@@ -7,6 +7,7 @@
 
 namespace AppBundle\Service;
 
+use AppBundle\WebService\Spotify\TrackFinder;
 use AppBundle\WebService\Spotify\ValueObject\ArtistSimplified;
 use AppBundle\WebService\Spotify\ValueObject\Track;
 use AppBundle\Exception\NoTracksFoundException;
@@ -14,15 +15,15 @@ use AppBundle\WebService\SR\Responses\Entity\Song;
 
 class SrToSpotifyTrackConverter
 {
-    /** @var SpotifyTrackFinder */
+    /** @var TrackFinder */
     private $spotifyTrackFinder;
 
     /**
      * SrToSpotifyTrackConverter constructor.
      *
-     * @param SpotifyTrackFinder $spotifyTrackFinder
+     * @param TrackFinder $spotifyTrackFinder
      */
-    public function __construct(SpotifyTrackFinder $spotifyTrackFinder)
+    public function __construct(TrackFinder $spotifyTrackFinder)
     {
         $this->spotifyTrackFinder = $spotifyTrackFinder;
     }

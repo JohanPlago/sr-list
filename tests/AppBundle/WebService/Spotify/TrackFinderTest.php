@@ -5,21 +5,21 @@
  * @version 1.0
  */
 
-namespace Tests\AppBundle\Service;
+namespace Tests\AppBundle\WebService\Spotify;
 
 use AppBundle\WebService\Spotify\ValueObject\{
     AlbumSimplified,
     ArtistSimplified,
     Track
 };
-use AppBundle\Service\SpotifyTrackFinder;
+use AppBundle\WebService\Spotify\TrackFinder;
 use SpotifyWebAPI\SpotifyWebAPI;
 
-class SpotifyTrackFinderTest extends \PHPUnit_Framework_TestCase
+class TrackFinderTest extends \PHPUnit_Framework_TestCase
 {
     /** @var SpotifyWebAPI|\PHPUnit_Framework_MockObject_MockObject */
     private $apiStub;
-    /** @var SpotifyTrackFinder */
+    /** @var TrackFinder */
     private $trackFinder;
 
     public function setUp()
@@ -27,7 +27,7 @@ class SpotifyTrackFinderTest extends \PHPUnit_Framework_TestCase
         $this->apiStub = $this->getMockBuilder(SpotifyWebAPI::class)
                               ->disableOriginalConstructor()
                               ->getMock();
-        $this->trackFinder = new SpotifyTrackFinder($this->apiStub);
+        $this->trackFinder = new TrackFinder($this->apiStub);
     }
 
     public function testBuildTrack()

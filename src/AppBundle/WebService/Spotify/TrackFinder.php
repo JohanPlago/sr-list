@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-namespace AppBundle\Service;
+namespace AppBundle\WebService\Spotify;
 
 use AppBundle\WebService\Spotify\ValueObject\{
     AlbumSimplified,
@@ -16,13 +16,13 @@ use AppBundle\WebService\Spotify\ValueObject\{
 use AppBundle\Exception\NoTracksFoundException;
 use SpotifyWebAPI\SpotifyWebAPI;
 
-class SpotifyTrackFinder
+class TrackFinder
 {
     /** @var SpotifyWebAPI */
     private $spotifyWebApi;
 
     /**
-     * SpotifyTrackFinder constructor.
+     * TrackFinder constructor.
      *
      * @param SpotifyWebAPI $spotifyWebApi
      */
