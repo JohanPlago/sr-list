@@ -7162,6 +7162,14 @@ img {
   max-height: 100%;
 }
 
+a {
+  color: #0FC391;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
 .txt-color-light-grey {
   color: #7a7a7a;
 }
@@ -7176,6 +7184,10 @@ img {
 
 .txt-color-primary-f {
   color: #0FC391 !important;
+}
+
+.txt-color-spotify-brand {
+  color: #2ebd59;
 }
 
 .txt-italic {
@@ -7303,6 +7315,19 @@ img {
   }
 }
 
+.logged-in-widget__image {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.logged-in-widget__img {
+  border-radius: 100px;
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+
 .site-content {
   max-width: 1200px;
   padding-left: 24px;
@@ -7360,6 +7385,10 @@ img {
   fill: #fff;
 }
 
+.svg-icon__svg--color-spotify-brand {
+  fill: #2ebd59;
+}
+
 .svg-icon--magnifying-glass {
   width: 27px;
   height: 27px;
@@ -7390,6 +7419,17 @@ img {
 }
 @media (max-width: 768px) {
   .svg-icon--spotify-logo {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.svg-icon--spotify-logo--sm {
+  max-width: 40px;
+  max-height: 40px;
+}
+@media (max-width: 768px) {
+  .svg-icon--spotify-logo--sm {
     width: 30px;
     height: 30px;
   }
@@ -7457,3 +7497,27 @@ img {
 .inline-block {
   display: inline-block;
 }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+/* start commented backslash hack \*/
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+/* close commented backslash hack */

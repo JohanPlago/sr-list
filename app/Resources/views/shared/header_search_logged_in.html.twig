@@ -1,0 +1,31 @@
+<div class="o-grid__item u-4/6@sm-up">
+    {% include ":search:form.html.twig" %}
+</div>
+<div class="o-grid__item u-1/6@sm-up">
+    {% if app.user is not null %}
+        <div class="logged-in-widget o-grid o-grid--center">
+            <div class="o-grid__item u-1/3">
+                <div class="logged-in-widget__image">
+                    <img src="{{ app.user.imageUrl }}" alt="" class="logged-in-widget__img">
+                </div>
+            </div>
+            <div class="logged-in-widget__name o-grid__item u-2/3">
+                <div>{{ app.user.displayName }}</div>
+                <div><a href="{{ path('logout') }}" class="txt-color-primary-f bare-link">Logga ut</a></div>
+            </div>
+        </div>
+    {% else %}
+        <div class="login-widget text-center">
+            <a href="{{ path('hwi_oauth_service_redirect', {service: "spotify"}) }}">
+                <div>
+                    <span class="svg-icon">
+                        <svg class="svg-icon__svg svg-icon--spotify-logo--sm svg-icon__svg--color-spotify-brand">
+                            <use xlink:href="{{ asset("assets/img/sprites.svg") }}#spotify-logo"/>
+                        </svg>
+                    </span>
+                </div>
+                <div class="txt-color-spotify-brand">Logga in</div>
+            </a>
+        </div>
+    {% endif %}
+</div>

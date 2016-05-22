@@ -16,6 +16,9 @@
   .svg-icon__svg--color-white {
     fill: #fff;
   }
+  .svg-icon__svg--color-spotify-brand {
+    fill: $color-spotify-brand;
+  }
 
   .svg-icon--magnifying-glass {
     width: 27px;
@@ -40,6 +43,15 @@
   .svg-icon--spotify-logo {
     width: 60px;
     height: 60px;
+
+    @media (max-width: 768px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .svg-icon--spotify-logo--sm {
+    max-width: 40px;
+    max-height: 40px;
 
     @media (max-width: 768px) {
       width: 30px;
