@@ -44,10 +44,7 @@ class SrToSpotifyTrackConverterTest extends \PHPUnit_Framework_TestCase
 
         $this->trackFinder->expects($this->once())
             ->method('findTrack')
-            ->with($this->logicalAnd(
-                $this->stringContains($song->getTitle()),
-                $this->stringContains($song->getArtist())
-            ))
+            ->with("artist:{$song->getArtist()} track:{$song->getTitle()}")
             ->willReturn($spotifyTrack);
 
         $result = $this->trackConverter->getSongFromSpotify($song);
