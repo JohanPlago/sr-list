@@ -7,11 +7,7 @@
 
 namespace Tests\AppBundle\WebService\Spotify;
 
-use AppBundle\WebService\Spotify\ValueObject\{
-    AlbumSimplified,
-    ArtistSimplified,
-    Track
-};
+use AppBundle\WebService\Spotify\ValueObject\Track;
 use AppBundle\WebService\Spotify\TrackFinder;
 use AppBundle\WebService\Spotify\ValueObjectBuilder;
 use SpotifyWebAPI\SpotifyWebAPI;

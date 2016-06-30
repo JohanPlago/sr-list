@@ -1,23 +1,17 @@
 <?php
 /**
- *
- *
  * @author Johan Palmfjord <johan.plago@gmail.com>
  * @copyright Johan Palmfjord, 2016
  * @version 1.0
  */
 
-
 namespace Tests\AppBundle\Service;
-
 
 use AppBundle\WebService\Spotify\ValueObject\Track;
 use AppBundle\Exception\NoTracksFoundException;
-use AppBundle\Service\{
-    AppBundle\WebService\Spotify\SpotifyTrackFinder,
-    SrToSpotifyTrackConverter
-};
+use AppBundle\Service\SrToSpotifyTrackConverter;
 use AppBundle\WebService\SR\Responses\Entity\Song;
+
 
 class SrToSpotifyTrackConverterTest extends \PHPUnit_Framework_TestCase
 {
