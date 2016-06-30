@@ -2,6 +2,7 @@
 # http://symfony.com/doc/current/book/service_container.html
 parameters:
 #    parameter_name: value
+    hwi_oauth.authentication.entry_point.oauth.class: AppBundle\Security\Http\EntryPoint\AjaxEntryPoint
 
 services:
     sr_client:
