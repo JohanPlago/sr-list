@@ -21,7 +21,7 @@ use AppBundle\WebService\SR\Responses\Entity\Song;
 
 class SrToSpotifyTrackConverterTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \AppBundle\WebService\Spotify\SpotifyTrackFinder|\PHPUnit_Framework_MockObject_MockObject */
+    /** @var \AppBundle\WebService\Spotify\TrackFinder|\PHPUnit_Framework_MockObject_MockObject */
     private $trackFinder;
     /** @var SrToSpotifyTrackConverter */
     private $trackConverter;
@@ -94,10 +94,16 @@ class SrToSpotifyTrackConverterTest extends \PHPUnit_Framework_TestCase
             ->setId('aoeu')
             ->setSpotifyUri('spotify:track:something');
 
+        // First track found
         $this->trackFinder->expects($this->at(0))
                           ->method('findTrack')
                           ->willReturn($spotifyTrack);
+        // 2nd track not found with restrictive search
         $this->trackFinder->expects($this->at(1))
+                          ->method('findTrack')
+                          ->willThrowException(NoTracksFoundException::emptyResult());
+        // 2nd track not found with loose search either
+        $this->trackFinder->expects($this->at(2))
                           ->method('findTrack')
                           ->willThrowException(NoTracksFoundException::emptyResult());
 
@@ -121,10 +127,16 @@ class SrToSpotifyTrackConverterTest extends \PHPUnit_Framework_TestCase
             ->setId('aoeu')
             ->setSpotifyUri('spotify:track:something');
 
+        // First track found
         $this->trackFinder->expects($this->at(0))
                           ->method('findTrack')
                           ->willReturn($spotifyTrack);
+        // 2nd track not found with restrictive search
         $this->trackFinder->expects($this->at(1))
+                          ->method('findTrack')
+                          ->willThrowException(NoTracksFoundException::emptyResult());
+        // 2nd track not found with loose search either
+        $this->trackFinder->expects($this->at(2))
                           ->method('findTrack')
                           ->willThrowException(NoTracksFoundException::emptyResult());
 
