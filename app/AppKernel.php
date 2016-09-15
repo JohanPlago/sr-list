@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Ci\RestClientBundle\CiRestClientBundle(),
             new \JMS\SerializerBundle\JMSSerializerBundle(),
             new \HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new AppBundle\AppBundle(),
         ];
 

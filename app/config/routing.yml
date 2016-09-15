@@ -12,3 +12,6 @@ spotify_login:
     path: /spotify/logga-in/check
 logout:
     path: /spotify/logga-ut
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
