@@ -58,12 +58,24 @@ class Episode
     private $publishDateUtc;
 
     /**
+     * @var \DateTime
+     *
+     * @Jms\Type("DateTime<'Y-m-d H:i'>")
+     */
+    private $publishDate;
+
+    /**
      * @var string
      *
      * @Jms\Type("string")
      * @Jms\SerializedName("imageurltemplate")
      */
     private $imageUrl;
+
+    /**
+     * @var string
+     */
+    private $thumbnailUrl;
 
     /**
      * @var DownloadPodFile
@@ -83,7 +95,10 @@ class Episode
         if ($this->publishDateUtc instanceof \DateTime) {
             $originalTimestamp = (int)$this->publishDateUtc->format('U');
             $this->publishDateUtc = \DateTime::createFromFormat('U', $originalTimestamp / 1000);
+            $this->publishDate = $this->publishDateUtc;
         }
+
+        $this->thumbnailUrl = $this->getImageUrl('api-default-square');
     }
 
     /**
@@ -212,6 +227,26 @@ class Episode
     }
 
     /**
+     * @return \DateTime
+     */
+    public function getPublishDate()
+    {
+        return $this->publishDate;
+    }
+
+    /**
+     * @param \DateTime $publishDate
+     *
+     * @return Episode
+     */
+    public function setPublishDate($publishDate)
+    {
+        $this->publishDate = $publishDate;
+
+        return $this;
+    }
+
+    /**
      * @param string $size Size of the image to be fetched
      *
      * @return string
@@ -219,7 +254,11 @@ class Episode
     public function getImageUrl(string $size = null) : string
     {
         if ($size) {
-            return $this->imageUrl . '?preset='.$size;
+            if (strpos($this->imageUrl, '?preset=') === false) {
+                return $this->imageUrl.'?preset='.$size;
+            } else {
+                return preg_replace('/(\\?preset=)[^&]+/i', '$1'.$size, $this->imageUrl);
+            }
         } else {
             return $this->imageUrl;
         }

@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Class EpisodeController
  *
- * @Route("/avsnitt")
+ * @Route("/api/episodes")
  */
 class EpisodeController extends Controller
 {
@@ -22,7 +22,7 @@ class EpisodeController extends Controller
      * @param string $searchTerm
      * @param int $page
      *
-     * @Route("/sok", name="episodes_search")
+     * @Route("/search", name="episodes_search", options={"expose"=true})
      */
     public function searchAction(Request $request) : Response
     {
@@ -36,26 +36,11 @@ class EpisodeController extends Controller
 
         $result = $this->get('sr_client')->searchForEpisode($searchTerm, $page);
 
-        // Use another template if no results are found
-        if ($result->getPagination()->getTotalHits() === 0) {
-            return $this->render(':search:episodes_result_empty.html.twig', [
-                'searchTerm' => $searchTerm,
-                ]);
-        }
-
-        // Redirect to the highest existing page number if current page is more than that
-        if ($page > $result->getPagination()->getTotalPages()) {
-            return $this->redirectToRoute("episodes_search", [
-                'q' => $searchTerm,
-                'page' => $result->getPagination()->getTotalPages(),
-            ]);
-        }
-
-        return $this->render(':search:episodes_results.html.twig', [
+        return new Response($this->get('jms_serializer')->serialize([
             'searchTerm' => $searchTerm,
             'page' => $page,
             'result' => $result,
-        ]);
+        ], 'json'), 200, ['Content-Type' => 'application/json']);
     }
 
     /**
